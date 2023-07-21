@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+    <!-- Custom -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<style>
+html,
+body {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #171717;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #404040;
+}
+</style>
+<!-- <body class="min-h-screen flex flex-col bg-neutral-900">
+  <nav class="">
+    <div class="container mx-auto flex items-center justify-between py-8 text-gray-100">
+      <div class="">
+        <p class="text-4xl font-light"><span class="font-semibold">Ronny</span> Das</p>
+      </div>
+      <div class="">
+        <ul class="flex items-center gap-6 text-lg font-medium">
+          <li class="text-emerald-500">About</li>
+          <li>Services</li>
+          <li>Works</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="">
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 text-sm"><i class="lab la-linkedin text-2xl"></i> <span class="text-gray-400">Linkedin</span></div>
+          <div class="flex items-center gap-2 text-sm"><i class="lab la-github text-2xl"></i> <span class="text-gray-400">Github</span></div>
+          <div class="text-emerald-500 bg-neutral-800 py-2 px-3 rounded-full"><i class="las la-envelope-square text-2xl"></i></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container mx-auto">
+    <div class="grid grid-cols-2 gap-8 items-center">
+      <div class="">
+        <span class="bg-emerald-500 rounded-md py-2 px-4">Front-End Developer</span>
+        <h1 class="text-gray-100 text-6xl my-6">Talk is cheap. <br>Show me the code</h1>
+        <h2 class="text-gray-400">I design and code beautifully simple things, and I love what I do.</h2>
+
+        <a href="#" class="text-emerald-500 underline mt-12 block">LETS CHAT !</a>
+        <div class="max-w-xs">
+          <div class="grid grid-cols-2 gap-6 mt-16">
+            <div class="flex gap-4 items-center">
+              <p class="text-4xl font-semibold text-gray-100">4</p>
+              <span class="text-gray-400 text-sm">YEARS OF EXPERIENCE</span>
+            </div>
+            <div class="flex gap-4 items-center">
+              <p class="text-4xl font-semibold text-gray-100">20+</p>
+              <span class="text-gray-400 text-sm">PROJECTS COMPLETED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <img src="../assets/me.png" alt="" class="rounded-full w-2/3 mx-auto">
+      </div>
+    </div>
+  </div>
+</body> -->
+
+<body class="bg-neutral-900 overflow-hidden h-screen flex flex-col">
+    <div class="flex space-x-2 fixed bottom-4 right-4" id="nav-buttons">
+        <button class="flex items-center justify-center h-12 w-12 bg-neutral-700 text-gray-100 shadow rounded-full"><i class="las la-arrow-left"></i></button>        
+        <button class="flex items-center justify-center h-12 w-12 bg-neutral-700 text-gray-100 shadow rounded-full" id="scrollRightButton"><i class="las la-arrow-right"></i></button>        
+    </div>
+    <nav class="">
+        <div class="container mx-auto flex items-center justify-between py-8 text-gray-100">
+            <div class="">
+                <p class="text-4xl font-light"><span class="font-semibold">Ronny</span> Das</p>
+            </div>
+            <div class="">
+                <ul class="flex items-center gap-6 text-lg font-medium">
+                    <li class="text-emerald-500">About</li>
+                    <li>Services</li>
+                    <li>Works</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="">
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2 text-sm"><i class="lab la-linkedin text-2xl"></i> <span class="text-gray-400">Linkedin</span></div>
+                    <div class="flex items-center gap-2 text-sm"><i class="lab la-github text-2xl"></i> <span class="text-gray-400">Github</span></div>
+                    <div class="text-emerald-500 bg-neutral-800 py-2 px-3 rounded-full"><i class="las la-envelope-square text-2xl"></i></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="snap-mandatory flex-grow snap-x flex overflow-y-hidden" id="scrl">
+        <div class="snap-start snap-always h-full w-screen flex-shrink-0 sld">
+            <!-- <div class="container mx-auto">
+                <div class="grid grid-cols-2 gap-8 items-center">
+                    <div class="">
+                        <span class="bg-emerald-500 rounded-md py-2 px-4">Front-End Developer</span>
+                        <h1 class="text-gray-100 text-6xl my-6">Talk is cheap. <br>Show me the code</h1>
+                        <h2 class="text-gray-400">I design and code beautifully simple things, and I love what I do.</h2>
+                        <a href="#" class="text-emerald-500 underline mt-12 block">LETS CHAT !</a>
+                        <div class="max-w-xs">
+                            <div class="grid grid-cols-2 gap-6 mt-16">
+                                <div class="flex gap-4 items-center">
+                                    <p class="text-4xl font-semibold text-gray-100">4</p>
+                                    <span class="text-gray-400 text-sm">YEARS OF EXPERIENCE</span>
+                                </div>
+                                <div class="flex gap-4 items-center">
+                                    <p class="text-4xl font-semibold text-gray-100">20+</p>
+                                    <span class="text-gray-400 text-sm">PROJECTS COMPLETED</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <img src="../assets/me.png" alt="" class="rounded-full w-2/3 mx-auto">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="snap-start snap-always h-full w-screen flex-shrink-0 sld">
+            <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+        <div class="snap-start snap-always h-full w-screen flex-shrink-0 sld">
+            <img src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+        <div class="snap-start snap-always h-full w-screen flex-shrink-0 sld">
+            <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+          // $("#scrollRightButton").on("click", function () {
+          //   alert('hi')
+          //   var container = $("#scrl");
+          //   var scrollAmount = 150;
+          //   var currentScroll = container.scrollLeft();
+          //   container.scrollLeft(currentScroll + scrollAmount);
+          // });
+          $("#scrollRightButton").on("click", function () {
+            var container = $("#scrl");
+            var currentScroll = container.scrollLeft();
+            var slideWidth = container.children(".sld").first().outerWidth(true);
+            var nextSlidePosition = Math.ceil(currentScroll / slideWidth) * slideWidth;
+            container.animate({ scrollLeft: nextSlidePosition }, "slow");
+          });
+        });
+    </script>
+</body>
+
+</html>

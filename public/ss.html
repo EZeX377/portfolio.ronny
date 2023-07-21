@@ -35,10 +35,10 @@ body {
 <body class="bg-neutral-900 overflow-hidden h-screen flex flex-col scroll-smooth">
     <div class="flex space-x-2 fixed top-1/2 -translate-y-1/2 right-4" id="nav-buttons">
         <ul class="items-center gap-6 text-sm text-gray-100">
-            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#about" id="about_tag" class="">About</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
-            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#services" id="services_tag" class="">Services</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
-            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#works" id="works_tag" class="">Works</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
-            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#contact" id="contact_tag" class="">Contact</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
+            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#sld1" id="sld1_tag" class="">About</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
+            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#sld2" id="sld2_tag" class="">Services</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
+            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#sld3" id="sld3_tag" class="">Works</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
+            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#sld4" id="sld4_tag" class="">Contact</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
         </ul>    
     </div>
     <nav class="">
@@ -64,7 +64,7 @@ body {
         </div>
     </nav>
     <div class="snap-mandatory flex-grow snap-x flex overflow-y-hidden scroll-smooth" id="scrl">
-        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="about">
+        <div class="snap-start snap-always h-full w-screen flex-shrink-0 sld" id="sld1">
             <div class="container mx-auto">
                 <div class="grid grid-cols-2 gap-8 items-center">
                     <div class="">
@@ -91,29 +91,16 @@ body {
                 </div>
             </div>
         </div>
-        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="services">
+        <div class="snap-start snap-always h-full w-screen flex-shrink-0 sld" id="sld2">
             <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
         </div>
-        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="works">
+        <div class="snap-start snap-always h-full w-screen flex-shrink-0 sld" id="sld3">
             <img src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
         </div>
-        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="contact">
+        <div class="snap-start snap-always h-full w-screen flex-shrink-0 sld" id="sld4">
             <div class="container mx-auto">
-                <h2 class="text-gray-100 text-4xl mb-6 text-center">Let's Work Together!</h2>
+                <h2 class="text-gray-100 text-3xl mb-6">Get in Touch</h2>
                 <div class="grid grid-cols-2 gap-8 items-center">
-                    <div class="">
-                        sajdhgjashdjkhjk
-                    </div>
-                    <div class="bg-neutral-700 rounded-lg p-24">
-                        <form action="">
-                            <div class="grid gap-3">
-                                 <div>
-                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-100">Your Name</label>
-                                    <input type="url" id="name" class="bg-transparent border-b border-gray-500 text-gray-400 text-sm rounded focus:ring-0 focus:border-gray-400 block w-full p-2.5" placeholder="" required>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -126,11 +113,7 @@ body {
             function activeUrl() {
                 var url = window.location.hash;
                 $("a").removeClass("text-green-500");
-                if(!url){
-                    $('#about_tag').addClass("text-green-500 font-medium");
-                }else{
                 $(url + "_tag").addClass("text-green-500 font-medium");
-                }
             }
             activeUrl();
 

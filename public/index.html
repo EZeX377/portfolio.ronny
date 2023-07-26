@@ -30,6 +30,15 @@ body {
     border-radius: 50px;
     background: #404040;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color .5s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
+}
 </style>
 
 <body class="bg-neutral-900 overflow-hidden h-screen flex flex-col scroll-smooth">
@@ -44,7 +53,7 @@ body {
     <nav class="">
         <div class="container mx-auto flex items-center justify-between py-8 text-gray-100">
             <div class="">
-                <p class="text-4xl font-light"><span class="font-semibold">Ronny</span> Das</p>
+                <a href="index.html" class="text-4xl font-light"><span class="font-semibold">Ronny</span> Das</a>
             </div>
             <!-- <div class="">
                 <ul class="flex items-center gap-6 text-lg font-medium">
@@ -56,8 +65,8 @@ body {
             </div> -->
             <div class="">
                 <div class="flex items-center gap-4">
-                    <div class="flex items-center gap-2 text-sm"><i class="lab la-linkedin text-2xl"></i> <span class="text-gray-400">Linkedin</span></div>
-                    <div class="flex items-center gap-2 text-sm"><i class="lab la-github text-2xl"></i> <span class="text-gray-400">Github</span></div>
+                    <a href="#" class="flex items-center gap-2 text-sm hover:text-gray-100"><i class="lab la-linkedin text-2xl"></i> <span class="text-gray-400 hover:text-gray-100">Linkedin</span></a>
+                    <a href="#" class="flex items-center gap-2 text-sm hover:text-gray-100"><i class="lab la-github text-2xl"></i> <span class="text-gray-400 hover:text-gray-100">Github</span></a>
                     <div class="text-emerald-500 bg-neutral-800 py-2 px-3 rounded-full"><i class="las la-envelope-square text-2xl"></i></div>
                 </div>
             </div>
@@ -71,7 +80,7 @@ body {
                         <span class="bg-emerald-500 rounded-md py-2 px-4">Front-End Developer</span>
                         <h1 class="text-gray-100 text-6xl my-6">Talk is cheap. <br>Show me the code</h1>
                         <h2 class="text-gray-400">I design and code beautifully simple things, and I love what I do.</h2>
-                        <a href="#" class="text-emerald-500 underline mt-12 block">LETS CHAT !</a>
+                        <a href="index.html#contact" class="text-emerald-500 underline mt-12 block">LETS CHAT !</a>
                         <div class="max-w-xs">
                             <div class="grid grid-cols-2 gap-6 mt-16">
                                 <div class="flex gap-4 items-center">
@@ -95,24 +104,77 @@ body {
             <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
         </div>
         <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="works">
-            <img src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+            <div class="container mx-auto">
+                <div class="flex gap-6">
+                    <div class="max-w-xs relative">
+                        <h2 class="text-gray-100 text-6xl mb-6 font-medium -rotate-90 relative top-3/4">My Works</h2>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="grid grid-cols-3 gap-6">
+                            <div class="border border-neutral-700 h-96"></div>
+                            <div class="border border-neutral-700 h-96"></div>
+                            <div class="border border-neutral-700 h-96"></div>
+                            <div class="border border-neutral-700 h-96"></div>
+                            <div class="border border-neutral-700 h-96"></div>
+                            <div class="border border-neutral-700 h-96"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="contact">
             <div class="container mx-auto">
-                <h2 class="text-gray-100 text-4xl mb-6 text-center">Let's Work Together!</h2>
-                <div class="grid grid-cols-2 gap-8 items-center">
-                    <div class="">
-                        sajdhgjashdjkhjk
-                    </div>
-                    <div class="bg-neutral-700 rounded-lg p-24">
+                <h2 class="text-gray-100 text-6xl mb-6 font-medium text-center">Let's Work Together!</h2>
+                <p class="text-gray-400 text-center">Feel free to call me or drop a message</p>
+                <div class="grid grid-cols-2 gap-x-24 mt-16">
+                    <div class="rounded-lg p-24 px-48">
                         <form action="">
                             <div class="grid gap-3">
                                  <div>
-                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-100">Your Name</label>
-                                    <input type="url" id="name" class="bg-transparent border-b border-gray-500 text-gray-400 text-sm rounded focus:ring-0 focus:border-gray-400 block w-full p-2.5" placeholder="" required>
+                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-100">Name</label>
+                                    <input type="text" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required>
+                                </div>
+                                 <div>
+                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-100">Email</label>
+                                    <input type="email" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required>
+                                </div>
+                                 <div>                                    
+                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-100">Phone Number</label>
+                                    <input type="tel" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required>
+                                </div>
+                                 <div>
+                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-100">Your Message</label>
+                                    <textarea rows="3" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required></textarea>
                                 </div>
                             </div>
+                            <div class="mt-12">
+                                <button class="px-3 py-1.5 bg-green-500 text-white">Send Message</button>
+                            </div>
                         </form>
+                    </div>
+                    <div class="rounded-lg p-24 px-48">
+                        <p class="text-gray-100 font-semibold mb-16">Contact Information</p>
+                        <div class="grid gap-2">
+                            <div class="flex gap-2 text-gray-400 items-start text-sm">
+                                <i class="las la-map-marked-alt mt-1"></i>
+                                <span>Ambari Rd, Fatasil Ambari, Guwahati, Assam 781001</span>
+                            </div>
+                            <div class="flex gap-2 text-gray-400 items-start text-sm">
+                                <i class="las la-phone-square mt-1"></i>
+                                <span>+91 967 803 7963</span>
+                            </div>
+                            <div class="flex gap-2 text-gray-400 items-start text-sm">
+                                <i class="las la-envelope-square mt-1"></i>
+                                <span>iamronnydas@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="mt-10">
+                            <p class="text-gray-100">Follow</p>
+                            <div class="flex gap-3">
+                                <a href="#" class="text-gray-400 hover:text-gray-100"><i class="lab la-linkedin text-2xl"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-gray-100"><i class="lab la-github text-2xl"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,6 +195,9 @@ body {
                 }
             }
             activeUrl();
+            $(window).on("load", function() {
+                if (location.hash) location.href = location.hash;
+            });
 
             $("a").on("click", function (e) {
                 e.preventDefault();

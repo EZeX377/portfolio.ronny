@@ -41,67 +41,64 @@ input:-webkit-autofill:active{
 }
 </style>
 
-<body class="bg-neutral-900 overflow-hidden h-screen flex flex-col scroll-smooth">
-    <div class="flex space-x-2 fixed top-1/2 -translate-y-1/2 right-4" id="nav-buttons">
+<body class="bg-gray-900 overflow-hidden h-screen flex flex-col scroll-smooth">
+    <!-- <div class="flex space-x-2 fixed top-1/2 -translate-y-1/2 right-4" id="nav-buttons">
         <ul class="items-center gap-6 text-sm text-gray-100">
             <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#about" id="about_tag" class="">About</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
             <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#services" id="services_tag" class="">Services</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
             <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#works" id="works_tag" class="">Works</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
             <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#contact" id="contact_tag" class="">Contact</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
         </ul>    
-    </div>
+    </div> -->
     <nav class="">
-        <div class="container mx-auto flex items-center justify-between py-8 text-gray-100">
+        <div class="px-2 xl:px-0 container mx-auto flex items-center justify-between py-8 text-gray-100">
             <div class="">
-                <a href="index.html" class="text-4xl font-light"><span class="font-semibold">Ronny</span> Das</a>
+                <a href="index.html" class="text-2xl xl:text-4xl font-light"><span class="font-semibold text-emerald-500">Ronny</span> Das</a>
             </div>
-            <!-- <div class="">
-                <ul class="flex items-center gap-6 text-lg font-medium">
-                    <li class="text-emerald-500">About</li>
-                    <li>Services</li>
-                    <li>Works</li>
-                    <li>Contact</li>
-                </ul>
-            </div> -->
             <div class="">
                 <div class="flex items-center gap-4">
-                    <a href="#" class="flex items-center gap-2 text-sm hover:text-gray-100"><i class="lab la-linkedin text-2xl"></i> <span class="text-gray-400 hover:text-gray-100">Linkedin</span></a>
-                    <a href="#" class="flex items-center gap-2 text-sm hover:text-gray-100"><i class="lab la-github text-2xl"></i> <span class="text-gray-400 hover:text-gray-100">Github</span></a>
-                    <div class="text-emerald-500 bg-neutral-800 py-2 px-3 rounded-full"><i class="las la-envelope-square text-2xl"></i></div>
+                    <a href="#" class="flex items-center gap-2 text-xs hover:text-gray-100"><i class="lab la-linkedin text-base xl:text-2xl"></i> <span class="text-gray-400 hover:text-gray-100">Linkedin</span></a>
+                    <a href="#" class="flex items-center gap-2 text-xs hover:text-gray-100"><i class="lab la-github text-base xl:text-2xl"></i> <span class="text-gray-400 hover:text-gray-100">Github</span></a>
+                    <div class="text-emerald-500 bg-neutral-800 py-1 px-2 xl:py-2 xl:px-3 rounded-full"><i class="las la-envelope-square text-base xl:text-2xl"></i></div>
                 </div>
             </div>
         </div>
     </nav>
     <div class="snap-mandatory flex-grow snap-x flex overflow-y-hidden scroll-smooth" id="scrl">
-        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="about">
-            <div class="container mx-auto">
-                <div class="grid grid-cols-2 gap-8 items-center">
+        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center relative" id="about">
+            <img src="../assets/circles.png" alt="" class="absolute z-[-4] opacity-100 bottom-0 left-0 w-56 md:w-96 md:h-96 xl:w-72 xl:h-72 mx-auto">
+            <div class="p-2 xl:p-0 container mx-auto">
+                <div class="grid xl:grid-cols-2 gap-4 xl:gap-8 items-center text-center xl:text-left">
+                    <div class="relative xl:hidden">
+                        <img src="../assets/me3.png" alt="" class="rounded-full w-full md:max-w-2xl mx-auto object-cover object-top">
+                        <img src="../assets/grid.png" alt="" class="absolute z-[-4] opacity-100 bottom-0 right-0  w-64 md:w-80 md:h-80 mx-auto">
+                    </div>
                     <div class="">
-                        <span class="bg-emerald-500 rounded-md py-2 px-4">Front-End Developer</span>
-                        <h1 class="text-gray-100 text-6xl my-6">Talk is cheap. <br>Show me the code</h1>
-                        <h2 class="text-gray-400">I design and code beautifully simple things, and I love what I do.</h2>
-                        <a href="index.html#contact" class="text-emerald-500 underline mt-12 block">LETS CHAT !</a>
-                        <div class="max-w-xs">
+                        <span class="bg-emerald-500 rounded-md py-2 px-4 text-xs xl:text-base">Front-End Developer</span>
+                        <h1 class="text-gray-100 text-2xl xl:text-6xl my-6">Talk is cheap. <br>Show me the code</h1>
+                        <h2 class="text-gray-400 text-sm xl:text-base">I design and code beautifully simple things, and I love what I do.</h2>
+                        <a href="index.html#contact" class="text-emerald-500 underline mt-12 block text-xs xl:text-base">LETS CHAT !</a>
+                        <div class="max-w-xs mx-auto xl:m-0">
                             <div class="grid grid-cols-2 gap-6 mt-16">
                                 <div class="flex gap-4 items-center">
-                                    <p class="text-4xl font-semibold text-gray-100">4</p>
-                                    <span class="text-gray-400 text-sm">YEARS OF EXPERIENCE</span>
+                                    <p class="text-2xl xl:text-4xl font-semibold text-gray-100">4</p>
+                                    <span class="text-gray-400 text-xs xl:text-sm">YEARS OF EXPERIENCE</span>
                                 </div>
                                 <div class="flex gap-4 items-center">
-                                    <p class="text-4xl font-semibold text-gray-100">20+</p>
-                                    <span class="text-gray-400 text-sm">PROJECTS COMPLETED</span>
+                                    <p class="text-2xl xl:text-4xl font-semibold text-gray-100">20+</p>
+                                    <span class="text-gray-400 text-xs xl:text-sm">PROJECTS COMPLETED</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="">
-                        <img src="../assets/me.png" alt="" class="rounded-full w-2/3 mx-auto">
-                    </div> -->
+                    <div class="relative hidden xl:block">
+                        <img src="../assets/me3.png" alt="" class="rounded-full w-full md:max-w-2xl mx-auto object-cover object-top">
+                        <img src="../assets/grid.png" alt="" class="absolute z-[-4] opacity-100 bottom-0 right-0  w-64 md:w-80 md:h-80 mx-auto">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="services">
-            <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
         </div>
         <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="works">
             <div class="container mx-auto">
@@ -122,7 +119,9 @@ input:-webkit-autofill:active{
                 </div>
             </div>
         </div>
-        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="contact">
+        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center relative" id="contact">
+            <img src="../assets/rec.png" alt="" class="absolute z-[-1] opacity-30 bottom-12 right-12 rounded-full w-96 h-96 mx-auto object-cover object-top">
+            <div class=""></div>
             <div class="container mx-auto">
                 <h2 class="text-gray-100 text-6xl mb-6 font-medium text-center">Let's Work Together!</h2>
                 <p class="text-gray-400 text-center">Feel free to call me or drop a message</p>
@@ -148,7 +147,7 @@ input:-webkit-autofill:active{
                                 </div>
                             </div>
                             <div class="mt-12">
-                                <button class="px-3 py-1.5 bg-green-500 text-white">Send Message</button>
+                                <button class="px-4 py-1.5 bg-emerald-500 hover:scale-x-105 transition-all duration-100 rounded-md text-white">Send Message <i class="las la-paper-plane -rotate-45 ml-1"></i></button>
                             </div>
                         </form>
                     </div>

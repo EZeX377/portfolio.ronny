@@ -65,6 +65,7 @@ input:-webkit-autofill:active{
         </div>
     </nav>
     <div class="snap-mandatory flex-grow snap-x flex overflow-y-hidden scroll-smooth" id="scrl">
+        <!-- Hero -->
         <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center relative" id="about">
             <img src="../assets/circles.png" alt="" class="absolute z-[-4] opacity-100 bottom-0 left-0 w-56 md:w-96 md:h-96 xl:w-72 xl:h-72 mx-auto">
             <div class="p-2 xl:p-0 container mx-auto">
@@ -77,9 +78,9 @@ input:-webkit-autofill:active{
                         <span class="bg-emerald-500 rounded-md py-2 px-4 text-xs xl:text-base">Front-End Developer</span>
                         <h1 class="text-gray-100 text-2xl xl:text-6xl my-6">Talk is cheap. <br>Show me the code</h1>
                         <h2 class="text-gray-400 text-sm xl:text-base">I design and code beautifully simple things, and I love what I do.</h2>
-                        <a href="index.html#contact" class="text-emerald-500 underline mt-12 block text-xs xl:text-base">LETS CHAT !</a>
+                        <a href="index.html#contact" class="text-emerald-500 underline mt-8 xl:mt-12 block text-xs xl:text-base">LETS CHAT !</a>
                         <div class="max-w-xs mx-auto xl:m-0">
-                            <div class="grid grid-cols-2 gap-6 mt-16">
+                            <div class="grid grid-cols-2 gap-6 mt-8 xl:mt-16">
                                 <div class="flex gap-4 items-center">
                                     <p class="text-2xl xl:text-4xl font-semibold text-gray-100">4</p>
                                     <span class="text-gray-400 text-xs xl:text-sm">YEARS OF EXPERIENCE</span>
@@ -98,9 +99,57 @@ input:-webkit-autofill:active{
                 </div>
             </div>
         </div>
-        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="services">
+        <!-- Services -->
+        <div class="p-2 snap-start snap-always h-full w-screen flex-shrink-0 flex flex-col items-center justify-center relative" id="services">
+            <img src="../assets/code1.png" alt="" class="absolute z-[-4] opacity-100 bottom-0 right-24 w-56 md:w-96 md:h-96 xl:w-72 xl:h-72 mx-auto opacity-5 z-[-1]">
+            <h1 class="text-gray-100 text-2xl xl:text-6xl my-6">What I Offer</h1>
+            <h2 class="text-gray-400 text-sm xl:text-base text-center">As a frontend developer, I offer a variety of services to create stunning and functional websites and web applications.</h2>   
+            <div class="grid xl:grid-cols-3 gap-4 xl:gap-8 items-center text-center xl:text-left flex-grow container mx-auto">
+                <div class="relative hidden xl:block">
+                    <img src="../assets/Programming.gif" alt="" class="max-w-lg bottom-0 left-0">
+                </div>
+                <div class="xl:col-span-2 grid xl:grid-cols-2 gap-4">
+                        <div class="text-gray-400 p-4 xl:p-8 rounded-md shadow rounded-md bg-gray-800 text-left flex gap-4 xl:block">
+                            <div class="border border-gray-700 rounded p-2 xl:p-4 w-fit h-fit xl:mb-4 mb-2 flex-shrink-0">
+                                <img src="../assets/webdesign.png" alt="" class="h-4 w-4 xl:h-8 xl:w-8">
+                            </div>
+                            <div class="">
+                                <h3 class="text-gray-100 font-semibold mb-2 xl:mb-4 text-xs xl:text-base">Website Design and Development</h3>
+                                <p class="text-xs xl:text-sm">I build tailored websites from scratch, ensuring they align with your brand identity and meet your specific needs and goals.</p>
+                            </div>
+                        </div>
+                        <div class="text-gray-400 p-4 xl:p-8 rounded-md shadow rounded-md bg-gray-800 text-left flex gap-4 xl:block">
+                            <div class="border border-gray-700 rounded p-2 xl:p-4 w-fit h-fit xl:mb-4 mb-2 flex-shrink-0">
+                                <img src="../assets/respdesign.png" alt="" class="h-4 w-4 xl:h-8 xl:w-8">
+                            </div>
+                            <div class="">
+                                <h3 class="text-gray-100 font-semibold mb-2 xl:mb-4 text-xs xl:text-base">Responsive Web Design</h3>
+                                <p class="text-xs xl:text-sm">I specialize in crafting websites that look and function seamlessly on desktops, tablets, and mobile devices, enhancing user satisfaction.</p>
+                            </div>
+                        </div>
+                        <div class="text-gray-400 p-4 xl:p-8 rounded-md shadow rounded-md bg-gray-800 text-left flex gap-4 xl:block">
+                            <div class="border border-gray-700 rounded p-2 xl:p-4 w-fit h-fit xl:mb-4 mb-2 flex-shrink-0">
+                                <img src="../assets/mockup.png" alt="" class="h-4 w-4 xl:h-8 xl:w-8">
+                            </div>
+                                <div class="">
+                                <h3 class="text-gray-100 font-semibold mb-2 xl:mb-4 text-xs xl:text-base">Figma Mockups</h3>
+                                <p class="text-xs xl:text-sm">I specialize in Figma mockups, providing interactive prototypes and high-fidelity UI design mockups. Collaborate with me to visualize your project's concept and ensure it looks great on all devices.</p>
+                            </div>
+                        </div>
+                        <div class="text-gray-400 p-4 xl:p-8 rounded-md shadow rounded-md bg-gray-800 text-left flex gap-4 xl:block">
+                            <div class="border border-gray-700 rounded p-2 xl:p-4 w-fit h-fit xl:mb-4 mb-2 flex-shrink-0">
+                                <img src="../assets/redesign.png" alt="" class="h-4 w-4 xl:h-8 xl:w-8">
+                            </div>
+                            <div class="">
+                                <h3 class="text-gray-100 font-semibold mb-2 xl:mb-4 text-xs xl:text-base">Website Redesign</h3>
+                                <p class="text-xs xl:text-sm">Transform your outdated website into a modern, visually appealing, and high-performing digital asset that resonates with your audience.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>   
         </div>
-        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="works">
+        <!-- Works -->
+        <!-- <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="works">
             <div class="container mx-auto">
                 <div class="flex gap-6">
                     <div class="max-w-xs relative">
@@ -118,41 +167,43 @@ input:-webkit-autofill:active{
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <!-- Contact -->
         <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center relative" id="contact">
-            <img src="../assets/rec.png" alt="" class="absolute z-[-1] opacity-30 bottom-12 right-12 rounded-full w-96 h-96 mx-auto object-cover object-top">
+            <img src="../assets/chat.png" alt="" class="absolute z-[-1] opacity-30 bottom-12 right-12 w-96 h-96 mx-auto object-cover object-top opacity-5">
+            <img src="../assets/cline.png" alt="" class="absolute z-[-4] opacity-100 top-1/4 left-0 w-56 md:w-96 md:h-96 xl:w-72 xl:h-72 mx-auto opacity-30">
             <div class=""></div>
-            <div class="container mx-auto">
-                <h2 class="text-gray-100 text-6xl mb-6 font-medium text-center">Let's Work Together!</h2>
-                <p class="text-gray-400 text-center">Feel free to call me or drop a message</p>
-                <div class="grid grid-cols-2 gap-x-24 mt-16">
-                    <div class="rounded-lg p-24 px-48">
+            <div class="p-2 container mx-auto">
+                <h2 class="text-gray-100 text-2xl xl:text-6xl my-6 text-center">Let's Work Together!</h2>
+                <p class="text-gray-400 text-sm xl:text-base text-center">Feel free to call me or drop a message</p>
+                <div class="grid xl:grid-cols-2 gap-x-24 mt-8 xl:mt-16">
+                    <div class="rounded-lg p-8 xl:p-24 xl:px-48">
                         <form action="">
                             <div class="grid gap-3">
                                  <div>
-                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-100">Name</label>
+                                    <label for="name" class="block mb-2 text-xs xl:text-sm font-medium text-gray-100">Name</label>
                                     <input type="text" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required>
                                 </div>
                                  <div>
-                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-100">Email</label>
+                                    <label for="name" class="block mb-2 text-xs xl:text-sm font-medium text-gray-100">Email</label>
                                     <input type="email" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required>
                                 </div>
                                  <div>                                    
-                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-100">Phone Number</label>
+                                    <label for="name" class="block mb-2 text-xs xl:text-sm font-medium text-gray-100">Phone Number</label>
                                     <input type="tel" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required>
                                 </div>
                                  <div>
-                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-100">Your Message</label>
+                                    <label for="name" class="block mb-2 text-xs xl:text-sm font-medium text-gray-100">Your Message</label>
                                     <textarea rows="3" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required></textarea>
                                 </div>
                             </div>
                             <div class="mt-12">
-                                <button class="px-4 py-1.5 bg-emerald-500 hover:scale-x-105 transition-all duration-100 rounded-md text-white">Send Message <i class="las la-paper-plane -rotate-45 ml-1"></i></button>
+                                <button class="px-4 py-1.5 bg-emerald-500 hover:scale-x-105 transition-all duration-100 rounded-md text-xs xl:text-base">Send Message <i class="las la-paper-plane -rotate-45 ml-1"></i></button>
                             </div>
                         </form>
                     </div>
-                    <div class="rounded-lg p-24 px-48">
-                        <p class="text-gray-100 font-semibold mb-16">Contact Information</p>
+                    <div class="rounded-lg p-8 xl:p-24 xl:px-48">
+                        <p class="text-gray-100 font-semibold mb-8 xl:mb-16">Contact Information</p>
                         <div class="grid gap-2">
                             <div class="flex gap-2 text-gray-400 items-start text-sm">
                                 <i class="las la-map-marked-alt mt-1"></i>

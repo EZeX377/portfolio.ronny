@@ -1,261 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Homepage</title>
-    <!-- Custom -->
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="./public/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronny Das | Portfolio</title>
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/harabara" rel="stylesheet">
+    <style>
+    /* Custom scroll behavior */
+    html {
+        font-family: "Manrope", sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    .fongrav {
+        font-family: 'Harabara', sans-serif;
+
+    }
+    </style>
 </head>
-<style>
-html,
-body {
-    /*font-family: 'Roboto', sans-serif;*/
-    font-family: 'Montserrat', sans-serif;
-}
 
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
-
-::-webkit-scrollbar-track {
-    background: #171717;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 50px;
-    background: #404040;
-}
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #ffffff;
-    transition: background-color .5s ease-in-out 0s;
-    box-shadow: inset 0 0 20px 20px #23232329;
-}
-</style>
-
-<body class="bg-gray-900 overflow-hidden h-screen flex flex-col scroll-smooth">
-    <!-- <div class="flex space-x-2 fixed top-1/2 -translate-y-1/2 right-4" id="nav-buttons">
-        <ul class="items-center gap-6 text-sm text-gray-100">
-            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#about" id="about_tag" class="">About</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
-            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#services" id="services_tag" class="">Services</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
-            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#works" id="works_tag" class="">Works</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
-            <li class="flex space-x-2 py-3 items-center justify-end"><a href="index.html#contact" id="contact_tag" class="">Contact</a><span class="h-1 border-b border-gray-100 w-10 block"></span></li>
-        </ul>    
-    </div> -->
-    <nav class="">
-        <div class="px-2 xl:px-0 container mx-auto flex items-center justify-between py-8 text-gray-100">
-            <div class="">
-                <a href="index.html" class="text-2xl xl:text-4xl font-light"><span class="font-semibold text-emerald-500">Ronny</span> Das</a>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="w-full z-50 fixed top-0 left-0 transition-all duration-200">
+        <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+            <img src="./assets/mylogo2.png" alt="" class="h-13 lg:h-16 transition-all duration-100">
+            <ul class="hidden md:flex md:space-x-12 font-medium">
+                <li><a href="#about" class="hover:underline decoration-2 underline-offset-8">About</a></li>
+                <li><a href="#projects" class="hover:underline decoration-2 underline-offset-8">Projects</a></li>
+                <li><a href="#contact" class="hover:underline decoration-2 underline-offset-8">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-6">
+                <!-- Mobile menu button -->
+                <button id="menu-btn" class="focus:outline-none md:hidden">
+                    <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <div class=""><i data-lucide="linkedin" class="size-6 lg:size-8"></i></div>
             </div>
-            <div class="">
-                <div class="flex items-center gap-4">
-                    <a href="#" class="flex items-center gap-2 text-xs hover:text-gray-100"><i class="lab la-linkedin text-base xl:text-2xl"></i> <span class="text-gray-400 hover:text-gray-100">Linkedin</span></a>
-                    <a href="#" class="flex items-center gap-2 text-xs hover:text-gray-100"><i class="lab la-github text-base xl:text-2xl"></i> <span class="text-gray-400 hover:text-gray-100">Github</span></a>
-                    <div class="text-emerald-500 bg-neutral-800 py-1 px-2 xl:py-2 xl:px-3 rounded-full"><i class="las la-envelope-square text-base xl:text-2xl"></i></div>
-                </div>
-            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow">
+            <ul class="flex flex-col p-4 space-y-2">
+                <li><a href="#about" class="hover:underline decoration-2 underline-offset-8">About</a></li>
+                <li><a href="#projects" class="hover:underline decoration-2 underline-offset-8">Projects</a></li>
+                <li><a href="#contact" class="hover:underline decoration-2 underline-offset-8">Contact</a></li>
+            </ul>
         </div>
     </nav>
-    <div class="snap-mandatory flex-grow snap-x flex overflow-y-hidden scroll-smooth" id="scrl">
-        <!-- Hero -->
-        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center relative" id="about">
-            <img src="./assets/circles.png" alt="" class="absolute z-[-4] opacity-100 bottom-0 left-0 w-56 md:w-96 md:h-96 xl:w-72 xl:h-72 mx-auto">
-            <div class="p-2 xl:p-0 container mx-auto">
-                <div class="grid xl:grid-cols-2 gap-4 xl:gap-8 items-center text-center xl:text-left">
-                    <div class="relative xl:hidden">
-                        <img src="./assets/me3.png" alt="" class="rounded-full w-full md:max-w-2xl mx-auto object-cover object-top">
-                        <img src="./assets/grid.png" alt="" class="absolute z-[-4] opacity-100 bottom-0 right-0  w-64 md:w-80 md:h-80 mx-auto">
+    <!-- Hero -->
+    <div class="h-[70vh] lg:h-[700px] xl:h-[800px] 2xl:h-[1000px] relative overflow-hidden">
+        <img src="./assets/asset-1.webp" alt="" class="max-sm:max-w-xs max-lg:max-w-lg max-2xl:max-w-5xl absolute -top-12 max-xl:-top-[50rem] max-2xl:-top-[42rem] max-xl:-right-72 max-2xl:-right-44">
+        <img src="./assets/asset-2.webp" alt="" class="absolute max-sm:max-w-md max-sm:left-1 max-sm:top-32 max-md:max-w-3xl max-md:left-0 max-md:top-60 max-lg:max-w-lg max-lg:left-44 max-lg:top-44 max-xl:top-32">
+        <div class="absolute block left-0 top-0 bg-white/10 h-full w-full flex items-center justify-center">
+            <div class="max-w-6xl w-full mx-auto px-6 text-center lg:text-left pt-24">
+                <h1 class="fongrav text-6xl sm:text-8xl lg:text-9xl">ui/ux designer</h1>
+                <p class="mt-2 lg:mt-4 text-[1.7rem] lg:text-4xl font-medium">with a passion for creating thoughtful and <br>visually stunning digital experiences.</p>
+                <div class="flex mt-20 lg:mt-28 items-center gap-4 justify-center lg:justify-start">
+                    <div class="size-15 lg:size-18 flex items-center justify-center rounded-full border">
+                        <i data-lucide="move-down-right"></i>
                     </div>
-                    <div class="">
-                        <span class="bg-emerald-500 rounded-md py-2 px-4 text-xs xl:text-base">Front-End Developer</span>
-                        <h1 class="text-gray-100 text-2xl xl:text-6xl my-6">Talk is cheap. <br>Show me the code</h1>
-                        <h2 class="text-gray-400 text-sm xl:text-base">I design and code beautifully simple things, and I love what I do.</h2>
-                        <a href="index.html#contact" class="text-emerald-500 underline mt-8 xl:mt-12 block text-xs xl:text-base">LETS CHAT !</a>
-                        <div class="max-w-xs mx-auto xl:m-0">
-                            <div class="grid grid-cols-2 gap-6 mt-8 xl:mt-16">
-                                <div class="flex gap-4 items-center">
-                                    <p class="text-2xl xl:text-4xl font-semibold text-gray-100">4</p>
-                                    <span class="text-gray-400 text-xs xl:text-sm">YEARS OF EXPERIENCE</span>
-                                </div>
-                                <div class="flex gap-4 items-center">
-                                    <p class="text-2xl xl:text-4xl font-semibold text-gray-100">20+</p>
-                                    <span class="text-gray-400 text-xs xl:text-sm">PROJECTS COMPLETED</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative hidden xl:block">
-                        <img src="./assets/me3.png" alt="" class="rounded-full w-full md:max-w-2xl mx-auto object-cover object-top">
-                        <img src="./assets/grid.png" alt="" class="absolute z-[-4] opacity-100 bottom-0 right-0  w-64 md:w-80 md:h-80 mx-auto">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Services -->
-        <div class="p-2 snap-start snap-always h-full w-screen flex-shrink-0 flex flex-col items-center justify-center relative" id="services">
-            <img src="./assets/code1.png" alt="" class="absolute z-[-4] opacity-100 bottom-0 right-24 w-56 md:w-96 md:h-96 xl:w-72 xl:h-72 mx-auto opacity-5 z-[-1]">
-            <h1 class="text-gray-100 text-2xl xl:text-6xl my-6">What I Offer</h1>
-            <h2 class="text-gray-400 text-sm xl:text-base text-center">As a frontend developer, I offer a variety of services to create stunning and functional websites and web applications.</h2>   
-            <div class="grid xl:grid-cols-3 gap-4 xl:gap-8 items-center text-center xl:text-left flex-grow container mx-auto">
-                <div class="relative hidden xl:block">
-                    <img src="./assets/Programming.gif" alt="" class="max-w-lg bottom-0 left-0">
-                </div>
-                <div class="xl:col-span-2 grid xl:grid-cols-2 gap-4">
-                        <div class="text-gray-400 p-4 xl:p-8 rounded-md shadow rounded-md bg-gray-800 text-left flex gap-4 xl:block">
-                            <div class="border border-gray-700 rounded p-2 xl:p-4 w-fit h-fit xl:mb-4 mb-2 flex-shrink-0">
-                                <img src="./assets/webdesign.png" alt="" class="h-4 w-4 xl:h-8 xl:w-8">
-                            </div>
-                            <div class="">
-                                <h3 class="text-gray-100 font-semibold mb-2 xl:mb-4 text-xs xl:text-base">Website Design and Development</h3>
-                                <p class="text-xs xl:text-sm">I build tailored websites from scratch, ensuring they align with your brand identity and meet your specific needs and goals.</p>
-                            </div>
-                        </div>
-                        <div class="text-gray-400 p-4 xl:p-8 rounded-md shadow rounded-md bg-gray-800 text-left flex gap-4 xl:block">
-                            <div class="border border-gray-700 rounded p-2 xl:p-4 w-fit h-fit xl:mb-4 mb-2 flex-shrink-0">
-                                <img src="./assets/respdesign.png" alt="" class="h-4 w-4 xl:h-8 xl:w-8">
-                            </div>
-                            <div class="">
-                                <h3 class="text-gray-100 font-semibold mb-2 xl:mb-4 text-xs xl:text-base">Responsive Web Design</h3>
-                                <p class="text-xs xl:text-sm">I specialize in crafting websites that look and function seamlessly on desktops, tablets, and mobile devices, enhancing user satisfaction.</p>
-                            </div>
-                        </div>
-                        <div class="text-gray-400 p-4 xl:p-8 rounded-md shadow rounded-md bg-gray-800 text-left flex gap-4 xl:block">
-                            <div class="border border-gray-700 rounded p-2 xl:p-4 w-fit h-fit xl:mb-4 mb-2 flex-shrink-0">
-                                <img src="./assets/mockup.png" alt="" class="h-4 w-4 xl:h-8 xl:w-8">
-                            </div>
-                                <div class="">
-                                <h3 class="text-gray-100 font-semibold mb-2 xl:mb-4 text-xs xl:text-base">Figma Mockups</h3>
-                                <p class="text-xs xl:text-sm">I specialize in Figma mockups, providing interactive prototypes and high-fidelity UI design mockups. Collaborate with me to visualize your project's concept and ensure it looks great on all devices.</p>
-                            </div>
-                        </div>
-                        <div class="text-gray-400 p-4 xl:p-8 rounded-md shadow rounded-md bg-gray-800 text-left flex gap-4 xl:block">
-                            <div class="border border-gray-700 rounded p-2 xl:p-4 w-fit h-fit xl:mb-4 mb-2 flex-shrink-0">
-                                <img src="./assets/redesign.png" alt="" class="h-4 w-4 xl:h-8 xl:w-8">
-                            </div>
-                            <div class="">
-                                <h3 class="text-gray-100 font-semibold mb-2 xl:mb-4 text-xs xl:text-base">Website Redesign</h3>
-                                <p class="text-xs xl:text-sm">Transform your outdated website into a modern, visually appealing, and high-performing digital asset that resonates with your audience.</p>
-                            </div>
-                        </div>
-                    </div>
-            </div>   
-        </div>
-        <!-- Works -->
-        <!-- <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center" id="works">
-            <div class="container mx-auto">
-                <div class="flex gap-6">
-                    <div class="max-w-xs relative">
-                        <h2 class="text-gray-100 text-6xl mb-6 font-medium -rotate-90 relative top-3/4">My Works</h2>
-                    </div>
-                    <div class="flex-grow">
-                        <div class="grid grid-cols-3 gap-6">
-                            <div class="border border-neutral-700 h-96"></div>
-                            <div class="border border-neutral-700 h-96"></div>
-                            <div class="border border-neutral-700 h-96"></div>
-                            <div class="border border-neutral-700 h-96"></div>
-                            <div class="border border-neutral-700 h-96"></div>
-                            <div class="border border-neutral-700 h-96"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Contact -->
-        <div class="snap-start snap-always h-full w-screen flex-shrink-0 flex items-center justify-center relative" id="contact">
-            <img src="./assets/chat.png" alt="" class="absolute z-[-1] opacity-30 bottom-12 right-12 w-96 h-96 mx-auto object-cover object-top opacity-5">
-            <img src="./assets/cline.png" alt="" class="absolute z-[-4] opacity-100 top-1/4 left-0 w-56 md:w-96 md:h-96 xl:w-72 xl:h-72 mx-auto opacity-30">
-            <div class=""></div>
-            <div class="p-2 container mx-auto">
-                <h2 class="text-gray-100 text-2xl xl:text-6xl my-6 text-center">Let's Work Together!</h2>
-                <p class="text-gray-400 text-sm xl:text-base text-center">Feel free to call me or drop a message</p>
-                <div class="grid xl:grid-cols-2 gap-x-24 mt-8 xl:mt-16">
-                    <div class="rounded-lg p-8 xl:p-24 xl:px-48">
-                        <form action="">
-                            <div class="grid gap-3">
-                                 <div>
-                                    <label for="name" class="block mb-2 text-xs xl:text-sm font-medium text-gray-100">Name</label>
-                                    <input type="text" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required>
-                                </div>
-                                 <div>
-                                    <label for="name" class="block mb-2 text-xs xl:text-sm font-medium text-gray-100">Email</label>
-                                    <input type="email" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required>
-                                </div>
-                                 <div>                                    
-                                    <label for="name" class="block mb-2 text-xs xl:text-sm font-medium text-gray-100">Phone Number</label>
-                                    <input type="tel" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required>
-                                </div>
-                                 <div>
-                                    <label for="name" class="block mb-2 text-xs xl:text-sm font-medium text-gray-100">Your Message</label>
-                                    <textarea rows="3" id="name" class="bg-transparent block w-full px-0.5 border-0 border-b border-gray-500 focus:border-gray-100 text-gray-300 outline-0 ring-0" placeholder="" required></textarea>
-                                </div>
-                            </div>
-                            <div class="mt-12">
-                                <button class="px-4 py-1.5 bg-emerald-500 hover:scale-x-105 transition-all duration-100 rounded-md text-xs xl:text-base">Send Message <i class="las la-paper-plane -rotate-45 ml-1"></i></button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="rounded-lg p-8 xl:p-24 xl:px-48">
-                        <p class="text-gray-100 font-semibold mb-8 xl:mb-16">Contact Information</p>
-                        <div class="grid gap-2">
-                            <div class="flex gap-2 text-gray-400 items-start text-sm">
-                                <i class="las la-map-marked-alt mt-1"></i>
-                                <span>Ambari Rd, Fatasil Ambari, Guwahati, Assam 781001</span>
-                            </div>
-                            <div class="flex gap-2 text-gray-400 items-start text-sm">
-                                <i class="las la-phone-square mt-1"></i>
-                                <span>+91 967 803 7963</span>
-                            </div>
-                            <div class="flex gap-2 text-gray-400 items-start text-sm">
-                                <i class="las la-envelope-square mt-1"></i>
-                                <span>iamronnydas@gmail.com</span>
-                            </div>
-                        </div>
-                        <div class="mt-10">
-                            <p class="text-gray-100">Follow</p>
-                            <div class="flex gap-3">
-                                <a href="#" class="text-gray-400 hover:text-gray-100"><i class="lab la-linkedin text-2xl"></i></a>
-                                <a href="#" class="text-gray-400 hover:text-gray-100"><i class="lab la-github text-2xl"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    <span class="text-xl">VIEW PROJECTS</span>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- About Section -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-32">
+        <!-- Intro -->
+        <div class="flex gap-32 items-center mb-24">
+            <div>
+                <p class="text-4xl font-medium text-gray-900 leading-snug">
+                    Turning ideas into clean, functional interfaces
+                    that connect design with real-world usability.
+                </p>
+            </div>
+            <div class="flex justify-center flex-shrink-0">
+                <img src="./assets/me3.png" alt="Ronny Das" class="max-w-xs md:max-w-md rounded-full">
+            </div>
+        </div>
+        <!-- Full professional bio -->
+        <div class="">
+            <div class="flex gap-12">
+                <h2 class="text-2xl font-semibold mb-8 w-32 flex-shrink-0">BIO</h2>
+                <div class="">
+                    <p class="text-gray-600 leading-relaxed">
+                        I'm <span class="font-semibold text-gray-900">Ronny Das</span>, a UI/UX Developer & Project Lead with over <strong>6 years of experience</strong> crafting responsive, user-centered web interfaces.
+                        I specialize in building accessible, visually balanced designs using <strong>Figma, Tailwind CSS, Bootstrap, and JavaScript</strong> — often bringing static concepts to life within Laravel Blade templates.
+                    </p>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Currently, I lead frontend projects at <strong>Cognitive Tech</strong>, where I manage client requirements, guide teams, and ensure smooth delivery of digital experiences.
+                        My work blends creativity and precision — delivering solutions that not only look good but feel intuitive to use.
+                    </p>
+                    <p class="mt-6 text-gray-500 italic">
+                        “Design isn’t just how it looks — it’s how it works.”
+                    </p>
+                </div>
+            </div>
+            <!-- Skills + Tools Section -->
+            <div class="grid md:grid-cols-2 gap-16 mt-16">
+                <div class="flex gap-12">
+                    <h2 class="text-2xl font-semibold mb-8 w-32 flex-shrink-0">SKILLS</h2>
+                    <div>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>HTML5, CSS3, JavaScript</li>
+                            <li>Bootstrap 5, Tailwind CSS</li>
+                            <li>Laravel Blade</li>
+                            <li>Requirement Gathering</li>
+                            <li>Wireframing & Coordination</li>
+                            <li>Team Leadership</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex gap-12">
+                    <h2 class="text-2xl font-semibold mb-8 w-32 flex-shrink-0">TOOLS</h2>
+                    <div>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>Figma</li>
+                            <li>Photoshop</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 pl-44">
+                <a href="#" download class="inline-flex items-center gap-2 mt-8 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-700 transition">
+                    <i data-lucide="download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-32">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-12">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
+                    <h3 class="text-2xl font-semibold mb-2">EAP – MIS Portal</h3>
+                    <p class="text-gray-600 mb-4">Govt. In-House | 2021</p>
+                    <p class="text-gray-700">Designed a statewide MIS to track project and financial progress across departments.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
+                    <h3 class="text-2xl font-semibold mb-2">CEE/PAT Counselling Portals</h3>
+                    <p class="text-gray-600 mb-4">2022–2023</p>
+                    <p class="text-gray-700">Developed high-traffic portals supporting admit card generation and allotments.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Mutual Transfer Portal</h3>
+                    <p class="text-gray-600 mb-4">2025</p>
+                    <p class="text-gray-700">Simplified workflows with intuitive UI for statewide employee transfer requests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-32">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-8">Get In Touch</h2>
+            <p class="text-lg text-gray-600 mb-12">I’m always open to new opportunities and collaborations. Let’s create something great together.</p>
+            <a href="mailto:iamronnydas@gmail.com" class="text-lg bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-700 transition">Say Hello</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-6 text-center mt-auto">
+        <div class="flex flex-col lg:flex-row items-center gap-6 justify-center lg:justify-between max-w-6xl w-full mx-auto border-t-2 pt-6 px-6">
+            <p class="text-gray-600">&copy; 2025 Ronny Das | Get In Touch <a class="underline">iamronnydas@gmail.com</a></p>
+            <div class="-order-1 lg:order-0"><i data-lucide="linkedin" class="size-6 lg:size-8"></i></div>
+        </div>
+    </footer>
+    <!-- Include jQuery CDN (if not already included) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
-        $(document).ready(function () {
-            function activeUrl() {
-                var url = window.location.hash;
-                $("a").removeClass("text-green-500");
-                if(!url){
-                    $('#about_tag').addClass("text-green-500 font-medium");
-                }else{
-                $(url + "_tag").addClass("text-green-500 font-medium");
-                }
+    $(document).ready(function() {
+
+        lucide.createIcons();
+
+        const $navbar = $('nav');
+        const $logo = $navbar.find('img');
+
+        function navCheckPosition() {
+            if ($(this).scrollTop() > 50) {
+                $navbar.addClass('bg-gray-100');
+                $logo.removeClass('h-13 lg:h-16').addClass('h-11 lg:h-14');
+            } else {
+                $navbar.removeClass('bg-gray-100');
+                $logo.removeClass('h-11 lg:h-14').addClass('h-13 lg:h-16');
             }
-            activeUrl();
-            $(window).on("load", function() {
-                if (location.hash) location.href = location.hash;
-            });
-
-            $("a").on("click", function (e) {
-                e.preventDefault();
-                window.location.hash = e.target.id.substring(0, e.target.id.length - 4);
-                activeUrl();
-              });
+        }
+        // Scroll effect
+        $(window).on('scroll', function() {
+            navCheckPosition();
         });
-
+        navCheckPosition();
+        // Mobile menu toggle
+        $('#menu-btn').on('click', function() {
+            $('#mobile-menu').toggleClass('hidden');
+        });
+    });
     </script>
 </body>
 

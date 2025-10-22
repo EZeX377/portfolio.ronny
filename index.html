@@ -4,191 +4,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronny Das | Portfolio</title>
-    <!-- Tailwind CSS v4 CDN -->
+    <link rel="icon" type="image/png" href="./assets/mylogo-sm.svg">
+    <link rel="icon" type="image/png" href="./assets/mylogo-sm.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="./assets/mylogo-white-sm.svg" media="(prefers-color-scheme: dark)">
+    <title>Ronny Das - Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/harabara" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @custom-variant hover (&:hover);
+        @custom-variant dark (&:where(.dark, .dark *));
+    </style>
     <style>
-    /* Custom scroll behavior */
+        /* Custom scroll behavior */
     html {
         font-family: "Manrope", sans-serif;
         scroll-behavior: smooth;
     }
 
-    .fongrav {
+    .fontHarabara {
         font-family: 'Harabara', sans-serif;
 
+    }
+    spline-viewer#logo {
+        display: none!important;
+        width: 0!important;
+        height: 0!important;
     }
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+<body class="bg-neutral-100 text-gray-800 dark:bg-neutral-900 dark:text-gray-100 flex flex-col min-h-screen transition-colors duration-500">
     <!-- Navbar -->
-    <nav class="w-full z-50 fixed top-0 left-0 transition-all duration-200">
-        <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
-            <img src="./assets/mylogo2.png" alt="" class="h-13 lg:h-16 transition-all duration-100">
+    <nav class="w-full z-50 fixed top-0 left-0 transition-all duration-200 dark:text-gray-100">
+        <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-4 md:px-6">
+            <!-- Logo -->
+            <img src="./assets/mylogo.svg" class="h-16 block dark:hidden" alt="Logo" data-aos="fade-down" data-aos-duration="1000">
+            <img src="./assets/mylogo-white.svg" class="h-16 hidden dark:block" alt="Logo" data-aos="fade-down" data-aos-duration="1000">
+            <!-- Desktop Nav Links -->
             <ul class="hidden md:flex md:space-x-12 font-medium">
-                <li><a href="#about" class="hover:underline decoration-2 underline-offset-8">About</a></li>
-                <li><a href="#projects" class="hover:underline decoration-2 underline-offset-8">Projects</a></li>
-                <li><a href="#contact" class="hover:underline decoration-2 underline-offset-8">Contact</a></li>
+                <li data-aos="fade-down" data-aos-duration="1000"><a href="./about.html" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">About</a></li>
+                <li data-aos="fade-down" data-aos-duration="1500"><a href="#projects" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">Projects</a></li>
+                <li data-aos="fade-down" data-aos-duration="2000"><a href="#contact" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">Contact</a></li>
             </ul>
+            <!-- Right Section -->
             <div class="flex items-center gap-6">
                 <!-- Mobile menu button -->
-                <button id="menu-btn" class="focus:outline-none md:hidden">
-                    <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
+                <button id="menu-btn" class="focus:outline-none md:hidden text-gray-800 dark:text-gray-200">
+                    <i data-lucide="menu" class="size-6 lg:size-8"></i>
                 </button>
-                <div class=""><i data-lucide="linkedin" class="size-6 lg:size-8"></i></div>
+                <!-- LinkedIn Icon -->
+                <div class="text-gray-800 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors" data-aos="fade-down" data-aos-duration="1000">
+                    <i data-lucide="linkedin" class="size-6 lg:size-8 hover:rotate-3"></i>
+                </div>
+                <!-- Dark Mode Toggle -->
+                <label for="mode" class="bg-neutral-200 has-checked:bg-neutral-800 border border-neutral-300 has-checked:border-neutral-700 transition-all duration-200 ease-linear w-12 h-7 px-1 rounded-full flex items-center justify-start has-checked:justify-end has-checked:text-white hover:border-emerald-600 dark:hover:border-emerald-500 cursor-pointer" data-aos="fade-down" data-aos-duration="1000">
+                    <div class="block size-4 flex items-center justify-center shadow-lg rounded-full bg-neutral-50 dark:bg-neutral-800 has-checked:bg-black transition-all duration-200 ease-linear">
+                        <input type="checkbox" class="sr-only peer" id="mode">
+                        <i data-lucide="sun-dim" class="size-3 text-gray-700 dark:text-gray-300 peer-checked:hidden"></i>
+                        <i data-lucide="moon-star" class="size-3 text-gray-700 dark:text-gray-300 hidden peer-checked:block"></i>
+                    </div>
+                </label>
             </div>
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow">
-            <ul class="flex flex-col p-4 space-y-2">
-                <li><a href="#about" class="hover:underline decoration-2 underline-offset-8">About</a></li>
-                <li><a href="#projects" class="hover:underline decoration-2 underline-offset-8">Projects</a></li>
-                <li><a href="#contact" class="hover:underline decoration-2 underline-offset-8">Contact</a></li>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-neutral-900 border-t border-gray-200 dark:border-neutral-800 shadow">
+            <ul class="flex flex-col p-4 space-y-2 font-medium">
+                <li><a href="#about" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">About</a></li>
+                <li><a href="#projects" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">Contact</a></li>
             </ul>
         </div>
     </nav>
     <!-- Hero -->
-    <div class="h-[70vh] lg:h-[700px] xl:h-[800px] 2xl:h-[1000px] relative overflow-hidden">
-        <img src="./assets/asset-1.webp" alt="" class="max-sm:max-w-xs max-lg:max-w-lg max-2xl:max-w-5xl absolute -top-12 max-xl:-top-[50rem] max-2xl:-top-[42rem] max-xl:-right-72 max-2xl:-right-44">
-        <img src="./assets/asset-2.webp" alt="" class="absolute max-sm:max-w-md max-sm:left-1 max-sm:top-32 max-md:max-w-3xl max-md:left-0 max-md:top-60 max-lg:max-w-lg max-lg:left-44 max-lg:top-44 max-xl:top-32">
-        <div class="absolute block left-0 top-0 bg-white/10 h-full w-full flex items-center justify-center">
-            <div class="max-w-6xl w-full mx-auto px-6 text-center lg:text-left pt-24">
-                <h1 class="fongrav text-6xl sm:text-8xl lg:text-9xl">ui/ux designer</h1>
-                <p class="mt-2 lg:mt-4 text-[1.7rem] lg:text-4xl font-medium">with a passion for creating thoughtful and <br>visually stunning digital experiences.</p>
-                <div class="flex mt-20 lg:mt-28 items-center gap-4 justify-center lg:justify-start">
-                    <div class="size-15 lg:size-18 flex items-center justify-center rounded-full border">
-                        <i data-lucide="move-down-right"></i>
-                    </div>
-                    <span class="text-xl">VIEW PROJECTS</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About Section -->
-    <section id="about" class="max-w-6xl mx-auto px-6 py-32">
-        <!-- Intro -->
-        <div class="flex gap-32 items-center mb-24">
-            <div>
-                <p class="text-4xl font-medium text-gray-900 leading-snug">
-                    Turning ideas into clean, functional interfaces
-                    that connect design with real-world usability.
-                </p>
-            </div>
-            <div class="flex justify-center flex-shrink-0">
-                <img src="./assets/me3.png" alt="Ronny Das" class="max-w-xs md:max-w-md rounded-full">
-            </div>
-        </div>
-        <!-- Full professional bio -->
-        <div class="">
-            <div class="flex gap-12">
-                <h2 class="text-2xl font-semibold mb-8 w-32 flex-shrink-0">BIO</h2>
+    <div class="h-[90vh] relative overflow-hidden bg-gray-100 dark:bg-neutral-800 transition-colors duration-500 sticky top-0">
+        <!-- Decorative background images -->
+        <img src="./assets/asset-1.webp" alt="" class="max-sm:max-w-xs max-lg:max-w-lg max-2xl:max-w-5xl absolute -top-12 max-xl:-top-[50rem] max-2xl:-top-[42rem] max-xl:-right-72 max-2xl:-right-44 2xl:max-w-7xl 2xl:-top-96 2xl:right-12 2xl:-translate-x-16 opacity-90 dark:opacity-60 transition-opacity duration-500">
+        <img src="./assets/asset-2.webp" alt="" class="absolute max-sm:max-w-md max-sm:left-1 max-sm:top-32 max-md:max-w-3xl max-md:left-0 max-md:top-60 max-lg:max-w-lg max-lg:left-44 max-lg:top-44 max-2xl:max-w-7xl max-xl:top-32 2xl:max-w-7xl 2xl:left-72 2xl:top-44 opacity-90 dark:opacity-60 transition-opacity duration-500">
+        <!-- Semi-transparent overlay -->
+        <div class="absolute inset-0 bg-white/10 dark:bg-neutral-900/10 flex items-center justify-center transition-colors duration-500">
+            <!-- Content -->
+            <div class="max-w-6xl w-full mx-auto px-4 md:px-6 text-center lg:text-left pt-24">
                 <div class="">
-                    <p class="text-gray-600 leading-relaxed">
-                        I'm <span class="font-semibold text-gray-900">Ronny Das</span>, a UI/UX Developer & Project Lead with over <strong>6 years of experience</strong> crafting responsive, user-centered web interfaces.
-                        I specialize in building accessible, visually balanced designs using <strong>Figma, Tailwind CSS, Bootstrap, and JavaScript</strong> — often bringing static concepts to life within Laravel Blade templates.
+                    <h1 class="fontHarabara text-6xl sm:text-8xl lg:text-9xl text-neutral-900 dark:text-white transition-colors duration-500" data-aos="fade-down" data-aos-duration="1000">
+                        ui/ux designer
+                    </h1>
+                    <p class="mt-2 lg:mt-4 text-[1.7rem] lg:text-4xl font-medium text-neutral-700 dark:text-neutral-300 transition-colors duration-500" data-aos="fade-down" data-aos-duration="1500">
+                        with a passion for creating thoughtful and <br>visually stunning digital experiences.
                     </p>
-                    <p class="mt-4 text-gray-600 leading-relaxed">
-                        Currently, I lead frontend projects at <strong>Cognitive Tech</strong>, where I manage client requirements, guide teams, and ensure smooth delivery of digital experiences.
-                        My work blends creativity and precision — delivering solutions that not only look good but feel intuitive to use.
-                    </p>
-                    <p class="mt-6 text-gray-500 italic">
-                        “Design isn’t just how it looks — it’s how it works.”
-                    </p>
-                </div>
-            </div>
-            <!-- Skills + Tools Section -->
-            <div class="grid md:grid-cols-2 gap-16 mt-16">
-                <div class="flex gap-12">
-                    <h2 class="text-2xl font-semibold mb-8 w-32 flex-shrink-0">SKILLS</h2>
-                    <div>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>HTML5, CSS3, JavaScript</li>
-                            <li>Bootstrap 5, Tailwind CSS</li>
-                            <li>Laravel Blade</li>
-                            <li>Requirement Gathering</li>
-                            <li>Wireframing & Coordination</li>
-                            <li>Team Leadership</li>
-                        </ul>
+                    <div class="flex mt-20 lg:mt-28 items-center gap-4 justify-center lg:justify-start" data-aos="fade-down" data-aos-duration="2000">
+                        <div class="size-15 lg:size-18 flex items-center justify-center rounded-full border border-neutral-800 dark:border-neutral-200 transition-colors duration-500">
+                            <i data-lucide="move-down-right" class="text-neutral-800 dark:text-neutral-100 transition-colors duration-500"></i>
+                        </div>
+                        <span class="text-xl text-neutral-800 dark:text-neutral-100 transition-colors duration-500">
+                            VIEW PROJECTS
+                        </span>
                     </div>
                 </div>
-                <div class="flex gap-12">
-                    <h2 class="text-2xl font-semibold mb-8 w-32 flex-shrink-0">TOOLS</h2>
-                    <div>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>Figma</li>
-                            <li>Photoshop</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-16 pl-44">
-                <a href="#" download class="inline-flex items-center gap-2 mt-8 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-700 transition">
-                    <i data-lucide="download"></i> Download Resume
-                </a>
             </div>
         </div>
-    </section>
+        <spline-viewer url="https://prod.spline.design/L9wJZixrMT0e4Hkc/scene.splinecode" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="3000" data-aos-offset="0" class="block size-[500px] absolute top-1/2 -translate-y-1/2 right-1/3 translate-x-1/2"></spline-viewer>
+    </div>
     <!-- Projects Section -->
-    <section id="projects" class="py-32">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-12">Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
-                    <h3 class="text-2xl font-semibold mb-2">EAP – MIS Portal</h3>
-                    <p class="text-gray-600 mb-4">Govt. In-House | 2021</p>
-                    <p class="text-gray-700">Designed a statewide MIS to track project and financial progress across departments.</p>
-                </div>
-                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
-                    <h3 class="text-2xl font-semibold mb-2">CEE/PAT Counselling Portals</h3>
-                    <p class="text-gray-600 mb-4">2022–2023</p>
-                    <p class="text-gray-700">Developed high-traffic portals supporting admit card generation and allotments.</p>
-                </div>
-                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
-                    <h3 class="text-2xl font-semibold mb-2">Mutual Transfer Portal</h3>
-                    <p class="text-gray-600 mb-4">2025</p>
-                    <p class="text-gray-700">Simplified workflows with intuitive UI for statewide employee transfer requests.</p>
-                </div>
+    <section id="projects" class="relative py-16 md:py-32 bg-neutral-100">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-5xl font-medium mb-6 text-center md:text-left">My Projects</h2>
+            <!-- <p class="text-lg text-gray-500 dark:text-gray-400 mb-16">A selection of my work, showcasing design and development.</p> -->
+            <ul class="relative divide-y divide-neutral-400">
+                <li class="group relative cursor-pointer flex flex-col md:flex-row items-center text-center md:text-left justify-between gap-8 md:gap-32 py-12" data-img="https://naomicreates.co.za/wp-content/uploads/2024/09/empowering-natural-hair-featured-2048x1280.jpeg">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-medium hover:underline">EAP – MIS Portal</h3>
+                        <p class="text-base font-medium">2021, Govt. In-House</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-base font-normal tracking-normal">Designed and deployed a statewide MIS for tracking project and financial progress of EAP initiatives, improving reporting accuracy across departments.</p>
+                        <div class="flex flex-wrap justify-center items-center md:justify-start gap-2">
+                            <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Web</span>
+                            <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">UI/UX</span>
+                            <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Responsive Design</span>
+                        </div>
+                    </div>
+                    <a href="#" class="font-semibold hover:underline flex items-center gap-2 hover:gap-3 transition-all duration-200 ease-linear text-sm whitespace-nowrap flex-shrink-0 w-24">Read More <i data-lucide="move-right" class="size-4"></i></a>
+                </li>
+                <li class="group relative cursor-pointer flex flex-col md:flex-row items-center text-center md:text-left justify-between gap-8 md:gap-32 py-12" data-img="https://naomicreates.co.za/wp-content/uploads/2024/09/or-kids-featured.jpeg">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-medium hover:underline">Fund Management Portal</h3>
+                        <p class="text-base font-medium">2024, Govt. In-House</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-base font-normal tracking-normal">Developed intuitive financial dashboards and reporting interfaces for a state level fund monitoring system, enhancing transparency and inter departmental coordination.</p>
+                        <div class="flex flex-wrap justify-center items-center md:justify-start gap-2">
+                            <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Web</span>
+                            <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">UI/UX</span>
+                            <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Responsive Design</span>
+                        </div>
+                    </div>
+                    <a href="#" class="font-semibold hover:underline flex items-center gap-2 hover:gap-3 transition-all duration-200 ease-linear text-sm whitespace-nowrap flex-shrink-0 w-24">Read More <i data-lucide="move-right" class="size-4"></i></a>
+                </li>
+                <li class="group relative cursor-pointer flex flex-col md:flex-row items-center text-center md:text-left justify-between gap-8 md:gap-32 py-12" data-img="https://naomicreates.co.za/wp-content/uploads/2024/09/decluttering-with-purpose-featured.jpeg">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-medium hover:underline">Mutual Transfer Portal</h3>
+                        <p class="text-base font-medium">2025</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-base font-normal tracking-normal">Led design of a statewide portal enabling employees to process mutual transfer requests online, simplifying workflows and boosting adoption among staff.</p>
+                        <div class="flex flex-wrap justify-center items-center md:justify-start gap-2">
+                            <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Web</span>
+                            <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">UI/UX</span>
+                            <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Responsive Design</span>
+                        </div>
+                    </div>
+                    <a href="#" class="font-semibold hover:underline flex items-center gap-2 hover:gap-3 transition-all duration-200 ease-linear text-sm whitespace-nowrap flex-shrink-0 w-24">Read More <i data-lucide="move-right" class="size-4"></i></a>
+                </li>
+            </ul>
+            <!-- floating image preview -->
+            <div id="preview" class="pointer-events-none fixed top-0 left-0 w-full max-w-72 md:max-w-lg opacity-0 scale-95 rounded-xl shadow-2xl overflow-hidden z-50">
+                <img src="" alt="preview" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
-    <!-- Contact Section -->
-    <section id="contact" class="py-32">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-8">Get In Touch</h2>
-            <p class="text-lg text-gray-600 mb-12">I’m always open to new opportunities and collaborations. Let’s create something great together.</p>
-            <a href="mailto:iamronnydas@gmail.com" class="text-lg bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-700 transition">Say Hello</a>
+    <!-- <section class= py-16"md:py-32">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-24">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://naomicreates.co.za/wp-content/uploads/2024/09/empowering-natural-hair-featured-2048x1280.jpeg" alt="Project 1" class="hover:scale-95 rounded w-full h-auto object-cover transition-all duration-200 ease-linear">
+                </div>
+                <div class="md:w-1/2 space-y-4">
+                    <h3 class="text-3xl font-medium hover:underline">EAP – MIS Portal</h3>
+                    <p class="text-base font-medium">2021, Govt. In-House</p>
+                    <p class="text-gray-500 dark:text-gray-400">Designed and deployed a statewide MIS for tracking project and financial progress of EAP initiatives, improving reporting accuracy across departments.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Web</span>
+                        <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">UI/UX</span>
+                        <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Responsive Design</span>
+                    </div>
+                    <a href="#" class="font-semibold hover:underline flex items-center gap-2 hover:gap-3 transition-all duration-200 ease-linear">Read More <i data-lucide="move-right" class="size-4"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="project2.jpg" alt="Project 2" class="hover:scale-95 rounded w-full h-auto object-cover transition-all duration-200 ease-linear">
+                </div>
+                <div class="md:w-1/2 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Web</span>
+                        <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">UI/UX</span>
+                        <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Responsive Design</span>
+                    </div>
+                    <h3 class="text-3xl font-medium hover:underline">Fund Management Portal</h3>
+                    <p class="text-base font-medium">2024, Govt. In-House</p>
+                    <p class="text-gray-500 dark:text-gray-400">Developed intuitive financial dashboards and reporting interfaces for a state level fund monitoring system, enhancing transparency and inter departmental coordination.</p>
+                    <a href="#" class="font-semibold hover:underline flex items-center gap-2 hover:gap-3 transition-all duration-200 ease-linear">Read More <i data-lucide="move-right" class="size-4"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="project3.jpg" alt="Project 3" class="hover:scale-95 rounded w-full h-auto object-cover transition-all duration-200 ease-linear">
+                </div>
+                <div class="md:w-1/2 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Web</span>
+                        <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">UI/UX</span>
+                        <span class="border border-gray-600 rounded-full text-xs uppercase px-3 py-1">Responsive Design</span>
+                    </div>
+                    <h3 class="text-3xl font-medium hover:underline">Mutual Transfer Portal</h3>
+                    <p class="text-base font-medium">2025</p>
+                    <p class="text-gray-500 dark:text-gray-400">Led design of a statewide portal enabling employees to process mutual transfer requests online, simplifying workflows and boosting adoption among staff.</p>
+                    <a href="#" class="font-semibold hover:underline flex items-center gap-2 hover:gap-3 transition-all duration-200 ease-linear">Read More <i data-lucide="move-right" class="size-4"></i></a>
+                </div>
+            </div>
         </div>
-    </section>
+    </section> -->
     <!-- Footer -->
-    <footer class="bg-gray-100 py-6 text-center mt-auto">
-        <div class="flex flex-col lg:flex-row items-center gap-6 justify-center lg:justify-between max-w-6xl w-full mx-auto border-t-2 pt-6 px-6">
-            <p class="text-gray-600">&copy; 2025 Ronny Das | Get In Touch <a class="underline">iamronnydas@gmail.com</a></p>
-            <div class="-order-1 lg:order-0"><i data-lucide="linkedin" class="size-6 lg:size-8"></i></div>
+    <footer class="bg-gray-100 dark:bg-neutral-900 pb-6 text-center mt-auto transition-colors duration-500">
+        <div class="flex flex-col lg:flex-row items-center gap-6 justify-center lg:justify-between max-w-6xl w-full mx-auto border-t-2 border-gray-300 dark:border-neutral-700 pt-6 px-4 md:px-6 transition-colors duration-500">
+            <p class="text-gray-500 dark:text-gray-400">
+                &copy; 2025 <span class="font-medium text-gray-800 dark:text-gray-200">Ronny Das</span> |
+                Get In Touch
+                <a href="mailto:iamronnydas@gmail.com" class="underline hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">iamronnydas@gmail.com</a>
+            </p>
+            <div class="-order-1 lg:order-0 text-gray-800 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">
+                <i data-lucide="linkedin" class="size-6 lg:size-8 hover:rotate-3"></i>
+            </div>
         </div>
     </footer>
-    <!-- Include jQuery CDN (if not already included) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.85/build/spline-viewer.js"></script>
     <script>
     $(document).ready(function() {
 
+        AOS.init();
+        setTimeout(() => {
+            const spline = document.querySelector("spline-viewer");
+
+            if (spline && spline.shadowRoot) {
+                const logo = spline.shadowRoot.querySelector("#logo");
+                if (logo) {
+                    logo.style.display = "none";
+                    logo.style.width = "0";
+                    logo.style.height = "0";
+                }
+            }
+        }, 100);
         lucide.createIcons();
+
 
         const $navbar = $('nav');
         const $logo = $navbar.find('img');
 
+
+
+
         function navCheckPosition() {
             if ($(this).scrollTop() > 50) {
-                $navbar.addClass('bg-gray-100');
+                $navbar.addClass('bg-neutral-100 dark:bg-neutral-900');
                 $logo.removeClass('h-13 lg:h-16').addClass('h-11 lg:h-14');
             } else {
-                $navbar.removeClass('bg-gray-100');
+                $navbar.removeClass('bg-neutral-100 dark:bg-neutral-900');
                 $logo.removeClass('h-11 lg:h-14').addClass('h-13 lg:h-16');
             }
         }
@@ -200,6 +270,55 @@
         // Mobile menu toggle
         $('#menu-btn').on('click', function() {
             $('#mobile-menu').toggleClass('hidden');
+        });
+
+        // Set theme on page load from localStorage
+        if (localStorage.theme === 'dark') {
+            $('html').addClass('dark');
+            $('#mode').prop('checked', true);
+        }
+        // Listen for checkbox change
+        $('#mode').on('change', function() {
+            if (this.checked) {
+                $('html').addClass('dark');
+                localStorage.theme = 'dark';
+            } else {
+                $('html').removeClass('dark');
+                localStorage.removeItem('theme');
+            }
+        });
+    });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const preview = document.getElementById('preview');
+        const previewImg = preview.querySelector('img');
+
+        let mouse = { x: 0, y: 0 };
+        let pos = { x: 0, y: 0 };
+
+        // Update cursor position
+        document.addEventListener('mousemove', e => {
+            mouse.x = e.clientX + 20; // offset
+            mouse.y = e.clientY + 20;
+        });
+
+        // Smooth follow animation
+        gsap.ticker.add(() => {
+            pos.x += (mouse.x - pos.x) * 0.15;
+            pos.y += (mouse.y - pos.y) * 0.15;
+            gsap.set(preview, { x: pos.x, y: pos.y });
+        });
+
+        // Hover logic
+        document.querySelectorAll('li[data-img]').forEach(li => {
+            li.addEventListener('mouseenter', () => {
+                previewImg.src = li.dataset.img;
+                gsap.to(preview, { opacity: 1, scale: 1, duration: 0.3 });
+            });
+            li.addEventListener('mouseleave', () => {
+                gsap.to(preview, { opacity: 0, scale: 0.95, duration: 0.3 });
+            });
         });
     });
     </script>

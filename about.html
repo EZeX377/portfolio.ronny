@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/mylogo-sm.svg">
+    <link rel="icon" type="image/png" href="./assets/mylogo-sm.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="./assets/mylogo-white-sm.svg" media="(prefers-color-scheme: dark)">
+    <title>Ronny Das - Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/harabara" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @custom-variant hover (&:hover);
+        @custom-variant dark (&:where(.dark, .dark *));
+    </style>
+    <style>
+        /* Custom scroll behavior */
+    html {
+        font-family: "Manrope", sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    .fontHarabara {
+        font-family: 'Harabara', sans-serif;
+
+    }
+    </style>
+</head>
+
+<body class="bg-neutral-100 text-gray-800 dark:bg-neutral-900 dark:text-gray-100 flex flex-col min-h-screen transition-colors duration-500">
+    <!-- Navbar -->
+    <nav class="w-full z-50 fixed top-0 left-0 transition-all duration-200 dark:text-gray-100">
+        <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-4 md:px-6">
+            <!-- Logo -->
+            <img src="./assets/mylogo.svg" class="h-16 block dark:hidden" alt="Logo">
+            <img src="./assets/mylogo-white.svg" class="h-16 hidden dark:block" alt="Logo">
+            <!-- Desktop Nav Links -->
+            <ul class="hidden md:flex md:space-x-12 font-medium">
+                <li><a href="./about.html" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">About</a></li>
+                <li><a href="#projects" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">Contact</a></li>
+            </ul>
+            <!-- Right Section -->
+            <div class="flex items-center gap-6">
+                <!-- Mobile menu button -->
+                <button id="menu-btn" class="focus:outline-none md:hidden text-gray-800 dark:text-gray-200">
+                    <i data-lucide="menu" class="size-6 lg:size-8"></i>
+                </button>
+                <!-- LinkedIn Icon -->
+                <div class="text-gray-800 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">
+                    <i data-lucide="linkedin" class="size-6 lg:size-8 hover:rotate-3"></i>
+                </div>
+                <!-- Dark Mode Toggle -->
+                <label for="mode" class="bg-neutral-200 has-checked:bg-neutral-800 border border-neutral-300 has-checked:border-neutral-700 transition-all duration-200 ease-linear w-12 h-7 px-1 rounded-full flex items-center justify-start has-checked:justify-end has-checked:text-white hover:border-emerald-600 dark:hover:border-emerald-500 cursor-pointer">
+                    <div class="block size-4 flex items-center justify-center shadow-lg rounded-full bg-neutral-50 dark:bg-neutral-800 has-checked:bg-black transition-all duration-200 ease-linear">
+                        <input type="checkbox" class="sr-only peer" id="mode">
+                        <i data-lucide="sun-dim" class="size-3 text-gray-700 dark:text-gray-300 peer-checked:hidden"></i>
+                        <i data-lucide="moon-star" class="size-3 text-gray-700 dark:text-gray-300 hidden peer-checked:block"></i>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-neutral-900 border-t border-gray-200 dark:border-neutral-800 shadow">
+            <ul class="flex flex-col p-4 space-y-2 font-medium">
+                <li><a href="#about" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">About</a></li>
+                <li><a href="#projects" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:underline decoration-2 underline-offset-8 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- About Section -->
+    <section id="about" class="max-w-6xl mx-auto px-4 md:px-6 py-20 md:py-28 lg:py-32 transition-colors duration-300">
+        <!-- Intro -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-32 items-center mb-16 md:mb-24">
+            <div>
+                <p class="text-2xl sm:text-3xl md:text-4xl font-medium text-gray-900 dark:text-gray-100 leading-snug tracking-wide transition-colors duration-300 text-center md:text-left py-12">
+                    Turning ideas into clean, functional interfaces
+                    that connect design with real-world usability.
+                </p>
+            </div>
+            <div class="flex justify-center md:justify-end flex-shrink-0">
+                <img src="./assets/me3.png" alt="Ronny Das" class="w-96 rounded-full">
+            </div>
+        </div>
+        <!-- Full professional bio -->
+        <div>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+                <h2 class="text-2xl font-semibold fontHarabara text-gray-900 dark:text-gray-100 transition-colors duration-300 text-center md:text-left md:w-24 flex-shrink-0">
+                    BIO
+                </h2>
+                <div class="space-y-4">
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300 text-center md:text-left">
+                        I'm <span class="font-semibold text-emerald-600 dark:text-emerald-500">Ronny Das</span>, a UI/UX Developer & Project Lead with over <strong>6 years of experience</strong> crafting responsive, user-centered web interfaces.
+                        I specialize in building accessible, visually balanced designs using <strong>Figma, Tailwind CSS, Bootstrap, and JavaScript</strong> — often bringing static concepts to life within Laravel Blade templates.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300 text-center md:text-left">
+                        Currently, I lead frontend projects at <strong>Cognitive Tech</strong>, where I manage client requirements, guide teams, and ensure smooth delivery of digital experiences.
+                        My work blends creativity and precision — delivering solutions that not only look good but feel intuitive to use.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400 italic transition-colors duration-300 text-center md:text-left">
+                        “Design isn’t just how it looks — it’s how it works.”
+                    </p>
+                </div>
+            </div>
+            <!-- Skills + Tools Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mt-16">
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+                    <h2 class="text-2xl font-semibold fontHarabara text-gray-900 dark:text-gray-100 transition-colors duration-300 text-center md:text-left md:w-24 flex-shrink-0">
+                        SKILLS
+                    </h2>
+                    <ul class="space-y-2 sm:space-y-3 text-gray-600 dark:text-gray-400 transition-colors duration-300 text-center md:text-left">
+                        <li>HTML5, CSS3, JavaScript</li>
+                        <li>Bootstrap 5, Tailwind CSS</li>
+                        <li>Laravel Blade</li>
+                        <li>Requirement Gathering</li>
+                        <li>Wireframing & Coordination</li>
+                        <li>Team Leadership</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+                    <h2 class="text-2xl font-semibold fontHarabara text-gray-900 dark:text-gray-100 transition-colors duration-300 text-center md:text-left md:w-24 flex-shrink-0">
+                        TOOLS
+                    </h2>
+                    <ul class="space-y-2 sm:space-y-3 text-gray-600 dark:text-gray-400 transition-colors duration-300 text-center md:text-left">
+                        <li>Figma</li>
+                        <li>Photoshop</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Resume Button -->
+            <div class="mt-16 text-center md:text-left md:pl-36">
+                <a href="#" download class="inline-flex items-center gap-2 bg-emerald-700 dark:bg-emerald-600 text-white px-6 py-3 rounded-full font-medium
+                hover:bg-emerald-600 dark:hover:bg-emerald-500 hover:scale-110 transition-all duration-200 ease-linear">
+                    <i data-lucide="download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-medium mb-8 fontHarabara text-neutral-900 dark:text-white transition-colors duration-300">
+                Let's work together?
+            </h2>
+            <p class="text-lg text-gray-500 dark:text-gray-400 max-w-lg mx-auto transition-colors duration-300">
+                I’m always open to new opportunities and collaborations. Let’s create something great together.
+            </p>
+            <a href="#" download class="inline-flex items-center gap-2 mt-8 text-emerald-700 dark:text-white border border-emerald-700 dark:border-emerald-600
+             hover:text-white hover:bg-emerald-600 dark:hover:bg-emerald-500 px-6 py-3 rounded-full font-medium
+             hover:scale-110 transition-all duration-200 ease-linear">
+                Email me
+            </a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-neutral-900 pb-6 text-center mt-auto transition-colors duration-500">
+        <div class="flex flex-col lg:flex-row items-center gap-6 justify-center lg:justify-between max-w-6xl w-full mx-auto border-t-2 border-gray-300 dark:border-neutral-700 pt-6 px-4 md:px-6 transition-colors duration-500">
+            <p class="text-gray-600 dark:text-gray-400">
+                &copy; 2025 <span class="font-medium text-gray-800 dark:text-gray-200">Ronny Das</span> |
+                Get In Touch
+                <a href="mailto:iamronnydas@gmail.com" class="underline hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">iamronnydas@gmail.com</a>
+            </p>
+            <div class="-order-1 lg:order-0 text-gray-800 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors">
+                <i data-lucide="linkedin" class="size-6 lg:size-8 hover:rotate-3"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- GSAP CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        lucide.createIcons();
+
+
+        const $navbar = $('nav');
+        const $logo = $navbar.find('img');
+
+
+
+
+        function navCheckPosition() {
+            if ($(this).scrollTop() > 50) {
+                $navbar.addClass('bg-neutral-100 dark:bg-neutral-900');
+                $logo.removeClass('h-13 lg:h-16').addClass('h-11 lg:h-14');
+            } else {
+                $navbar.removeClass('bg-neutral-100 dark:bg-neutral-900');
+                $logo.removeClass('h-11 lg:h-14').addClass('h-13 lg:h-16');
+            }
+        }
+        // Scroll effect
+        $(window).on('scroll', function() {
+            navCheckPosition();
+        });
+        navCheckPosition();
+        // Mobile menu toggle
+        $('#menu-btn').on('click', function() {
+            $('#mobile-menu').toggleClass('hidden');
+        });
+
+        // Set theme on page load from localStorage
+        if (localStorage.theme === 'dark') {
+            $('html').addClass('dark');
+            $('#mode').prop('checked', true);
+        }
+        // Listen for checkbox change
+        $('#mode').on('change', function() {
+            if (this.checked) {
+                $('html').addClass('dark');
+                localStorage.theme = 'dark';
+            } else {
+                $('html').removeClass('dark');
+                localStorage.removeItem('theme');
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>

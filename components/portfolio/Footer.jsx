@@ -1,5 +1,4 @@
-import { email, linkedinUrl } from "./content";
-import LinkedInIcon from "./LinkedInIcon";
+import { email } from "./content";
 
 export default function Footer() {
   return (

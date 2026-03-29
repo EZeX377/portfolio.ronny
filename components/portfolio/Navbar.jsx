@@ -6,8 +6,7 @@ import Image from "next/image";
 
 import logoLight from "@/assets/mylogo2-sm.svg";
 import logoDark from "@/assets/mylogo2-sm-w.svg";
-import { linkedinUrl, navItems } from "./content";
-import LinkedInIcon from "./LinkedInIcon";
+import { navItems } from "./content";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {

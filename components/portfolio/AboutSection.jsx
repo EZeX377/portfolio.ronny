@@ -11,7 +11,7 @@ import networkArtwork from "@/assets/network.webp";
 import uiArtwork from "@/assets/ui.png";
 import chatArtwork from "@/assets/chat.webp";
 import StatusBadge from "./StatusBadge";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { MessageSquare, MoveRight } from "lucide-react";
 
 

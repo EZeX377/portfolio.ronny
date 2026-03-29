@@ -11,7 +11,7 @@ export function Reveal({ children, delay = 0, duration = 0 }) {
     <div className="overflow-hidden">
       <motion.div
         initial={{ y: "100%" }}
-        whileInView={{ y: "0%" }}
+        whileInView={{ y: "0%", marginBottom: "3px" }}
         viewport={{ once: true }}
         transition={{
           duration,
@@ -62,7 +62,7 @@ export default function HeroSection() {
       <div className="section-shell relative z-10 flex min-h-[100svh] flex-col items-center justify-center pb-24 pt-28 text-center md:pt-32 lg:pb-32">
         <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center">
           <Reveal duration={1.9}>
-            <h1 className="fontHarabara text-balance text-5xl font-extrabold leading-[0.95] text-slate-800 dark:text-slate-100 sm:text-6xl md:text-7xl lg:text-9xl">
+            <h1 className="font-harabara text-balance text-5xl font-extrabold leading-[0.95] text-slate-800 dark:text-slate-100 sm:text-6xl md:text-7xl lg:text-9xl">
               Hi, I am Ronny Das
             </h1>
           </Reveal>

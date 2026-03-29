@@ -5,6 +5,9 @@
   --font-harabara: "Harabara", sans-serif;
 }
 
+/* Stable class-based dark mode for v4/Next.js */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   color-scheme: light;
 }

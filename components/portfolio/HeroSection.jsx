@@ -43,7 +43,7 @@ export function FadeContent({ children, delay = 0, duration = 0 }) {
 
 export default function HeroSection() {
   return (
-    <header className="relative min-h-[100svh] overflow-hidden">
+    <header className="relative min-h-svh overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute inset-0 opacity-5 dark:opacity-[0.12]"
@@ -59,7 +59,7 @@ export default function HeroSection() {
         className="absolute left-1/2 top-[37%] h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.8)_0%,rgba(255,255,255,0)_70%)] blur-[200px] dark:bg-[radial-gradient(circle,rgba(0,0,0,1)_30%,rgba(0,0,0,0)_70%)] sm:h-[700px] sm:w-[700px] lg:h-[700px] lg:w-[700px]"
       />
 
-      <div className="section-shell relative z-10 flex min-h-[100svh] flex-col items-center justify-center pb-24 pt-28 text-center md:pt-32 lg:pb-32">
+      <div className="section-shell relative z-10 flex min-h-svh flex-col items-center justify-center pb-24 pt-28 text-center md:pt-32 lg:pb-32">
         <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center">
           <Reveal duration={1.9}>
             <h1 className="font-harabara text-balance text-5xl font-extrabold leading-[0.95] text-slate-800 dark:text-slate-100 sm:text-6xl md:text-7xl lg:text-9xl">

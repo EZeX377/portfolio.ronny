@@ -7,10 +7,12 @@ import isoGridArtwork from "@/assets/iso-grid.webp";
 import gridArtwork from "@/assets/grid.svg";
 import stackArtwork from "@/assets/stack-bg.webp";
 import stackArtworkAlt from "@/assets/stack-bg2.webp";
+import networkArtwork from "@/assets/network.webp";
 import uiArtwork from "@/assets/ui.png";
+import chatArtwork from "@/assets/chat.webp";
 import StatusBadge from "./StatusBadge";
 import { delay, motion } from "framer-motion";
-import { MoveRight } from "lucide-react";
+import { MessageSquare, MoveRight } from "lucide-react";
 
 
 
@@ -32,6 +34,23 @@ export default function AboutSection() {
   const contentVariants = {
     initial: { y: 0 },
     hover: { y: -3 },
+  };
+  const msgVariants = {
+    initial: {
+      scale: 1,
+      x: 0,
+      y: 0,
+    },
+    hover: {
+      scale: 1.03,
+      x: -4,
+      y: -4,
+      opacity: 0.06,
+    },
+  };
+  const networkVariants = {
+    initial: { y: 0, scale: 1 },
+    hover: { y: 6, scale: 1.02, opacity: 0.1 },
   };
 
   return (
@@ -67,6 +86,7 @@ export default function AboutSection() {
             <Image
               src={isoGridArtwork}
               alt=""
+              priority
               aria-hidden="true"
               className="absolute -right-44 -top-14 hidden min-h-96 scale-150 opacity-35 sm:block"
             />
@@ -94,18 +114,38 @@ export default function AboutSection() {
             </motion.div>
           </motion.div>
 
-          <div className="surface-card-soft relative flex flex-col justify-center overflow-hidden px-6 py-8 md:px-7">
+          <motion.div initial="initial"
+            whileHover="hover"
+            animate="initial"
+            transition={{ duration: 0.5, ease: customEase }} className="surface-card-soft relative flex flex-col justify-center overflow-hidden px-6 py-8 md:px-7">
             <div className="">
-              <h3 className="text-xl font-semibold text-neutral-900 dark:text-white md:text-2xl">
+              <h3 className="text-lg font-semibold text-neutral-900 dark:text-white md:text-xl">
                 Project Delivery &amp; Ownership
               </h3>
               <p className="muted-copy mt-3 text-sm font-medium leading-5">
                 Leading end-to-end delivery across requirements, stakeholder coordination, implementation, and deployment for live systems.
               </p>
             </div>
-          </div>
+            <motion.div
+              variants={networkVariants}
+              transition={{ duration: 0.5, ease: customEase }}
+              className="absolute -right-32 -top-0 z-0 hidden max-w-[300px] sm:block h-auto opacity-[0.06] dark:opacity-[0.08]"
+              style={{ willChange: "transform" }}
+            >
+              <Image
+                src={networkArtwork}
+                alt="Close-up editor artwork representing frontend implementation and interface development"
+                className="h-full object-contain w-auto -rotate-45"
+              />
+            </motion.div>
+          </motion.div>
 
-          <div className="relative flex min-h-[220px] flex-col items-center justify-center rounded-3xl border border-indigo-200/60 bg-gradient-to-br from-indigo-600/90 to-violet-500/80 px-6 py-7 text-center text-white shadow-sm shadow-indigo-200/20 dark:border-indigo-700/45 dark:from-indigo-900/80 dark:to-violet-900/70 dark:shadow-none">
+          <motion.div
+            initial="initial"
+            whileHover="hover"
+            animate="initial"
+            transition={{ duration: 0.5, ease: customEase }}
+            className="relative flex min-h-[220px] flex-col items-center justify-center rounded-3xl border overflow-hidden border-indigo-200/60 bg-gradient-to-br from-indigo-600/90 to-violet-500/80 px-6 py-7 text-center text-white shadow-sm shadow-indigo-200/20 dark:border-indigo-700/45 dark:from-indigo-900/80 dark:to-violet-900/70 dark:shadow-none">
             <div className="flex w-full max-w-[320px] flex-col items-center">
               <StatusBadge label="Open to Opportunities" />
               <p className="mt-4 max-w-[32ch] text-sm font-medium leading-6 text-white/88 md:text-sm">
@@ -115,10 +155,26 @@ export default function AboutSection() {
                 href="#contact"
                 className="focus-ring mt-6 inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/18 bg-white/10 px-5 py-2 text-sm font-semibold text-white/92 transition-colors duration-150 hover:bg-white/16"
               >
-                View Contact <MoveRight className="size-4 ml-1" />
+                View Contact <MoveRight className="size-4 ml-1 " />
               </a>
             </div>
-          </div>
+            <motion.div
+              initial={{ scale: 1, x: 0, y: 0 }}
+              variants={msgVariants}
+              transition={{
+                duration: 0.5,
+                delay: 0.15,
+                ease: customEase,
+              }}
+              className="absolute -bottom-12 -right-12 opacity-[0.06] dark:opacity-[0.03] w-56"
+            >
+              <Image
+                src={chatArtwork}
+                alt="Close-up editor artwork representing frontend implementation and interface development"
+                className="h-full object-contain w-auto"
+              />
+            </motion.div>
+          </motion.div>
 
           <div className="grid grid-cols-1 gap-6 md:col-span-4 md:grid-cols-4">
             <motion.div className="surface-card-soft relative overflow-hidden px-6 py-8 col-span-2"
@@ -180,7 +236,7 @@ export default function AboutSection() {
                 </motion.div>
                 <motion.div
                   variants={imageVariants2}
-                  transition={{ duration: 0.7, ease: customEase }}
+                  transition={{ duration: 0.7, delay: 0.15, ease: customEase }}
                   className="absolute -right-2 top-0 h-full w-auto"
                   style={{ willChange: "transform" }}
                 >
@@ -193,10 +249,10 @@ export default function AboutSection() {
                 className="relative z-10 max-w-[34ch] pt-24"
                 style={{ willChange: "transform" }}
               >
-                <h3 className="mb-3 text-xl font-semibold text-neutral-900 dark:text-white md:text-2xl">
+                <h3 className="mb-3 text-lg font-semibold text-neutral-900 dark:text-white md:text-xl">
                   Tools &amp; Technologies
                 </h3>
-                <p className="muted-copy max-w-[32ch] text-base font-medium leading-5">
+                <p className="muted-copy max-w-[45ch] text-base font-medium leading-5">
                   Core tools used across frontend development, design, and system delivery.
                 </p>
               </motion.div>

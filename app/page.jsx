@@ -9,18 +9,18 @@ import SmoothScroll from "@/components/portfolio/SmoothScroll";
 
 export default function Home() {
   return (
-    <div className="page-shell flex min-h-screen flex-col">
-      <Navbar />
-      <main id="top" className="flex-1 overflow-x-hidden -mt-[96px]">
-        <SmoothScroll>
+    <SmoothScroll>
+      <div className="page-shell flex min-h-screen flex-col">
+        <Navbar />
+        <main id="top" className="flex-1 overflow-x-hidden -mt-[96px]">
           <HeroSection />
           <AboutSection />
           <ProjectsSection />
           {/* <SkillsSection /> */}
           <ContactSection />
-        </SmoothScroll>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </SmoothScroll>
   );
 }

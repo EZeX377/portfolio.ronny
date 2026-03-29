@@ -66,9 +66,9 @@ export const contactMethods = [
     value: email,
     href: `mailto:${email}`
   },
-  {
-    label: "LinkedIn",
-    value: "linkedin.com/in/iamronnydas",
-    href: linkedinUrl
-  }
+  // {
+  //   label: "LinkedIn",
+  //   value: "linkedin.com/in/iamronnydas",
+  //   href: linkedinUrl
+  // }
 ];

@@ -102,7 +102,7 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <div className="hidden items-center gap-5 md:flex">
+        {/* <div className="hidden items-center gap-5 md:flex">
           <a
             href={linkedinUrl}
             target="_blank"
@@ -113,9 +113,12 @@ export default function Navbar() {
             <LinkedInIcon className="h-6 w-6 hover:rotate-3" />
           </a>
           <ThemeToggle isDark={isDark} onToggle={() => setIsDark((current) => !current)} />
+        </div> */}
+        <div className="hidden items-center md:flex">
+          <ThemeToggle isDark={isDark} onToggle={() => setIsDark((current) => !current)} />
         </div>
 
-        <div className="z-[100] flex items-center justify-end gap-3 md:hidden">
+        {/* <div className="z-[100] flex items-center justify-end gap-3 md:hidden">
           <a
             href={linkedinUrl}
             target="_blank"
@@ -125,6 +128,18 @@ export default function Navbar() {
           >
             <LinkedInIcon className="h-6 w-6 hover:rotate-3" />
           </a>
+          <button
+            type="button"
+            aria-controls="mobile-navigation"
+            aria-expanded={menuOpen}
+            aria-label="Toggle menu"
+            onClick={() => setMenuOpen((current) => !current)}
+            className="focus-ring rounded-full p-2 text-neutral-700 dark:text-neutral-200"
+          >
+            {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div> */}
+        <div className="z-[100] flex items-center justify-end md:hidden">
           <button
             type="button"
             aria-controls="mobile-navigation"

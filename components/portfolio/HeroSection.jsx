@@ -85,7 +85,7 @@ export default function HeroSection() {
                   <MoveDownRight className="text-indigo-500 transition-colors duration-150 group-hover:text-white dark:text-indigo-400 dark:group-hover:text-slate-950" />
                 </span>
                 <span className="text-lg font-medium tracking-wide text-slate-800 underline-offset-4 transition-colors duration-150 group-hover:text-indigo-600 group-hover:underline dark:text-slate-100 dark:group-hover:text-indigo-400 sm:text-xl">
-                  EXPLORE PROJECTS
+                  VIEW MY WORK
                 </span>
               </a>
             </div>

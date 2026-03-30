@@ -1,4 +1,3 @@
-import Navbar from "@/components/portfolio/Navbar";
 import HeroSection from "@/components/portfolio/HeroSection";
 import AboutSection from "@/components/portfolio/AboutSection";
 import ProjectsSection from "@/components/portfolio/ProjectsSection";
@@ -9,18 +8,17 @@ import SmoothScroll from "@/components/portfolio/SmoothScroll";
 
 export default function Home() {
   return (
-    <SmoothScroll>
-      <div className="page-shell flex min-h-screen flex-col">
-        <Navbar />
-        <main id="top" className="flex-1 overflow-x-hidden -mt-[96px]">
+    <>
+      <SmoothScroll>
+        <main id="top" className="flex-1 overflow-x-hidden">
           <HeroSection />
           <AboutSection />
           <ProjectsSection />
-          {/* <SkillsSection /> */}
+          <SkillsSection />
           <ContactSection />
         </main>
         <Footer />
-      </div>
-    </SmoothScroll>
+      </SmoothScroll>
+    </>
   );
 }

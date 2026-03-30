@@ -10,13 +10,15 @@ export default function ThemeToggle({ isDark, onToggle }) {
   }, []);
 
   return (
-    <button
+    <motion.button
       type="button"
       role="switch"
       aria-checked={isDark}
       aria-label="Toggle dark mode"
       onClick={onToggle}
-      className={`focus-ring flex h-8 w-14 items-center rounded-full border px-1 transition-all duration-200 ease-linear border-neutral-300 bg-white text-neutral-800 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white`}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.9 }}
+      className={`focus-ring flex h-8 w-14 items-center rounded-full border px-1 transition-colors duration-200 ease-linear border-neutral-300 bg-white text-neutral-800 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white`}
     >
       <div className="relative flex h-full w-full items-center">
         {mounted && (
@@ -34,6 +36,6 @@ export default function ThemeToggle({ isDark, onToggle }) {
           </motion.span>
         )}
       </div>
-    </button>
+    </motion.button>
   );
 }

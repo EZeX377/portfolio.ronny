@@ -54,8 +54,8 @@ export default function AboutSection() {
   };
 
   return (
-    <section id="about" aria-labelledby="about-heading" className="section-block page-shell">
-      <div className="section-shell space-y-10">
+    <section id="about" aria-labelledby="about-heading" className="section-block">
+      <div className="section-shell space-y-12 md:space-y-16 lg:space-y-20 2xl:space-y-24">
         <div className="space-y-4">
           <h2 id="about-heading" className="section-heading">
             More Than UI, Delivering Systems That Work
@@ -65,16 +65,17 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
-          <motion.div className="surface-card-soft relative row-span-1 col-span-3 flex flex-col justify-end overflow-hidden px-6 py-8 md:row-span-2 md:px-8 md:py-10"
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <motion.div className="surface-card-soft relative col-span-1 md:col-span-2 md:row-span-2 flex flex-col justify-end overflow-hidden"
             initial="initial"
             whileHover="hover"
+            whileTap="hover"
             animate="initial"
             transition={{ duration: 0.5, ease: customEase }}>
             <motion.div
               variants={imageVariants}
               transition={{ duration: 0.5, ease: customEase }}
-              className="absolute -right-60 -top-10 z-10 hidden h-80 w-auto sm:block md:h-[450px]"
+              className="absolute -right-48 md:-right-60 -top-8 md:-top-10 z-0 h-80 w-auto md:h-[450px]"
               style={{ willChange: "transform" }}
             >
               <Image
@@ -85,15 +86,15 @@ export default function AboutSection() {
             </motion.div>
             <Image
               src={isoGridArtwork}
-              alt=""
+              alt="Isometric perspective grid illustrating structured system architecture and delivery frameworks"
               priority
               aria-hidden="true"
-              className="absolute -right-44 -top-14 hidden min-h-96 scale-150 opacity-35 sm:block"
+              className="absolute md:-right-44 -top-14 w-full scale-150 opacity-35"
             />
             <motion.div
               variants={contentVariants}
               transition={{ duration: 0.4, ease: customEase }}
-              className="relative z-10 max-w-[60ch] pt-36 md:pt-40"
+              className="relative z-10 max-w-[60ch] pt-56 md:pt-32"
               style={{ willChange: "transform" }}
             >
               <h3 className="mb-3 text-2xl font-bold text-neutral-900 dark:text-white md:text-3xl">
@@ -116,8 +117,9 @@ export default function AboutSection() {
 
           <motion.div initial="initial"
             whileHover="hover"
+            whileTap="hover"
             animate="initial"
-            transition={{ duration: 0.5, ease: customEase }} className="surface-card-soft relative flex flex-col justify-center overflow-hidden px-6 py-8 md:px-7">
+            transition={{ duration: 0.5, ease: customEase }} className="surface-card-soft relative flex flex-col justify-center overflow-hidden">
             <div className="">
               <h3 className="text-lg font-semibold text-neutral-900 dark:text-white md:text-xl">
                 Project Delivery &amp; Ownership
@@ -128,13 +130,14 @@ export default function AboutSection() {
             </div>
             <motion.div
               variants={networkVariants}
+              whileHover="hover"
               transition={{ duration: 0.5, ease: customEase }}
-              className="absolute -right-32 -top-0 z-0 hidden max-w-[300px] sm:block h-auto opacity-[0.06] dark:opacity-[0.08]"
+              className="absolute -right-32 top-0 z-0 h-auto max-w-[300px] opacity-[0.06] dark:opacity-[0.08]"
               style={{ willChange: "transform" }}
             >
               <Image
                 src={networkArtwork}
-                alt="Close-up editor artwork representing frontend implementation and interface development"
+                alt="Abstract network node artwork symbolizing stakeholder coordination and end-to-end project delivery"
                 className="h-full object-contain w-auto -rotate-45"
               />
             </motion.div>
@@ -143,9 +146,10 @@ export default function AboutSection() {
           <motion.div
             initial="initial"
             whileHover="hover"
+            whileTap="hover"
             animate="initial"
             transition={{ duration: 0.5, ease: customEase }}
-            className="relative flex min-h-[220px] flex-col items-center justify-center rounded-3xl border overflow-hidden border-indigo-200/60 bg-gradient-to-br from-indigo-600/90 to-violet-500/80 px-6 py-7 text-center text-white shadow-sm shadow-indigo-200/20 dark:border-indigo-700/45 dark:from-indigo-900/80 dark:to-violet-900/70 dark:shadow-none">
+            className="surface-card-soft relative flex min-h-[220px] flex-col items-center justify-center rounded-3xl border overflow-hidden border-indigo-200/60 bg-gradient-to-br from-indigo-600/90 to-violet-500/80 text-center text-white shadow-sm shadow-indigo-200/20 dark:border-indigo-700/45 dark:from-indigo-900/80 dark:to-violet-900/70 dark:shadow-none">
             <div className="flex w-full max-w-[320px] flex-col items-center">
               <StatusBadge label="Open to Opportunities" />
               <p className="mt-4 max-w-[32ch] text-sm font-medium leading-6 text-white/88 md:text-sm">
@@ -170,22 +174,23 @@ export default function AboutSection() {
             >
               <Image
                 src={chatArtwork}
-                alt="Close-up editor artwork representing frontend implementation and interface development"
+                alt="Stylized floating chat bubbles representing real-time communication and requirement analysis"
                 className="h-full object-contain w-auto"
               />
             </motion.div>
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-6 md:col-span-4 md:grid-cols-4">
-            <motion.div className="surface-card-soft relative overflow-hidden px-6 py-8 col-span-2"
+          <div className="grid grid-cols-1 gap-4 md:col-span-3 md:grid-cols-4">
+            <motion.div className="surface-card-soft relative overflow-hidden col-span-1 md:col-span-2"
               initial="initial"
               whileHover="hover"
+              whileTap="hover"
               animate="initial"
               transition={{ duration: 0.5, ease: customEase }}>
               <motion.div
                 variants={contentVariants}
                 transition={{ duration: 0.4, ease: customEase }}
-                className="max-w-[30ch]"
+                className="relative z-20 max-w-[30ch] pb-32"
                 style={{ willChange: "transform" }}
               >
                 <h3 className="mb-3 text-lg font-semibold text-neutral-900 dark:text-white md:text-xl">
@@ -198,14 +203,14 @@ export default function AboutSection() {
               <motion.div
                 variants={imageVariants3}
                 transition={{ duration: 0.6, ease: customEase }}
-                className="h-full w-auto -mr-2 absolute -right-48 -bottom-24 hidden max-w-[30rem] sm:block z-10"
+                className="h-full w-auto -mr-2 absolute -right-64 -bottom-44 md:-right-40 md:-bottom-28 max-w-120 z-10"
                 style={{ willChange: "transform" }}
               >
                 <Image
                   src={uiArtwork}
-                  alt=""
+                  alt="Detailed dashboard UI mockup showing complex data visualization systems and modular interface design"
                   aria-hidden="true"
-                  className="rounded-sm"
+                  className="rounded-sm pointer-events-none"
                 />
               </motion.div>
               <div
@@ -220,19 +225,20 @@ export default function AboutSection() {
               />
             </motion.div>
 
-            <motion.div className="surface-card-soft relative overflow-hidden px-6 py-8 md:col-span-2 md:px-8 md:py-10"
+            <motion.div className="surface-card-soft relative overflow-hidden col-span-1 md:col-span-2"
               initial="initial"
               whileHover="hover"
+              whileTap="hover"
               animate="initial"
               transition={{ duration: 0.5, ease: customEase }}>
-              <div className="absolute inset-y-0 right-0 hidden sm:block">
+              <div className="absolute inset-y-0 right-0">
                 <motion.div
                   variants={imageVariants}
                   transition={{ duration: 0.5, ease: customEase }}
                   className="h-full w-auto -mr-2"
                   style={{ willChange: "transform" }}
                 >
-                  <Image src={stackArtwork} alt="" aria-hidden="true" className="h-full w-auto opacity-80" />
+                  <Image src={stackArtwork} alt="Visual representation of a modern technology stack with layered architectural components" aria-hidden="true" className="h-full w-auto opacity-80" />
                 </motion.div>
                 <motion.div
                   variants={imageVariants2}
@@ -240,13 +246,13 @@ export default function AboutSection() {
                   className="absolute -right-2 top-0 h-full w-auto"
                   style={{ willChange: "transform" }}
                 >
-                  <Image src={stackArtworkAlt} alt="" aria-hidden="true" className="h-full w-auto opacity-80" />
+                  <Image src={stackArtworkAlt} alt="Alternative perspective of technology stack layers illustrating depth and implementation complexity" aria-hidden="true" className="h-full w-auto opacity-80" />
                 </motion.div>
               </div>
               <motion.div
                 variants={contentVariants}
                 transition={{ duration: 0.4, ease: customEase }}
-                className="relative z-10 max-w-[34ch] pt-24"
+                className="relative z-10 max-w-[34ch] pt-32"
                 style={{ willChange: "transform" }}
               >
                 <h3 className="mb-3 text-lg font-semibold text-neutral-900 dark:text-white md:text-xl">

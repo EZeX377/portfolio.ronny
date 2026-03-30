@@ -13,9 +13,9 @@ export default function ProjectsSection() {
     <section
       id="projects"
       aria-labelledby="projects-heading"
-      className="section-block page-shell"
+      className="section-block"
     >
-      <div className="section-shell space-y-10 md:space-y-14">
+      <div className="section-shell space-y-12 md:space-y-16 lg:space-y-20 2xl:space-y-28">
         <div className="space-y-4">
           <h2 id="projects-heading" className="section-heading">
             Selected Projects
@@ -25,14 +25,14 @@ export default function ProjectsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-24">
+        <div className="grid grid-cols-1 gap-16 md:gap-24 lg:gap-32 2xl:gap-40">
           {projects.map((project, index) => {
             const isReverse = index % 2 !== 0;
 
             return (
               <article
                 key={project.title}
-                className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-24"
+                className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-16 lg:gap-24 2xl:gap-32"
               >
                 <ProjectPreview
                   image={previewImages[index % previewImages.length]}

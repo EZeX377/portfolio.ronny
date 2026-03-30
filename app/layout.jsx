@@ -1,9 +1,13 @@
+import Navbar from "@/components/portfolio/Navbar";
 import "./globals.css";
 
 export const metadata = {
   title: "Ronny Das | UI/UX Developer and Project Lead for Government Systems",
   description:
     "Ronny Das is a UI/UX Developer and Project Lead building Government Systems, Web Applications, and Dashboard Systems with a focus on delivery, usability, and frontend execution.",
+  icons: {
+    icon: "/icon.svg",
+  },
   keywords: [
     "UI/UX Developer",
     "Project Lead",
@@ -44,7 +48,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="page-shell min-h-screen tracking-wide">{children}</body>
+      <body className="page-shell min-h-screen tracking-wide overflow-x-hidden">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

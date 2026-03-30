@@ -5,10 +5,10 @@ import { contactMethods } from "./content";
 
 export default function ContactSection() {
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="section-block page-shell">
+    <section id="contact" aria-labelledby="contact-heading" className="section-block">
       <div className="section-shell">
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.2fr_0.9fr]">
-          <article className="surface-card-soft px-6 py-8 md:px-8 md:py-10">
+        <div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-[1.2fr_0.9fr] lg:gap-12 2xl:gap-16">
+          <article className="surface-card-soft">
             <h2 id="contact-heading" className="section-heading text-3xl sm:text-4xl">
               Let&apos;s Discuss Delivery-Focused UI/UX and System Design Work
             </h2>
@@ -19,8 +19,8 @@ export default function ContactSection() {
               Send Email <ArrowRight className="h-4 w-4" />
             </a>
           </article>
-
-          <article className="surface-card px-6 py-8">
+ 
+          <article className="surface-card">
             <h3 className="text-xl font-semibold text-neutral-900 dark:text-white md:text-2xl">
               Get in touch
             </h3>

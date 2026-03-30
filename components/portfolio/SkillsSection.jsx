@@ -3,8 +3,8 @@ import { skillGroups } from "./content";
 
 export default function SkillsSection() {
   return (
-    <section id="skills" aria-labelledby="skills-heading" className="section-block page-shell">
-      <div className="section-shell space-y-10 md:space-y-14">
+    <section id="skills" aria-labelledby="skills-heading" className="section-block">
+      <div className="section-shell space-y-12 md:space-y-16 lg:space-y-20 2xl:space-y-24">
         <div className="space-y-4">
           <h2 id="skills-heading" className="section-heading">
             Skills Across Delivery and Implementation
@@ -14,9 +14,9 @@ export default function SkillsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-12 2xl:gap-16">
           {skillGroups.map((group) => (
-            <article key={group.title} className="surface-card px-6 py-7 md:px-8">
+            <article key={group.title} className="surface-card">
               <h3 className="text-xl font-semibold text-neutral-900 dark:text-white md:text-2xl">
                 {group.title}
               </h3>

@@ -17,8 +17,9 @@ export default function SmoothScroll({ children }) {
       wheelMultiplier: 1.1,
       smoothWheel: true,
       autoRaf: true, // Automatically handles requestAnimationFrame
+      smoothTouch: false, // Disable smooth scroll for touch devices to allow native scrolling
       anchors: {
-        offset: 20, // Matches the scroll-margin-top/navbar height
+        offset: 40, // Matches the scroll-margin-top/navbar height
         duration: 1.2,
         easing: (t) => 1 - Math.pow(1 - t, 3), // easeOutCubic
       },
@@ -31,7 +32,7 @@ export default function SmoothScroll({ children }) {
       const hash = window.location.hash;
       requestAnimationFrame(() => {
         lenis.scrollTo(hash, {
-          offset: -96,
+          offset: 40,
           duration: 1.2,
           easing: (t) => 1 - Math.pow(1 - t, 3),
         });

@@ -2,10 +2,14 @@
 
 import { ChevronDown, MapPin, MoveDownRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import gridBackground from "@/assets/grid.svg";
 
 const gridSource = typeof gridBackground === "string" ? gridBackground : gridBackground.src;
+
+const MotionLink = motion(Link);
+
 export function Reveal({ children, delay = 0, duration = 0 }) {
   return (
     <div className="overflow-hidden">
@@ -80,7 +84,7 @@ export default function HeroSection() {
           </p>
           <FadeContent duration={1.9} delay={0.8}>
             <div className="mt-16 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <motion.a
+              <MotionLink
                 href="#projects"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -92,12 +96,12 @@ export default function HeroSection() {
                 <span className="text-lg font-medium tracking-wide text-slate-800 underline-offset-4 transition-colors duration-150 group-hover:text-indigo-600 group-hover:underline dark:text-slate-100 dark:group-hover:text-indigo-400 sm:text-xl">
                   VIEW MY WORK
                 </span>
-              </motion.a>
+              </MotionLink>
             </div>
           </FadeContent>
         </div>
 
-        <motion.a
+        <MotionLink
           href="#about"
           aria-label="Scroll to about section"
           className="focus-ring absolute bottom-6 left-1/2 z-20 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full bg-neutral-900 text-white shadow-sm dark:bg-neutral-100 dark:text-neutral-900"
@@ -108,7 +112,7 @@ export default function HeroSection() {
           transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
         >
           <ChevronDown className="h-5 w-5" />
-        </motion.a>
+        </MotionLink>
       </div>
     </header >
   );

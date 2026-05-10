@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import editorArtwork from "@/assets/editor-grid.webp";
 import isoGridArtwork from "@/assets/iso-grid.webp";
@@ -155,12 +156,12 @@ export default function AboutSection() {
               <p className="mt-4 max-w-[32ch] text-sm font-medium leading-6 text-white/88 md:text-sm">
                 Exploring roles focused on system design, project delivery, and large-scale government or enterprise platforms.
               </p>
-              <a
+              <Link
                 href="#contact"
                 className="focus-ring mt-6 inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/18 bg-white/10 px-5 py-2 text-sm font-semibold text-white/92 transition-colors duration-150 hover:bg-white/16"
               >
                 View Contact <MoveRight className="size-4 ml-1 " />
-              </a>
+              </Link>
             </div>
             <motion.div
               initial={{ scale: 1, x: 0, y: 0 }}
@@ -238,7 +239,7 @@ export default function AboutSection() {
                   className="h-full w-auto -mr-2"
                   style={{ willChange: "transform" }}
                 >
-                  <Image src={stackArtwork} alt="Visual representation of a modern technology stack with layered architectural components" aria-hidden="true" className="h-full w-auto opacity-80" />
+                  <Image src={stackArtwork} alt="Visual representation of a modern technology stack with layered architectural components" aria-hidden="true" className="h-full w-auto opacity-80 pointer-events-none" />
                 </motion.div>
                 <motion.div
                   variants={imageVariants2}
@@ -246,19 +247,19 @@ export default function AboutSection() {
                   className="absolute -right-2 top-0 h-full w-auto"
                   style={{ willChange: "transform" }}
                 >
-                  <Image src={stackArtworkAlt} alt="Alternative perspective of technology stack layers illustrating depth and implementation complexity" aria-hidden="true" className="h-full w-auto opacity-80" />
+                  <Image src={stackArtworkAlt} alt="Alternative perspective of technology stack layers illustrating depth and implementation complexity" aria-hidden="true" className="h-full w-auto opacity-80 pointer-events-none" />
                 </motion.div>
               </div>
               <motion.div
                 variants={contentVariants}
                 transition={{ duration: 0.4, ease: customEase }}
-                className="relative z-10 max-w-[34ch] pt-32"
+                className="relative z-10 max-w-[24ch] pt-32"
                 style={{ willChange: "transform" }}
               >
                 <h3 className="mb-3 text-lg font-semibold text-neutral-900 dark:text-white md:text-xl">
                   Tools &amp; Technologies
                 </h3>
-                <p className="muted-copy max-w-[45ch] text-base font-medium leading-5">
+                <p className="muted-copy text-base font-medium leading-5">
                   Core tools used across frontend development, design, and system delivery.
                 </p>
               </motion.div>

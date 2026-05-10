@@ -3,12 +3,15 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import Image from "next/image";
 
 import logoLight from "@/assets/mylogo2-sm.svg";
 import logoDark from "@/assets/mylogo2-sm-w.svg";
 import { navItems } from "./content";
 import ThemeToggle from "./ThemeToggle";
+
+const MotionLink = motion(Link);
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -70,7 +73,7 @@ export default function Navbar() {
       style={{ transform: "translateZ(0)" }}
     >
       <div className="section-shell grid grid-cols-[auto_1fr_auto] items-center py-4">
-        <motion.a
+        <MotionLink 
           href="#top"
           whileTap={{ scale: 0.95 }}
           className="focus-ring z-100 rounded-xl"
@@ -90,18 +93,18 @@ export default function Navbar() {
               className="h-full w-auto object-contain transition-all duration-200 hidden dark:block"
             />
           </div>
-        </motion.a>
+        </MotionLink>
 
         <div className="hidden justify-center md:flex">
           <ul className="flex items-center gap-7 text-sm font-semibold text-neutral-700 dark:text-neutral-200">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   className="focus-ring rounded-full px-2 py-1 transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -215,13 +218,9 @@ export default function Navbar() {
                       exit: { opacity: 0, x: 10 },
                     }}
                   >
-                    <a
-                      href={item.href}
-                      onClick={closeMenu}
-                      className="focus-ring rounded-full px-6 py-2 transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
-                    >
-                      {item.label}
-                    </a>
+                  <Link href={item.href} onClick={closeMenu} className="focus-ring rounded-full px-6 py-2 transition-colors hover:text-indigo-600 dark:hover:text-indigo-400">
+                    {item.label}
+                  </Link>
                   </motion.li>
                 ))}
               </ul>

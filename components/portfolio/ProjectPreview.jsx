@@ -44,10 +44,11 @@ export default function ProjectPreview({ image, alt, priority, label = "System P
       initial="rest"
       animate="rest"
       whileHover="hover"
+      whileTap="hover"
       className={`relative w-full ${className}`.trim()}
     >
       <div className="relative w-full">
-        <div className="pointer-events-none absolute inset-x-0 top-[3.1%] z-[21] flex justify-center px-[8%]">
+        <div className="pointer-events-none absolute inset-x-0 top-[3.1%] z-21 flex justify-center px-[8%]">
           <span className="text-[8px] font-semibold text-neutral-400 dark:text-neutral-500 -mt-0.5">
             {label}
           </span>
@@ -72,7 +73,7 @@ export default function ProjectPreview({ image, alt, priority, label = "System P
               height={image.height}
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="h-auto w-full"
+              className="h-auto w-full pointer-events-none"
             />
           </motion.div>
         </div>
@@ -80,12 +81,12 @@ export default function ProjectPreview({ image, alt, priority, label = "System P
         <Image
           src={frameArtwork}
           alt="Browser window frame decoration providing context for the project preview"
-          className="relative z-20 h-auto w-full dark:hidden"
+          className="relative z-20 h-auto w-full dark:hidden pointer-events-none"
         />
         <Image
           src={frameArtworkDark}
           alt="Browser window frame decoration for night mode visuals"
-          className="relative z-20 hidden h-auto w-full dark:block"
+          className="relative z-20 hidden h-auto w-full dark:block pointer-events-none"
         />
       </div>
     </motion.div>

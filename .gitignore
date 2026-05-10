@@ -11,3 +11,5 @@ pnpm-debug.log*
 *.tsbuildinfo
 coverage
 
+*.yaml
+CONTEXT.md

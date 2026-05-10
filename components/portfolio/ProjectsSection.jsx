@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 import projectOneImage from "@/assets/project1.png";
 import projectTwoImage from "@/assets/project3.png";
@@ -32,13 +33,13 @@ export default function ProjectsSection() {
             return (
               <article
                 key={project.title}
-                className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-16 lg:gap-24 2xl:gap-32"
+                className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12"
               >
                 <ProjectPreview
                   image={previewImages[index % previewImages.length]}
                   label={previewLabels[index % previewLabels.length]}
                   alt={`Preview interface for ${project.title}`}
-                  className={isReverse ? "md:order-2" : "md:order-1"}
+                  className={` ${isReverse ? "md:order-2" : "md:order-1"} md:col-span-2`}
                 />
 
                 <div
@@ -49,7 +50,7 @@ export default function ProjectsSection() {
                     {project.title}
                   </h3>
 
-                  <p className="muted-copy leading-7 max-w-md">
+                  <p className="muted-copy leading-7 max-w-md line-clamp-5">
                     {project.description}
                   </p>
 
@@ -61,13 +62,13 @@ export default function ProjectsSection() {
                     ))}
                   </div>
 
-                  <a
-                    href="#contact"
-                    aria-label={`View case study for ${project.title} by contacting Ronny Das`}
+                  <Link
+                    href={`/projects/${project.slug}/case_study`}
+                    aria-label={`View case study for ${project.title}`}
                     className="focus-ring inline-flex items-center gap-2 rounded-full text-sm font-semibold text-neutral-900 transition-colors duration-150 hover:text-indigo-600 dark:text-neutral-100 dark:hover:text-indigo-400"
                   >
                     View Case Study <ArrowRight className="h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </article>
             );

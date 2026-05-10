@@ -1,4 +1,5 @@
 import { ArrowRight, Mail } from "lucide-react";
+import Link from "next/link";
 
 import LinkedInIcon from "./LinkedInIcon";
 import { contactMethods } from "./content";
@@ -15,9 +16,9 @@ export default function ContactSection() {
             <p className="section-intro mt-4 max-w-2xl">
               If you want to talk about system design, project delivery, government platforms, dashboard systems, or structured interface work, I&apos;m open to the conversation.
             </p>
-            <a href={`mailto:${contactMethods[0].value}`} className="focus-ring button-secondary mt-6 inline-flex gap-2">
+            <Link href={`mailto:${contactMethods[0].value}`} className="focus-ring button-secondary mt-6 inline-flex gap-2">
               Send Email <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
           </article>
  
           <article className="surface-card">
@@ -26,7 +27,7 @@ export default function ContactSection() {
             </h3>
             <div className="mt-6 space-y-3">
               {contactMethods.map((method) => (
-                <a
+                <Link
                   key={method.label}
                   href={method.href}
                   target={method.label === "LinkedIn" ? "_blank" : undefined}
@@ -42,7 +43,7 @@ export default function ContactSection() {
                     </span>
                   </span>
                   {method.label === "Email" ? <Mail className="h-5 w-5 text-neutral-500 dark:text-neutral-400" /> : <LinkedInIcon className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />}
-                </a>
+                </Link>
               ))}
             </div>
             <p className="mt-5 text-sm leading-6 text-neutral-600 dark:text-neutral-400">

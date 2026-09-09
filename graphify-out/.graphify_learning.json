@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-09-09T17:03:54.556503+00:00",
+  "nodes": {
+    "app_projects_id_case_study_page": {
+      "code_fingerprint": "59553c6aa40ed551bd6d69ea3634ed1092ee404a778a89a631fb546dd3c1ba4f",
+      "label": "case_study/page.jsx",
+      "last": "2026-09-09T16:45:32.382019+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-09T16:45:32.382019+00:00",
+          "outcome": "useful",
+          "q": "ux/ui your review of my current portfolio"
+        }
+      ],
+      "score": 0.999705302,
+      "source_file": "app/projects/[id]/case_study/page.jsx",
+      "status": "tentative",
+      "uses": 1
+    },
+    "components_portfolio_content": {
+      "code_fingerprint": "aa54461cefb006b6672cdcaecacfe0dda52e9043443cde7725338520e73eff69",
+      "label": "content.js",
+      "last": "2026-09-09T16:45:32.382019+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-09T16:45:32.382019+00:00",
+          "outcome": "useful",
+          "q": "ux/ui your review of my current portfolio"
+        }
+      ],
+      "score": 0.999705302,
+      "source_file": "components/portfolio/content.js",
+      "status": "tentative",
+      "uses": 1
+    },
+    "components_portfolio_herosection": {
+      "code_fingerprint": "a595bbc6b94aade0397fe33b12d2a0b1a670abc6250b0cb9f1df2aba00fdc165",
+      "label": "HeroSection.jsx",
+      "last": "2026-09-09T16:45:32.382019+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-09T16:45:32.382019+00:00",
+          "outcome": "useful",
+          "q": "ux/ui your review of my current portfolio"
+        }
+      ],
+      "score": 0.999705302,
+      "source_file": "components/portfolio/HeroSection.jsx",
+      "status": "tentative",
+      "uses": 1
+    },
+    "components_portfolio_navbar": {
+      "code_fingerprint": "ba919909f9b0ae2f0c046bcc2fb138c13eba8471a0966809e5299f2a6c64e8ff",
+      "label": "Navbar.jsx",
+      "last": "2026-09-09T16:45:32.382019+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-09T16:45:32.382019+00:00",
+          "outcome": "useful",
+          "q": "ux/ui your review of my current portfolio"
+        }
+      ],
+      "score": 0.999705302,
+      "source_file": "components/portfolio/Navbar.jsx",
+      "status": "tentative",
+      "uses": 1
+    },
+    "components_portfolio_projectssection": {
+      "code_fingerprint": "a94c3cf75717c962f75b3f018ac7c6320cdc1f5555906ebfe0ec7e78ba24a1a6",
+      "label": "ProjectsSection.jsx",
+      "last": "2026-09-09T16:45:32.382019+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-09T16:45:32.382019+00:00",
+          "outcome": "useful",
+          "q": "ux/ui your review of my current portfolio"
+        }
+      ],
+      "score": 0.999705302,
+      "source_file": "components/portfolio/ProjectsSection.jsx",
+      "status": "tentative",
+      "uses": 1
+    },
+    "package": {
+      "code_fingerprint": "7795149f7f11e27e1b549bf28842f525468a432411388a0fb598335100ff2a01",
+      "label": "package.json",
+      "last": "2026-09-09T13:13:13.083780+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-09T13:13:13.083780+00:00",
+          "outcome": "useful",
+          "q": "Check whether the screenshot dependency vulnerabilities exist and plan fixes"
+        }
+      ],
+      "score": 0.996305384,
+      "source_file": "package.json",
+      "status": "tentative",
+      "uses": 1
+    }
+  },
+  "version": 1
+}

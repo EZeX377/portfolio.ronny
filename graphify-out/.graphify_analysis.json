@@ -1,0 +1,498 @@
+{
+  "communities": {
+    "0": [
+      "eslint_config",
+      "package",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_start",
+      "package_type",
+      "package_version",
+      "ref_chokidar",
+      "ref_dotenv",
+      "ref_eslint",
+      "ref_eslint_plugin_react",
+      "ref_globals",
+      "ref_next",
+      "ref_postcss",
+      "ref_react_dom",
+      "ref_tailwindcss",
+      "ref_tailwindcss_postcss",
+      "ref_types_node",
+      "ref_types_react",
+      "ref_typescript"
+    ],
+    "1": [
+      "app_projects_id_case_study_page",
+      "app_projects_id_case_study_page_casestudypage",
+      "app_projects_id_case_study_page_projectimages",
+      "components_portfolio_content",
+      "components_portfolio_content_email",
+      "components_portfolio_content_linkedinurl",
+      "components_portfolio_content_navitems",
+      "components_portfolio_content_projects",
+      "components_portfolio_content_skillgroups",
+      "components_portfolio_footer",
+      "components_portfolio_projectpreview",
+      "components_portfolio_projectpreview_projectpreview",
+      "components_portfolio_projectssection",
+      "components_portfolio_projectssection_previewimages",
+      "components_portfolio_projectssection_previewlabels",
+      "components_portfolio_skillbullet",
+      "components_portfolio_skillbullet_skillbullet",
+      "components_portfolio_skillssection",
+      "components_portfolio_skillssection_skillssection",
+      "readme_single_source_of_truth"
+    ],
+    "2": [
+      "app_layout",
+      "app_layout_metadata",
+      "app_layout_rootlayout",
+      "components_portfolio_aboutsection",
+      "components_portfolio_aboutsection_aboutsection",
+      "components_portfolio_copyemailbutton",
+      "components_portfolio_copyemailbutton_copyemailbutton",
+      "components_portfolio_navbar",
+      "components_portfolio_navbar_motionlink",
+      "components_portfolio_navbar_navbar",
+      "components_portfolio_statusbadge",
+      "components_portfolio_statusbadge_statusbadge",
+      "components_portfolio_themetoggle",
+      "components_portfolio_themetoggle_themetoggle",
+      "ref_framer_motion",
+      "ref_lucide_react",
+      "ref_react"
+    ],
+    "3": [
+      "assets_asset6_ui_ux_design_workspace",
+      "assets_bootstrap_bootstrap_logo",
+      "assets_css_css3_logo",
+      "assets_editor_portfolio_source_code",
+      "assets_figma_figma_logo",
+      "readme_app_router",
+      "readme_depth_aware_motion",
+      "readme_framer_motion",
+      "readme_gpu_acceleration",
+      "readme_lenis",
+      "readme_lucide_react",
+      "readme_next_js",
+      "readme_next_js_image_optimization",
+      "readme_ronny_das_portfolio",
+      "readme_smooth_scrolling",
+      "readme_system_first_design",
+      "readme_tailwind_css",
+      "readme_ui_ux_development",
+      "readme_zero_fouc_dark_mode"
+    ],
+    "4": [
+      "package_dependencies",
+      "package_dependencies_framer_motion",
+      "package_dependencies_lenis",
+      "package_dependencies_lucide_react",
+      "package_dependencies_next",
+      "package_dependencies_postcss",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_tailwindcss",
+      "package_dependencies_tailwindcss_postcss"
+    ],
+    "5": [
+      "package_devdependencies",
+      "package_devdependencies_chokidar",
+      "package_devdependencies_dotenv",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_plugin_react",
+      "package_devdependencies_globals",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_typescript"
+    ],
+    "6": [
+      "app_page",
+      "app_page_home",
+      "components_portfolio_contactsection",
+      "components_portfolio_contactsection_contactsection",
+      "components_portfolio_content_contactmethods",
+      "components_portfolio_footer_footer",
+      "components_portfolio_herosection",
+      "components_portfolio_herosection_fadecontent",
+      "components_portfolio_herosection_herosection",
+      "components_portfolio_herosection_motionlink",
+      "components_portfolio_herosection_reveal",
+      "components_portfolio_linkedinicon",
+      "components_portfolio_linkedinicon_linkedinicon",
+      "components_portfolio_projectssection_projectssection",
+      "components_portfolio_smoothscroll",
+      "components_portfolio_smoothscroll_smoothscroll",
+      "ref_lenis"
+    ],
+    "7": [
+      "assets_stack_bg_bootstrap_logo",
+      "assets_stack_bg_css3_logo",
+      "assets_stack_bg_frontend_technology_stack_graphic",
+      "assets_stack_bg_html5_logo",
+      "assets_stack_bg_javascript_logo",
+      "assets_stack_bg_tailwind_css_logo",
+      "assets_tailwindcss_tailwind_css_logo"
+    ],
+    "8": [
+      "agents_graphify_explain",
+      "agents_graphify_knowledge_graph",
+      "agents_graphify_path",
+      "agents_graphify_query",
+      "agents_graphify_update",
+      "agents_graphify_workflow"
+    ],
+    "9": [
+      "assets_mylogo2_sm_ronny_das_circular_rd_monogram",
+      "assets_mylogo2_sm_w_ronny_das_circular_rd_monogram",
+      "assets_mylogo_ronny_das_brand_lockup",
+      "assets_mylogo_sm_ronny_das_rd_monogram",
+      "assets_mylogo_white_ronny_das_brand_lockup",
+      "assets_mylogo_white_sm_ronny_das_rd_monogram"
+    ],
+    "10": [
+      "assets_project1_eap_mis_portal_project",
+      "assets_project1_ronny_das_portfolio_page",
+      "assets_project3_eap_mis_portal_project",
+      "assets_project3_ronny_das_portfolio_page",
+      "assets_ui_vuexy_crm_analytics_dashboard"
+    ],
+    "11": [
+      "assets_internet_internet_globe_icon",
+      "assets_network2_connected_globe_network_icon",
+      "assets_network_abstract_node_network_diagram",
+      "assets_network_global_network_icon"
+    ],
+    "12": [
+      "assets_photoshop_adobe_photoshop_logo",
+      "assets_stack_bg2_adobe_photoshop_logo",
+      "assets_stack_bg2_design_tools_graphic",
+      "assets_stack_bg2_figma_logo"
+    ],
+    "13": [
+      "jsconfig",
+      "jsconfig_compileroptions",
+      "jsconfig_compileroptions_baseurl",
+      "jsconfig_compileroptions_paths"
+    ],
+    "14": [
+      "assets_generated_image_4_ui_ux_design_workspace",
+      "assets_laptop_coding_laptop_icon",
+      "assets_mockup_3d_mockup_blueprint_icon"
+    ],
+    "15": [
+      "assets_grid_cartesian_grid_background",
+      "assets_grid_radial_dot_grid_pattern",
+      "assets_iso_grid_isometric_grid_background"
+    ],
+    "16": [
+      "assets_redesign_web_redesign_icon",
+      "assets_respdesign_responsive_design_icon",
+      "assets_webdesign_website_layout_icon"
+    ],
+    "17": [
+      "agents_adhd_actionable_responses",
+      "agents_output_style_policy"
+    ],
+    "18": [
+      "assets_editor_grid_code_editor_with_grid",
+      "assets_programming_programmer_workstation"
+    ],
+    "19": [
+      "assets_globe_dotted_world_map",
+      "assets_map_dotted_world_map"
+    ],
+    "20": [
+      "assets_html_html5_logo",
+      "assets_javascript_javascript_logo"
+    ],
+    "21": [
+      "assets_me2_portrait_of_man_with_glasses",
+      "assets_me3_portrait_of_man_with_glasses"
+    ],
+    "22": [
+      "assets_project_frame_b_dark_browser_mockup",
+      "assets_project_frame_light_browser_mockup"
+    ],
+    "23": [
+      "assets_sparkling_sparkles_icon",
+      "assets_star_star_icon"
+    ],
+    "24": [
+      "app_icon_ronny_logo_mark"
+    ],
+    "25": [
+      "assets_blob2_green_rounded_blob"
+    ],
+    "26": [
+      "assets_blob3_green_irregular_blob"
+    ],
+    "27": [
+      "assets_blob_dark_organic_blob"
+    ],
+    "28": [
+      "assets_chat_chat_bubble_icon_set"
+    ],
+    "29": [
+      "assets_chat_hashtag_conversation_icon"
+    ],
+    "30": [
+      "assets_chat_overlapping_message_bubbles"
+    ],
+    "31": [
+      "assets_circles_concentric_circle_decoration"
+    ],
+    "32": [
+      "assets_cline_dashed_curved_arrow"
+    ],
+    "33": [
+      "assets_cloud_service_cloud_network_icon"
+    ],
+    "34": [
+      "assets_code1_code_brackets_icon"
+    ],
+    "35": [
+      "assets_editor2_perspective_code_editor"
+    ],
+    "36": [
+      "assets_editor_grid_code_editor_cutout"
+    ],
+    "37": [
+      "assets_img_20190627_124330_selfie_at_waterfall"
+    ],
+    "38": [
+      "assets_quick_profile_card_ui_icon"
+    ],
+    "39": [
+      "assets_rec_recording_indicator_icon"
+    ],
+    "40": [
+      "assets_server_server_rack_illustration"
+    ],
+    "41": [
+      "assets_service_abstract_angular_line_background"
+    ],
+    "42": [
+      "assets_service_new_developer_workspace_illustration"
+    ],
+    "43": [
+      "assets_terminal_terminal_command_line_icon"
+    ],
+    "44": [
+      "assets_triangle_outlined_triangle_icon"
+    ],
+    "45": [
+      "postcss_config"
+    ],
+    "46": [
+      "public_icon_circular_portfolio_monogram_logo"
+    ],
+    "47": [
+      "graphify_out_memory_query_20260909_131313_c6a045b2_check_whether_the_screenshot_dependency_vulnerabil",
+      "graphify_out_memory_query_20260909_131313_c6a045b2_check_whether_the_screenshot_dependency_vulnerabil_answer",
+      "graphify_out_memory_query_20260909_131313_c6a045b2_check_whether_the_screenshot_dependency_vulnerabil_outcome",
+      "graphify_out_memory_query_20260909_131313_c6a045b2_check_whether_the_screenshot_dependency_vulnerabil_q_check_whether_the_screenshot_dependency_vulnerabilities_exist_and_plan_fixes",
+      "graphify_out_memory_query_20260909_131313_c6a045b2_check_whether_the_screenshot_dependency_vulnerabil_source_nodes"
+    ]
+  },
+  "cohesion": {
+    "0": 0.09090909090909091,
+    "1": 0.14210526315789473,
+    "2": 0.18382352941176472,
+    "3": 0.1111111111111111,
+    "4": 0.2,
+    "5": 0.2222222222222222,
+    "6": 0.14705882352941177,
+    "7": 0.2857142857142857,
+    "8": 0.3333333333333333,
+    "9": 0.4,
+    "10": 0.5,
+    "11": 0.8333333333333334,
+    "12": 0.5,
+    "13": 0.5,
+    "14": 0.6666666666666666,
+    "15": 0.6666666666666666,
+    "16": 0.6666666666666666,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 0.4
+  },
+  "gods": [
+    {
+      "id": "ref_lucide_react",
+      "label": "lucide-react",
+      "degree": 9
+    },
+    {
+      "id": "readme_ronny_das_portfolio",
+      "label": "Ronny Das UI/UX Developer and Project Lead Portfolio",
+      "degree": 9
+    },
+    {
+      "id": "ref_framer_motion",
+      "label": "framer-motion",
+      "degree": 7
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "degree": 6
+    },
+    {
+      "id": "assets_stack_bg_frontend_technology_stack_graphic",
+      "label": "Frontend Technology Stack Graphic",
+      "degree": 5
+    },
+    {
+      "id": "agents_graphify_workflow",
+      "label": "Graphify Knowledge Graph Workflow",
+      "degree": 5
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 4
+    },
+    {
+      "id": "graphify_out_memory_query_20260909_131313_c6a045b2_check_whether_the_screenshot_dependency_vulnerabil_q_check_whether_the_screenshot_dependency_vulnerabilities_exist_and_plan_fixes",
+      "label": "Q: Check whether the screenshot dependency vulnerabilities exist and plan fixes",
+      "degree": 4
+    },
+    {
+      "id": "assets_editor_portfolio_source_code",
+      "label": "Portfolio HTML Source in Sublime Text",
+      "degree": 4
+    },
+    {
+      "id": "components_portfolio_projectpreview_projectpreview",
+      "label": "ProjectPreview()",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "UI/UX Wireframing Workspace Illustration",
+      "target": "UI/UX Development",
+      "source_files": [
+        "assets/asset6.png",
+        "README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc ↔ image); connects across different repos/directories; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "Tailwind CSS",
+      "target": "CSS3 Logo",
+      "source_files": [
+        "README.md",
+        "assets/css.png"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc ↔ image); connects across different repos/directories"
+    },
+    {
+      "source": "Portfolio HTML Source in Sublime Text",
+      "target": "Ronny Das UI/UX Developer and Project Lead Portfolio",
+      "source_files": [
+        "assets/editor.png",
+        "README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc ↔ image); connects across different repos/directories"
+    },
+    {
+      "source": "EAP MIS Portal Project",
+      "target": "EAP MIS Portal Project",
+      "source_files": [
+        "assets/project1.png",
+        "assets/project3.png"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "Ronny Das Portfolio Page",
+      "target": "Ronny Das Portfolio Page",
+      "source_files": [
+        "assets/project1.png",
+        "assets/project3.png"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; semantically similar concepts with no structural link"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `lucide-react` connect `Navbar.jsx` to `package.json`, `content.js`, `app/page.jsx`?",
+      "why": "High betweenness centrality (0.074) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `package.json`?",
+      "why": "High betweenness centrality (0.040) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `devDependencies` to `package.json`?",
+      "why": "High betweenness centrality (0.036) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `name`, `private`, `build` to the rest of the system?",
+      "why": "114 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `package.json` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `content.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.14210526315789473 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Ronny Das UI/UX Developer and Project Lead Portfolio` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

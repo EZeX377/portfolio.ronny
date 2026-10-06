@@ -1,6 +1,6 @@
 "use client";
 import { useLayoutEffect, useRef } from "react";
-import { useAnimate } from "framer-motion";
+import { useAnimate } from "framer-motion/mini";
 import { usePortfolio } from "./PortfolioProvider";
 
 const ease = [.22, 1, .36, 1];
@@ -19,7 +19,7 @@ export function useAnimatedStyles(ref, state) {
   useLayoutEffect(() => {
     if (!ref.current || !initialized) return;
     const update = () => {
-     const elements = [ref.current, ...ref.current.querySelectorAll("*")].filter(element => getComputedStyle(element).getPropertyValue("--motion-duration"));
+     const elements = [ref.current, ...ref.current.querySelectorAll("*")].filter(element => !element.closest('[data-slot~="method-connectors"], [data-slot~="scope-links"], [data-slot~="profile-portrait"]') && getComputedStyle(element).getPropertyValue("--motion-duration"));
      for (const element of elements) {
       const computed = getComputedStyle(element);
       const owned = (computed.getPropertyValue("--motion-properties") || "transform,translate,opacity").split(",").map(v => v.trim()).filter(v => properties.includes(v));
@@ -34,7 +34,10 @@ export function useAnimatedStyles(ref, state) {
       if (!changed.length) continue;
       const duration = seconds(targetStyle.getPropertyValue("--motion-duration")) || .85;
       const delay = seconds(targetStyle.getPropertyValue("--motion-delay"));
-      const frames = Object.fromEntries(changed.map(prop => [camel(prop), prop === "visibility" && target[prop] === "visible" ? ["visible", "visible"] : [before[prop], target[prop]]]));
+      const frames = Object.fromEntries(changed.map(prop => {
+        const keyframes = prop === "visibility" && target[prop] === "visible" ? ["visible", "visible"] : [before[prop], target[prop]];
+        return [camel(prop), prop === "opacity" ? keyframes.map(Number) : keyframes];
+      }));
       const animation = animate(element, frames, { duration, delay, ease });
       running.current.set(element, animation);
       animation.then(() => {
@@ -50,13 +53,21 @@ export function useAnimatedStyles(ref, state) {
 
   useLayoutEffect(() => {
     const element = ref.current;
-    const enter = () => updateRef.current();
-    const leave = () => updateRef.current();
-    element?.addEventListener("pointerenter", enter);
-    element?.addEventListener("pointerleave", leave);
+    let frame = 0;
+    const update = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => updateRef.current());
+    };
+    element?.addEventListener("pointerover", update);
+    element?.addEventListener("pointerout", update);
+    element?.addEventListener("focusin", update);
+    element?.addEventListener("focusout", update);
     return () => {
-    element?.removeEventListener("pointerenter", enter);
-    element?.removeEventListener("pointerleave", leave);
+    cancelAnimationFrame(frame);
+    element?.removeEventListener("pointerover", update);
+    element?.removeEventListener("pointerout", update);
+    element?.removeEventListener("focusin", update);
+    element?.removeEventListener("focusout", update);
     updateRef.current = () => {};
     running.current.forEach(animation => animation.stop());
     previous.current.forEach((value, element) => Object.keys(value).forEach(prop => element.style.removeProperty(prop)));

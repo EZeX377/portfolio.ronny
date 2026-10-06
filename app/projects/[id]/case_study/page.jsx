@@ -14,6 +14,22 @@ const projectImages = {
   "eap-mis": projectTwoImage,
 };
 
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const project = projects.find((item) => item.slug === id);
+  if (!project) return {};
+  const title = `${project.title} — Ronny Das`;
+  const description = project.description;
+  const url = `/projects/${id}/case_study`;
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, type: "article", url },
+    twitter: { card: "summary_large_image", title, description, images: [{ url: "/opengraph-image", alt: "Ronny Das — Project Lead & UI/UX Developer" }] },
+  };
+}
+
 export default async function CaseStudyPage({ params }) {
   const { id } = await params;
   const project = projects.find((p) => p.slug === id);
@@ -23,10 +39,10 @@ export default async function CaseStudyPage({ params }) {
   }
 
   return (
-    <main className="legacy-case-study section-block min-h-screen">
+    <main id="main" className="legacy-case-study section-block min-h-screen">
       <div className="section-shell">
         <Link
-          href="/#projects"
+          href="/#work"
           className="focus-ring mb-8 inline-flex items-center gap-2 text-sm font-medium text-neutral-500 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100"
         >
           <ArrowLeft className="size-4" /> Back to Projects
@@ -37,7 +53,7 @@ export default async function CaseStudyPage({ params }) {
           <div className="space-y-6">
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag) => (
-                <span key={tag} className="tag-pill text-[.6rem] uppercase tracking-widest bg-indigo-50/50 dark:bg-indigo-950/30">
+                <span key={tag} className="tag-pill text-[12px] uppercase tracking-widest bg-indigo-50/50 dark:bg-indigo-950/30">
                   {tag}
                 </span>
               ))}
@@ -65,21 +81,21 @@ export default async function CaseStudyPage({ params }) {
             {/* Overview Stats */}
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="surface-card p-6 border-b-2 border-b-indigo-500/30">
-                <span className="text-[10px] uppercase font-bold tracking-widest text-neutral-400 block mb-2">Duration</span>
+                <span className="text-[12px] uppercase font-bold tracking-widest text-neutral-400 block mb-2">Duration</span>
                 {project.caseStudy.duration.map((item) =>
                   <p key={item} className={`font-semibold text-neutral-900 dark:text-white ${item.length > 1 ? "mb-0.5" : ""}`}> {item}</p>
                 )}
               </div>
               <div className="surface-card p-6 border-b-2 border-b-indigo-500/30">
-                <span className="text-[10px] uppercase font-bold tracking-widest text-neutral-400 block mb-2">Role</span>
+                <span className="text-[12px] uppercase font-bold tracking-widest text-neutral-400 block mb-2">Role</span>
                 <p className="font-semibold text-neutral-900 dark:text-white">{project.caseStudy.role}</p>
               </div>
               <div className="surface-card p-6 border-b-2 border-b-indigo-500/30">
-                <span className="text-[10px] uppercase font-bold tracking-widest text-neutral-400 block mb-2">Type</span>
+                <span className="text-[12px] uppercase font-bold tracking-widest text-neutral-400 block mb-2">Type</span>
                 <p className="font-semibold text-neutral-900 dark:text-white">{project.caseStudy.type}</p>
               </div>
               <div className="surface-card p-6 border-b-2 border-b-indigo-500/30">
-                <span className="text-[10px] uppercase font-bold tracking-widest text-neutral-400 block mb-2">Stack</span>
+                <span className="text-[12px] uppercase font-bold tracking-widest text-neutral-400 block mb-2">Stack</span>
                 <p className="font-semibold text-neutral-900 dark:text-white">{project.caseStudy.stack}</p>
               </div>
             </section>

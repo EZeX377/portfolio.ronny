@@ -39,9 +39,9 @@ dialog::backdrop{background:rgba(6,14,18,.76)}
 
 @layer components {
   .layout-container { @apply w-full max-w-[1740px] mx-auto px-[var(--gutter)]; }
-  .type-mono { @apply [font-family:'Courier_New',monospace] text-[10px] leading-[1.6] tracking-[.07em] font-[400]; }
-  .type-eyebrow { @apply [font-family:'Courier_New',monospace] text-[10px] tracking-[.09em] leading-[1.6] flex items-center gap-[9px]; }
-  .section-label { @apply [font-family:'Courier_New',monospace] text-[10px] tracking-[.09em] leading-[1.6] text-muted mb-[30px]; }
+  .type-mono { @apply [font-family:'Courier_New',monospace] text-[12px] leading-[1.6] tracking-[.07em] font-[400]; }
+  .type-eyebrow { @apply [font-family:'Courier_New',monospace] text-[12px] tracking-[.09em] leading-[1.6] flex items-center gap-[9px]; }
+  .section-label { @apply [font-family:'Courier_New',monospace] text-[12px] tracking-[.09em] leading-[1.6] text-muted mb-[30px]; }
   .action-button { @apply inline-flex gap-[32px] items-center justify-between [border:1px_solid_transparent] rounded-[2px] p-[17px_22px] min-h-[54px] text-[12px] transition-colors duration-250; }
   .accent-square { @apply w-[6px] h-[6px] inline-block [background:var(--copper)] shrink-0; }
 }

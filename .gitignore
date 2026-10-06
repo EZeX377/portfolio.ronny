@@ -13,3 +13,4 @@ coverage
 
 *.yaml
 CONTEXT.md
+/graphify-out

@@ -1,12 +1,15 @@
 import Navbar from "@/components/portfolio/Navbar";
 import { PortfolioProvider } from "@/components/portfolio/PortfolioProvider";
 import PortfolioDialogs from "@/components/portfolio/PortfolioDialogs";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 export const metadata = {
+    metadataBase: new URL(siteUrl),
     title: "Ronny Das — Interface Theatre",
     description: "Ronny Das — Project Lead & UI/UX Developer. UI/UX and delivery for government and enterprise platforms.",
     icons: { icon: "/icon.svg" },
-    openGraph: { title: "Ronny Das — Interface Theatre", description: "Project Lead & UI/UX Developer. Government systems, clear interfaces, and coordinated delivery.", type: "website" },
+    openGraph: { title: "Ronny Das — Interface Theatre", description: "Project Lead & UI/UX Developer. Government systems, clear interfaces, and coordinated delivery.", type: "website", siteName: "Ronny Das — Interface Theatre", locale: "en_IN" },
+    twitter: { card: "summary_large_image", title: "Ronny Das — Interface Theatre", description: "Project Lead & UI/UX Developer. Government systems, clear interfaces, and coordinated delivery.", images: [{ url: "/opengraph-image", alt: "Ronny Das — Project Lead & UI/UX Developer" }] },
 };
 export const viewport = { themeColor: "#f3f2ed" };
 // Initialize preferences before paint; the provider owns subsequent changes.

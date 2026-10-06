@@ -80,12 +80,12 @@ export default function ProjectPreview({ image, alt, priority, label = "System P
 
         <Image
           src={frameArtwork}
-          alt="Browser window frame decoration providing context for the project preview"
+          alt=""
           className="relative z-20 h-auto w-full dark:hidden pointer-events-none"
         />
         <Image
           src={frameArtworkDark}
-          alt="Browser window frame decoration for night mode visuals"
+          alt=""
           className="relative z-20 hidden h-auto w-full dark:block pointer-events-none"
         />
       </div>

@@ -54,3 +54,9 @@ This project is a complete migration and evolution of the Ronny Das portfolio in
 The codebase follows a **System First** approach—every motion, layout shift, and loading state is intentional. By leveraging the latest Next.js features and specialized libraries like Lenis, the portfolio provides a production-grade experience that reflects the same level of care given to large-scale enterprise platforms.
 
 
+
+## Production URL and SEO
+
+Canonical links, social images, robots.txt, and the sitemap use `SITE_URL` when set. On Vercel they otherwise use `VERCEL_PROJECT_PRODUCTION_URL`; local development defaults to `http://localhost:3000`.
+
+Before building on the VPS, set `SITE_URL` to the final public origin (including `https://`). Rebuild when this value changes, because homepage metadata and the sitemap are prerendered. The sitemap currently includes only the homepage; detailed case studies remain deferred and project cards open modal overviews.

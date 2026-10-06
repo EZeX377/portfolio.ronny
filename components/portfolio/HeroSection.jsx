@@ -1,119 +1,12 @@
-"use client";
-
-import { ChevronDown, MapPin, MoveDownRight } from "lucide-react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-
-import gridBackground from "@/assets/grid.svg";
-
-const gridSource = typeof gridBackground === "string" ? gridBackground : gridBackground.src;
-
-const MotionLink = motion(Link);
-
-export function Reveal({ children, delay = 0, duration = 0 }) {
-  return (
-    <div className="overflow-hidden">
-      <motion.div
-        initial={{ y: "100%" }}
-        whileInView={{ y: "0%", marginBottom: "3px" }}
-        viewport={{ once: true }}
-        transition={{
-          duration,
-          delay,
-          ease: [0.22, 1, 0.1, 1],
-        }}
-      >
-        {children}
-      </motion.div>
-    </div>
-  );
-}
-export function FadeContent({ children, delay = 0, duration = 0 }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{
-        duration,
-        delay,
-        ease: [0.22, 1, 0.1, 1],
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
+import MotionElement from "./MotionElement";
+import HeroArtwork from "./HeroArtwork";
 export default function HeroSection() {
-  return (
-    <header className="relative min-h-svh overflow-hidden">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 opacity-5 dark:opacity-[0.12]"
-        style={{
-          backgroundImage: `url(${gridSource})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
-        }}
-      />
-
-      <div
-        aria-hidden="true"
-        className="absolute left-1/2 top-[37%] h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.8)_0%,rgba(255,255,255,0)_70%)] blur-[200px] dark:bg-[radial-gradient(circle,rgba(0,0,0,1)_30%,rgba(0,0,0,0)_70%)] sm:h-[700px] sm:w-[700px] lg:h-[700px] lg:w-[700px]"
-      />
-
-      <div className="section-shell relative z-10 flex min-h-svh flex-col items-center justify-center py-20 text-center md:py-24 lg:py-32">
-        <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center">
-          <Reveal duration={1.9}>
-            <h1 className="font-harabara text-balance text-5xl font-extrabold leading-[0.95] text-slate-800 dark:text-slate-100 sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl">
-              Hi, I am Ronny Das
-            </h1>
-          </Reveal>
-          <Reveal duration={1.5} delay={0.4}>
-            <p className="mt-8 max-w-5xl w-full text-xl leading-[1.65] text-slate-600 dark:text-slate-300 sm:text-2xl md:text-3xl">
-              Leading the delivery of large-scale government and enterprise platforms
-              <br className="hidden md:block" />
-              through structured systems, clear workflows, and reliable execution.
-            </p>
-          </Reveal>
-
-          <p className="mt-10 flex flex-col flex-wrap items-center justify-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400 sm:text-base">
-            <MapPin className="h-4 w-4" />
-            Currently Project Lead in UI/UX &amp; Delivery at<br /> <span className="text-indigo-500 dark:text-indigo-400 font-bold">COGNITIVE TECH</span>
-          </p>
-          <FadeContent duration={1.9} delay={0.8}>
-            <div className="mt-16 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <MotionLink
-                href="#projects"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="focus-ring group flex min-h-[44px] items-center justify-center gap-4 rounded-full"
-              >
-                <span className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-indigo-500 transition-colors duration-150 group-hover:bg-indigo-500 dark:border-indigo-400 dark:group-hover:bg-indigo-400 lg:h-14 lg:w-14">
-                  <MoveDownRight className="text-indigo-500 transition-colors duration-150 group-hover:text-white dark:text-indigo-400 dark:group-hover:text-slate-950" />
-                </span>
-                <span className="text-lg font-medium tracking-wide text-slate-800 underline-offset-4 transition-colors duration-150 group-hover:text-indigo-600 group-hover:underline dark:text-slate-100 dark:group-hover:text-indigo-400 sm:text-xl">
-                  VIEW MY WORK
-                </span>
-              </MotionLink>
-            </div>
-          </FadeContent>
-        </div>
-
-        <MotionLink
-          href="#about"
-          aria-label="Scroll to about section"
-          className="focus-ring absolute bottom-6 left-1/2 z-20 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full bg-neutral-900 text-white shadow-sm dark:bg-neutral-100 dark:text-neutral-900"
-          initial={{ y: -12 }}
-          animate={{ y: 0 }}
-          whileHover={{ scale: 1.1, y: 0 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-        >
-          <ChevronDown className="h-5 w-5" />
-        </MotionLink>
+    return (<section id="home" data-slot="hero" className={"relative pt-9 pb-0 overflow-hidden [&_h1]:text-[clamp(64px,7.6vw,119px)] [&_h1]:font-medium [&_h1]:leading-[.98] [&_h1]:tracking-[-.065em] max-[1100px]:[&_h1]:text-[7.5vw] max-[800px]:[&_h1]:text-[clamp(62px,12vw,96px)] max-[560px]:pt-6 max-[560px]:[&_h1]:text-[clamp(74px,20vw,92px)] [@media_(min-width:801px)]:[&_h1]:text-[clamp(78px,10.4vw,180px)]"}><div data-slot="section-container page-pad" className={"layout-container overflow-visible"}>
+      <div data-slot="hero-topline mono" className={"type-mono flex justify-between text-muted max-[800px]:text-[8px] max-[560px]:text-[7px] [@media_(min-width:801px)]:text-[12px]"}><span>PROJECT LEAD &amp; UI/UX DEVELOPER</span><span data-slot="edition" className={"max-[560px]:hidden"}>PORTFOLIO / VOL. 01</span></div>
+      <div data-slot="hero-grid" className={"grid grid-cols-[1fr_1fr] gap-7.5 items-center min-h-142.5 [@media_(min-width:1600px)]:min-h-170 max-[1100px]:min-h-127.5 max-[1100px]:gap-4 max-[800px]:grid-cols-[1fr] max-[800px]:gap-0 [@media_(min-width:801px)]:grid-cols-[minmax(0,.88fr)_minmax(0,1.12fr)] [@media_(min-width:801px)]:gap-[clamp(24px,3vw,52px)] [@media_(min-width:801px)]:min-h-210"}>
+        <div data-slot="hero-copy" className={"relative z-[2] p-[50px_0_38px] max-[800px]:pt-15 max-[800px]:pb-0 max-[560px]:pt-10.75 [@media_(min-width:801px)]:min-w-0 [@media_(min-width:801px)]:py-8"}><p data-slot="eyebrow" className={"type-eyebrow [[data-slot~='hero-copy']_&]:mb-6 max-[800px]:[[data-slot~='hero-copy']_&]:text-[8px] max-[560px]:[[data-slot~='hero-copy']_&]:text-[7px] max-[560px]:[[data-slot~='hero-copy']_&]:mb-5.5 [@media_(min-width:801px)]:text-[12px]"}><span data-slot="tiny-square" className={"accent-square"}></span> COMPLEXITY, COMPOSED.</p><h1><MotionElement as="span" kind="entrance" delay={0} data-slot="title-line" className={"block whitespace-nowrap"}>Ronny</MotionElement><MotionElement as="span" kind="entrance" delay={0.12} data-slot="title-line" className={"block whitespace-nowrap"}>Das<span data-slot="copper" className={"text-copper"}>.</span></MotionElement></h1><MotionElement as="p" kind="entrance" delay={0.2} data-slot="hero-role" className={"[font:500_clamp(17px,1.6vw,23px)/1.35_var(--display)] tracking-[-.025em] mt-6 max-w-107.5 max-[800px]:text-[19px] max-[800px]:mt-5.5 max-[560px]:text-[17px] max-[560px]:mt-5.25 [@media_(min-width:801px)]:text-[clamp(20px,1.7vw,28px)] [@media_(min-width:801px)]:max-w-[100%] [@media_(min-width:801px)]:leading-[1.3]"}>Project Lead &amp; UI/UX Developer</MotionElement><MotionElement as="p" kind="entrance" delay={0.2} data-slot="hero-description" className={"text-[16px] max-w-91.25 m-[30px_0] leading-[1.65] text-muted max-[800px]:text-[15px] max-[800px]:m-[25px_0] max-[800px]:max-w-90 max-[560px]:text-[13px] max-[560px]:max-w-75 max-[560px]:m-[25px_0] [@media_(min-width:801px)]:text-[clamp(16px,1.15vw,20px)] [@media_(min-width:801px)]:max-w-[min(100%,clamp(360px,32vw,520px))] [@media_(min-width:801px)]:my-7 [@media_(min-width:801px)]:leading-[1.6]"}>I design interfaces and lead delivery for government and enterprise platforms, from requirements through implementation.</MotionElement><MotionElement as="p" kind="entrance" delay={0.3} data-slot="hero-position mono" className={"type-mono text-[11px] leading-[1.6] text-muted mt-2 max-w-102.5 max-[800px]:text-[11px] max-[560px]:text-[10px] max-[560px]:max-w-75 mb-6 [&_strong]:font-normal [&_strong]:text-copper [@media_(min-width:801px)]:text-[12px]"}>CURRENTLY AT <strong>COGNITIVE TECH</strong></MotionElement><MotionElement as="div" kind="entrance" delay={0.3} data-slot="hero-actions" className={"flex items-center flex-wrap gap-[12px_25px] max-[560px]:gap-[10px_20px]"}><a data-slot="button button-dark" className={"action-button bg-ink text-bg hover:bg-copper hover:[transform:translateY(-2px)] [&_span]:text-[20px] [[data-motion=off]_&:hover]:[transform:none] max-[560px]:text-[11px] max-[560px]:p-[14px_18px] max-[560px]:min-h-12.5 max-[560px]:gap-6.5"} href="#work">View my work <span aria-hidden="true">↗</span></a><a data-slot="text-link" className={"[[data-slot~='hero-actions']_&]:text-[11px] [[data-slot~='hero-actions']_&]:gap-3.5 [[data-slot~='hero-actions']_&]:[overflow-wrap:anywhere] max-[560px]:[[data-slot~='hero-actions']_&]:text-[10px] inline-flex items-center gap-6.25 min-h-11 text-[11px] border-0 border-b border-line [background:transparent] p-[8px_0] [transition:color_.2s,border-color_.2s] [&_span]:text-[20px] hover:text-copper hover:border-copper [@media_(min-width:801px)]:[[data-slot~='hero-actions']_&]:text-[12px] [@media_(min-width:801px)]:text-[12px]"} href="mailto:iamronnydas@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></MotionElement><div data-slot="hero-tags mono" className={"type-mono flex gap-5.5 mt-9.5 text-[9px] text-muted [&_span:before]:[content:'+'] [&_span:before]:mr-1.75 [&_span:before]:text-copper max-[1100px]:gap-3 max-[1100px]:text-[8px] max-[800px]:hidden [@media_(min-width:801px)]:text-[12px]"}><span>SYSTEM DESIGN</span><span>UI/UX &amp; DELIVERY</span></div></div>
+        <HeroArtwork />
       </div>
-    </header >
-  );
+      <div data-slot="hero-bottom" className={"[border-top:1px_solid_var(--line)] mt-7.5 p-[24px_0] flex justify-between items-center [&_p]:text-[10px] [&_p]:leading-[1.5] [&_p]:text-muted max-[1100px]:mt-3.75 max-[800px]:mt-1.25 max-[560px]:p-[19px_0] max-[560px]:[&_p]:text-[8px] max-[560px]:[&_p]:text-right [@media_(min-width:801px)]:[&_p]:text-[12px]"}><a data-slot="scroll-cue mono" className={"type-mono flex gap-3.75 items-center max-[560px]:text-[7px] max-[560px]:gap-3 [@media_(min-width:801px)]:text-[12px]"} href="#work"><span data-slot="down-arrow" className={"text-[21px]"} aria-hidden="true">↓</span> SCROLL TO EXPLORE</a><p>Employee services.<br />Programme reporting.</p><span data-slot="coordinate mono" className={"type-mono text-muted text-[8px] max-[800px]:[[data-slot~='hero-bottom']_&]:hidden [@media_(min-width:801px)]:text-[12px]"}>STRATEGY / DESIGN / DELIVERY</span></div>
+    </div></section>);
 }

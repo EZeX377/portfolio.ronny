@@ -1,0 +1,75 @@
+[
+  {
+    "id": "mutual",
+    "title": "Mutual Transfer Portal",
+    "category": "Government services · Project overview",
+    "summary": "A statewide portal for Assam Grade III and IV government employees across departments, with a centralized, role-driven mutual transfer workflow.",
+    "focus": [
+      "Centralized mutual transfer workflow",
+      "Role-driven journeys",
+      "Cross-department service access"
+    ],
+    "note": "Detailed case study and project-specific screens will be added. The visual shown is an illustrative system study.",
+    "image": "assets/mutualtransfer.webp"
+  },
+  {
+    "id": "eap",
+    "title": "EAP MIS",
+    "category": "Enterprise & government · Project overview",
+    "summary": "Dashboard-driven reporting of project and financial progress across enterprise and government programmes.",
+    "focus": [
+      "Project progress reporting",
+      "Financial progress visibility",
+      "Dashboard information hierarchy"
+    ],
+    "note": "Detailed case study and project-specific screens will be added. The visual shown is an illustrative system study.",
+    "image": "assets/eap.webp"
+  },
+  {
+    "id": "nesfic",
+    "title": "North East Seva First Innovation Challenge (NESFIC) 2026",
+    "category": "Innovation challenge · Project overview",
+    "summary": "North East Seva First Innovation Challenge (NESFIC) 2026. Detailed project context will be added.",
+    "focus": [
+      "NESFIC 2026"
+    ],
+    "note": "Detailed case study and project-specific screens will be added. The visual shown is an illustrative system study.",
+    "image": "assets/nesfic.webp"
+  },
+  {
+    "id": "asamis",
+    "title": "ASAMIS",
+    "category": "Government platform · Project overview",
+    "summary": "End-to-end system delivery, database coordination, interface design, and ongoing support for a live government platform.",
+    "focus": [
+      "System delivery",
+      "Database coordination",
+      "Interface design and ongoing support"
+    ],
+    "note": "A detailed case study and project-specific screens will be added.",
+    "image": null
+  },
+  {
+    "id": "asdm-hr",
+    "title": "ASDM HR Attendance & Leave App",
+    "category": "React Native · Project overview",
+    "summary": "ASDM HR Attendance & Leave App — React Native. Detailed project context will be added.",
+    "focus": [
+      "React Native"
+    ],
+    "note": "A detailed case study and project-specific screens will be added.",
+    "image": null
+  },
+  {
+    "id": "aadhaar",
+    "title": "Aadhaar eKYC + AEBAS Integration",
+    "category": "Integration · Project overview",
+    "summary": "Aadhaar eKYC + AEBAS Integration. Detailed project context will be added.",
+    "focus": [
+      "Aadhaar eKYC",
+      "AEBAS integration"
+    ],
+    "note": "A detailed case study and project-specific screens will be added.",
+    "image": null
+  }
+]

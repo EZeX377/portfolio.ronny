@@ -1,80 +1,45 @@
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+"use client";
+import MotionSurface from "./MotionSurface";
 
-import projectOneImage from "@/assets/project1.png";
-import projectTwoImage from "@/assets/project3.png";
-import { projects } from "./content";
-import ProjectPreview from "./ProjectPreview";
+import MotionElement from "./MotionElement";
 
-const previewImages = [projectOneImage, projectTwoImage];
-const previewLabels = ["Dashboard Preview", "System Preview"];
+import ProjectBrowser from "./ProjectBrowser";
+import { usePortfolio } from "./PortfolioProvider";
+import projects from "./projectData.json";
+
+const selected = [
+  { id: "nesfic", index: "01", category: "INNOVATION CHALLENGE", title: "NESFIC 2026", description: "NESFIC 2026 · North East Seva First Innovation Challenge.", tags: ["NESFIC", "Innovation challenge", "2026"], imageClass: "atelier-image" },
+  { id: "eap", index: "02", category: "REPORTING SYSTEMS", title: "EAP MIS", description: "Project and financial progress reporting for government and enterprise programmes.", tags: ["MIS", "Dashboards", "Web applications"], imageClass: "field-image" },
+  { id: "mutual", index: "03", category: "GOVERNMENT SYSTEMS", title: "Mutual Transfer Portal", description: "A role-based transfer workflow for Assam’s government employees.", tags: ["Government systems", "Workflow design", "Delivery"], imageClass: "civic-image" },
+];
+const additional = [
+  { id: "asamis", index: "04", description: "System delivery · Database coordination · Ongoing support" },
+  { id: "asdm-hr", index: "05", description: "React Native · Attendance · Leave" },
+  { id: "aadhaar", index: "06", description: "Aadhaar eKYC · AEBAS integration" },
+];
+
+function ProjectCard({ project, featured = false }) {
+  const { openProject } = usePortfolio();
+  const overview = projects.find(item => item.id === project.id);
+  const open = () => openProject(project.id);
+  return <article data-slot={`project${featured ? " project-feature" : ""}`} className={""}>
+    <MotionSurface as="button" data-slot={`project-image ${project.imageClass}`} className={"[&[data-slot~='project-image']]:w-full [&[data-slot~='project-image']]:p-[64px_70px_42px] [&[data-slot~='project-image']]:block [&[data-slot~='project-image']]:[border:1px_solid_var(--line)] [&[data-slot~='project-image']]:text-left [&[data-slot~='project-image']]:relative [&[data-slot~='project-image']]:overflow-hidden [&[data-slot~='project-image']]:rounded-[3px] [&[data-slot~='project-image']]:isolate [&[data-slot~='civic-image']]:[background:#e1e7dc] [&[data-slot~='civic-image']]:text-[#3c5144] [&[data-slot~='field-image']]:[background:#2a393e] [&[data-slot~='field-image']]:text-[#e4e8de] [&[data-slot~='atelier-image']]:[background:#e8dacc] [&[data-slot~='atelier-image']]:text-[#625140] [[data-motion=off]_&[data-slot~='project-image']_img]:[transform:none] max-[1100px]:[&[data-slot~='project-image']]:p-[60px_50px_40px] max-[800px]:[&[data-slot~='project-image']]:p-[58px_35px_40px] max-[560px]:[&[data-slot~='project-image']]:p-[44px_16px_30px] [[data-slot~='project-pair']_&]:p-[60px_25px_35px] max-[800px]:[[data-slot~='project-pair']_&]:p-[52px_15px_30px] max-[560px]:[[data-slot~='project-pair']_&]:p-[44px_16px_30px] [@media_(min-width:801px)_and_(max-width:1200px)]:[[data-slot~='project-pair']_&]:p-[60px_50px_40px]"} data-project={project.id} aria-label={`Open ${overview.title} project overview`} onClick={open}>
+      <div data-slot="project-label mono" className={"type-mono absolute top-6.25 left-7.5 text-[8px] z-[1] text-[inherit] max-[800px]:text-[7px] max-[800px]:left-6 max-[800px]:top-5.5 max-[560px]:left-4.5 max-[560px]:top-4 max-[560px]:text-[6px] max-[560px]:max-w-[80%] max-[560px]:leading-[1.6] [@media_(min-width:801px)]:text-[12px] [@media_(min-width:801px)]:max-w-[calc(100%_-_60px)] max-[800px]:[[data-slot~='project-pair']_&]:left-4.5 max-[800px]:[[data-slot~='project-pair']_&]:text-[6px] max-[560px]:[[data-slot~='project-pair']_&]:text-[6px] max-[560px]:[[data-slot~='project-pair']_&]:top-4"}>{project.index} / {project.category} / SYSTEM STUDY</div>
+      <ProjectBrowser {...overview} /><span data-slot="project-open" className={"absolute right-6 bottom-5.75 w-10.5 h-10.5 rounded-[50%] bg-bg text-ink grid [place-items:center] text-[24px] [transition:background_.25s,color_.25s] [[data-slot~='project-image']:hover_&]:bg-copper [[data-slot~='project-image']:hover_&]:text-bg max-[560px]:w-8.5 max-[560px]:h-8.5 max-[560px]:right-3.75 max-[560px]:bottom-3 max-[560px]:text-[21px]"} aria-hidden="true">↗</span>
+    </MotionSurface>
+    <div data-slot="project-meta" className={"flex justify-between gap-6.25 mt-6.5 items-end [&_h3]:text-[clamp(30px,3.1vw,46px)] [&_h3]:tracking-[-.05em] [&_h3]:mb-2.25 [&_p:not([data-slot~='mono'])]:text-[12px] [&_p:not([data-slot~='mono'])]:text-muted max-[800px]:[&_h3]:text-[31px] max-[800px]:[&_p:not([data-slot~='mono'])]:text-[10px] max-[560px]:items-start max-[560px]:gap-4 max-[560px]:mt-5.5 max-[560px]:block max-[560px]:[&_h3]:text-[30px] max-[560px]:[&_p:not([data-slot~='mono'])]:text-[11px] [@media_(min-width:801px)]:items-start [[data-slot~='project-pair']_&]:gap-4 [[data-slot~='project-pair']_&_h3]:text-[30px] max-[1100px]:[[data-slot~='project-pair']_&]:block max-[800px]:[[data-slot~='project-pair']_&_h3]:text-[27px] max-[560px]:[[data-slot~='project-pair']_&]:mt-5 max-[560px]:[[data-slot~='project-pair']_&_h3]:text-[30px] [@media_(min-width:801px)]:[[data-slot~='project-pair']_&]:block"}>
+      <div><p data-slot="mono" className={"type-mono [[data-slot~='project-meta']_&]:text-[8px] [[data-slot~='project-meta']_&]:text-muted [[data-slot~='project-meta']_&]:mb-2.5 [@media_(min-width:801px)]:text-[12px] [@media_(min-width:801px)]:[[data-slot~='project-meta']_&]:text-[12px]"}>{project.index} / {project.category}</p><h3>{project.title}<span data-slot="copper" className={"text-copper"}>.</span></h3><p>{project.description}</p></div>
+      <div data-slot="project-meta-right" className={"text-right max-[560px]:text-left max-[560px]:mt-4 [@media_(min-width:801px)]:max-w-[48%] [[data-slot~='project-pair']_&]:text-left [@media_(min-width:801px)]:[[data-slot~='project-pair']_&]:max-w-[none] [@media_(min-width:801px)]:[[data-slot~='project-pair']_&]:text-left"}><div data-slot="tags" className={"flex gap-1.75 flex-wrap [&_span]:[border:1px_solid_var(--line)] [&_span]:p-[5px_9px] [&_span]:rounded-[30px] [&_span]:text-[8px] [&_span]:text-muted max-[800px]:[[data-slot~='project-meta-right']_&]:justify-end max-[560px]:[[data-slot~='project-meta-right']_&]:[justify-content:flex-start] [@media_(min-width:801px)]:[&_span]:text-[12px] [[data-slot~='project-pair']_&]:mt-4.5 max-[1100px]:[[data-slot~='project-pair']_&]:mt-3 max-[560px]:[[data-slot~='project-pair']_&]:mt-2.5 [[data-slot~='project-pair']_[data-slot~='project-meta-right']_&]:[justify-content:flex-start] [@media_(min-width:801px)]:[[data-slot~='project-pair']_&]:[justify-content:flex-start]"}>{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div><button data-slot="text-link" className={"inline-flex items-center gap-6.25 min-h-11 text-[11px] border-0 border-b border-line [background:transparent] p-[8px_0] [transition:color_.2s,border-color_.2s] [&_span]:text-[20px] hover:text-copper hover:border-copper [[data-slot~='project-meta-right']_&]:mt-4 max-[560px]:[[data-slot~='project-meta-right']_&]:mt-2.5 [@media_(min-width:801px)]:text-[12px] [[data-slot~='project-pair']_&]:text-[9px] [[data-slot~='project-pair']_&]:gap-3 [[data-slot~='project-pair']_&]:whitespace-nowrap max-[1100px]:[[data-slot~='project-pair']_&]:mt-3 [@media_(min-width:801px)]:[[data-slot~='project-pair']_&]:text-[12px]"} data-project={project.id} onClick={open}>Project overview <span aria-hidden="true">↗</span></button></div>
+    </div>
+  </article>;
+}
 
 export default function ProjectsSection() {
-  return (
-    <section
-      id="projects"
-      aria-labelledby="projects-heading"
-      className="section-block"
-    >
-      <div className="section-shell space-y-12 md:space-y-16 lg:space-y-20 2xl:space-y-28">
-        <div className="space-y-4">
-          <h2 id="projects-heading" className="section-heading">
-            Selected Projects
-          </h2>
-          <p className="section-intro">
-            Real-world systems where interface design, delivery structure, stakeholder coordination, and operational reliability had to work together.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-16 md:gap-24 lg:gap-32 2xl:gap-40">
-          {projects.map((project, index) => {
-            const isReverse = index % 2 !== 0;
-
-            return (
-              <article
-                key={project.title}
-                className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12"
-              >
-                <ProjectPreview
-                  image={previewImages[index % previewImages.length]}
-                  label={previewLabels[index % previewLabels.length]}
-                  alt={`Preview interface for ${project.title}`}
-                  className={` ${isReverse ? "md:order-2" : "md:order-1"} md:col-span-2`}
-                />
-
-                <div
-                  className={`space-y-4 px-1 pb-1 ${isReverse ? "md:order-1 md:pr-8" : "md:order-2 md:pl-8"
-                    }`}
-                >
-                  <h3 className="text-2xl font-semibold leading-tight text-neutral-900 dark:text-white">
-                    {project.title}
-                  </h3>
-
-                  <p className="muted-copy leading-7 max-w-md line-clamp-5">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="tag-pill">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <Link
-                    href={`/projects/${project.slug}/case_study`}
-                    aria-label={`View case study for ${project.title}`}
-                    className="focus-ring inline-flex items-center gap-2 rounded-full text-sm font-semibold text-neutral-900 transition-colors duration-150 hover:text-indigo-600 dark:text-neutral-100 dark:hover:text-indigo-400"
-                  >
-                    View Case Study <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
+  const { openProject } = usePortfolio();
+  return <section id="work" data-slot="work" className={"pt-28 pb-28.75 max-[800px]:pt-20 max-[800px]:pb-18.75 max-[560px]:pt-16.25 max-[560px]:pb-16.25"}><div data-slot="section-container page-pad" className={"layout-container overflow-visible"}>
+    <div data-slot="section-heading" className={"flex justify-between gap-12.5 items-end mb-16 max-[800px]:items-start max-[800px]:gap-6.25 max-[800px]:mb-10.5 max-[560px]:block max-[560px]:mb-8.75 max-[560px]:[&_h2]:text-[46px]"}><div><p data-slot="section-kicker mono" className={"section-label type-mono max-[800px]:text-[8px] max-[800px]:mb-5.75 [@media_(min-width:801px)]:text-[12px]"}>02 — SELECTED WORK</p><MotionElement as="h2" kind="reveal" delay={0} data-slot="reveal" className={"[[data-motion=off]_&]:opacity-100! [[data-motion=off]_&]:[transform:none]! [@media_(prefers-reduced-motion:reduce)]:[:root:not([data-motion=on])_&]:opacity-100! [@media_(prefers-reduced-motion:reduce)]:[:root:not([data-motion=on])_&]:[transform:none]!"} data-motion-style="">Systems made<br />clear<span data-slot="copper" className={"text-copper"}>.</span></MotionElement></div><div data-slot="section-intro" className={"max-w-71.25 pb-1 text-muted text-[14px] max-[800px]:max-w-53.75 max-[800px]:text-[12px] max-[800px]:pt-7.5 max-[560px]:pt-5.5 max-[560px]:max-w-80 max-[560px]:text-[12px]"}><p>Employee transfer workflows, programme reporting, and government applications I’ve worked on.</p><p data-slot="sample-note" className={"flex items-start gap-2.25 mt-6 text-[10px] leading-[1.6] max-[560px]:mt-4.25 max-[560px]:text-[9px] [@media_(min-width:801px)]:text-[12px]"}><span data-slot="tiny-square" className={"accent-square [[data-slot~='sample-note']_&]:mt-1.25"}></span> Brief project overviews. Visuals are illustrative system studies; detailed case studies are to come.</p></div></div>
+    <ProjectCard project={selected[0]} featured />
+    <div data-slot="project-pair" className={"grid grid-cols-[1fr_1fr] gap-7.5 mt-20 max-[800px]:gap-5.5 max-[800px]:mt-14.5 max-[560px]:grid-cols-[1fr] max-[560px]:gap-11.25 max-[560px]:mt-11.25 [@media_(min-width:801px)_and_(max-width:1200px)]:grid-cols-[1fr]"}>{selected.slice(1).map(project => <ProjectCard key={project.id} project={project} />)}</div>
+    <div data-slot="more-work" className={"mt-16.25 [border-top:1px_solid_var(--line)] max-[560px]:mt-10.5"}><p data-slot="eyebrow" className={"type-eyebrow [[data-slot~='more-work']>&]:p-[25px_0] [[data-slot~='more-work']>&]:text-muted [[data-slot~='more-work']>&]:text-[8px] [@media_(min-width:801px)]:text-[12px] [@media_(min-width:801px)]:[[data-slot~='more-work']>&]:text-[12px]"}>ALSO IN MY WORK</p>{additional.map(project => <button key={project.id} data-project={project.id} data-slot="work-row" className={"w-full flex items-center gap-6.25 p-[25px_0] [border:0] [border-top:1px_solid_var(--line)] [background:transparent] text-left [&_b]:block [&_b]:[font:500_clamp(21px,2vw,30px)_var(--display)] [&_b]:tracking-[-.04em] [&_small]:block [&_small]:text-[11px] [&_small]:mt-1.75 [&_small]:text-muted max-[560px]:gap-3.75 max-[560px]:p-[22px_0] max-[560px]:[&_small]:text-[10px] max-[560px]:[&_small]:max-w-62.5 [@media_(min-width:801px)]:[&_small]:text-[12px]"} onClick={() => openProject(project.id)}><span data-slot="mono" className={"type-mono [[data-slot~='work-row']>&]:text-copper [[data-slot~='work-row']>&]:text-[9px] [@media_(min-width:801px)]:text-[12px] [@media_(min-width:801px)]:[[data-slot~='work-row']>&]:text-[12px]"}>{project.index}</span><span><b>{projects.find(item => item.id === project.id).title}</b><small>{project.description}</small></span><span data-slot="work-row-arrow" className={"ml-auto text-[26px] text-copper [--motion-duration:0.85s] [--motion-properties:transform] [[data-slot~='work-row']:hover_&]:[transform:translate(4px,-4px)] [[data-slot~='work-row']:focus-visible_&]:[transform:translate(4px,-4px)] [[data-motion=off]_&]:[transform:none]!"} data-motion-style="" aria-hidden="true">↗</span></button>)}</div>
+  </div></section>;
 }

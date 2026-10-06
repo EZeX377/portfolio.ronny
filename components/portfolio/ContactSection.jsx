@@ -1,57 +1,8 @@
-import { ArrowRight, Mail } from "lucide-react";
-import Link from "next/link";
+"use client";
+import MotionElement from "./MotionElement";
 
-import LinkedInIcon from "./LinkedInIcon";
-import { contactMethods } from "./content";
-
+import { usePortfolio } from "./PortfolioProvider";
 export default function ContactSection() {
-  return (
-    <section id="contact" aria-labelledby="contact-heading" className="section-block">
-      <div className="section-shell">
-        <div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-[1.2fr_0.9fr] lg:gap-12 2xl:gap-16">
-          <article className="surface-card-soft">
-            <h2 id="contact-heading" className="section-heading text-3xl sm:text-4xl">
-              Let&apos;s Discuss Delivery-Focused UI/UX and System Design Work
-            </h2>
-            <p className="section-intro mt-4 max-w-2xl">
-              If you want to talk about system design, project delivery, government platforms, dashboard systems, or structured interface work, I&apos;m open to the conversation.
-            </p>
-            <Link href={`mailto:${contactMethods[0].value}`} className="focus-ring button-secondary mt-6 inline-flex gap-2">
-              Send Email <ArrowRight className="h-4 w-4" />
-            </Link>
-          </article>
- 
-          <article className="surface-card">
-            <h3 className="text-xl font-semibold text-neutral-900 dark:text-white md:text-2xl">
-              Get in touch
-            </h3>
-            <div className="mt-6 space-y-3">
-              {contactMethods.map((method) => (
-                <Link
-                  key={method.label}
-                  href={method.href}
-                  target={method.label === "LinkedIn" ? "_blank" : undefined}
-                  rel={method.label === "LinkedIn" ? "noreferrer" : undefined}
-                  className="focus-ring flex items-center justify-between rounded-2xl border border-neutral-200 bg-white/90 px-4 py-4 transition-colors duration-150 hover:border-indigo-300 dark:border-neutral-700 dark:bg-neutral-800/90 dark:hover:border-indigo-500/70"
-                >
-                  <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
-                      {method.label}
-                    </span>
-                    <span className="mt-1 block text-sm font-medium text-neutral-800 dark:text-neutral-100 sm:text-base">
-                      {method.value}
-                    </span>
-                  </span>
-                  {method.label === "Email" ? <Mail className="h-5 w-5 text-neutral-500 dark:text-neutral-400" /> : <LinkedInIcon className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />}
-                </Link>
-              ))}
-            </div>
-            <p className="mt-5 text-sm leading-6 text-neutral-600 dark:text-neutral-400">
-              Open to roles focused on system design, project delivery, and large-scale government or enterprise platforms.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-  );
+    const { openContact } = usePortfolio();
+    return (<section id="contact" data-slot="contact" className={"pt-10 pb-13.75 [background:#cf956f] text-[#1a2429] relative overflow-hidden [&_h2]:text-[clamp(56px,8.5vw,134px)] [&_h2]:leading-[1.02] [&_h2]:tracking-[-.06em] [&_h2]:m-[65px_0_60px] [&_h2]:relative [&_:focus-visible]:[outline-color:#1a2429] max-[800px]:[&_h2]:mt-11.25 max-[800px]:[&_h2]:mb-11.25 max-[560px]:pt-7.5 max-[560px]:pb-8.75 max-[560px]:[&_h2]:text-[53px] max-[560px]:[&_h2]:leading-[1.07] max-[560px]:[&_h2]:m-[40px_0_35px]"}><div data-slot="section-container page-pad" className={"layout-container overflow-visible"}><div data-slot="contact-top" className={"flex justify-between items-center"}><p data-slot="section-kicker mono" className={"section-label type-mono [[data-slot~='contact-top']_&]:text-[#3e4140] [[data-slot~='contact-top']_&]:mb-0 [[data-slot~='contact-top']>&]:text-[8px] [[data-slot~='contact-top']>&]:text-[#3e4140] max-[800px]:text-[8px] max-[800px]:mb-5.75 max-[800px]:[[data-slot~='contact-top']>&]:text-[6px] max-[560px]:[[data-slot~='contact-top']>&]:hidden [@media_(min-width:801px)]:text-[12px] [@media_(min-width:801px)]:[[data-slot~='contact-top']>&]:text-[12px]"}>06 — WHAT’S NEXT?</p><span data-slot="mono" className={"type-mono [[data-slot~='contact-top']>&]:text-[8px] [[data-slot~='contact-top']>&]:text-[#3e4140] max-[800px]:[[data-slot~='contact-top']>&]:text-[6px] max-[560px]:[[data-slot~='contact-top']>&]:hidden [@media_(min-width:801px)]:text-[12px] [@media_(min-width:801px)]:[[data-slot~='contact-top']>&]:text-[12px]"}>A CONVERSATION IS A GOOD START.</span></div><MotionElement as="h2" kind="reveal" delay={0} data-slot="reveal" className={"[[data-motion=off]_&]:opacity-100! [[data-motion=off]_&]:[transform:none]! [@media_(prefers-reduced-motion:reduce)]:[:root:not([data-motion=on])_&]:opacity-100! [@media_(prefers-reduced-motion:reduce)]:[:root:not([data-motion=on])_&]:[transform:none]!"} data-motion-style="">Let’s make<br />the complex <span data-slot="contact-serif" className={"[font-family:Georgia,serif] [font-style:italic] font-normal tracking-[-.065em]"}>clear.</span></MotionElement><div data-slot="contact-bottom" className={"flex justify-between gap-10 [border-top:1px_solid_rgba(26,36,41,.28)] pt-6.25 items-center [&_p]:text-[12px] [&_p]:leading-[1.7] [&_p]:text-[#353e3e] max-[560px]:block max-[560px]:pt-5.5 max-[560px]:[&_p]:text-[11px]"}><p>Have a project in mind or a role to discuss?<br />I’m open to government, enterprise, and freelance work.</p><button data-slot="contact-button" className={"[background:#1a2429] text-[#f4efe8] [border:0] text-[13px] flex gap-15 items-center p-[19px_24px] min-h-15.5 [&_span]:text-[24px] [&_span]:[--motion-duration:0.85s] [&_span]:[--motion-properties:transform] [&:hover_span]:[transform:translate(3px,-3px)] [[data-motion=off]_&_span]:[transform:none] max-[560px]:mt-6 max-[560px]:w-full max-[560px]:justify-between max-[560px]:text-[12px] max-[560px]:min-h-14.5"} data-motion-style="" id="contact-open" onClick={openContact}>Start a conversation <span aria-hidden="true">↗</span></button></div></div></section>);
 }

@@ -1,102 +1,47 @@
-@import "tailwindcss";
-
-@theme {
-  --font-manrope: "Manrope", sans-serif;
-  --font-harabara: "Harabara", sans-serif;
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@theme inline {
+  --color-bg: var(--bg); --color-surface: var(--surface); --color-ink: var(--ink); --color-muted: var(--muted); --color-line: var(--line); --color-soft: var(--soft); --color-copper: var(--copper); --color-stage: var(--stage);
+  --font-display: var(--display); --font-body: var(--body);
 }
 
-/* Stable class-based dark mode for v4/Next.js */
-@custom-variant dark (&:where(.dark, .dark *));
-
-:root {
-  color-scheme: light;
-}
-
-.dark {
-  color-scheme: dark;
-}
-
+/* Theme tokens and element defaults. Layout and illustration styling live in Tailwind utilities. */
 @layer base {
-  html {
-    font-family: var(--font-manrope);
-    background-color: var(--color-neutral-50);
-  }
+:root{--bg:#f3f2ed;--surface:#fffefa;--ink:#1a2227;--muted:#60655f;--line:#d4d6ce;--soft:#e8e9e2;--copper:#955735;--copper-bright:#c58b64;--stage:#e8e9e3;--header:rgba(243,242,237,.96);--shadow:0 22px 60px rgba(31,39,37,.15);--ease:cubic-bezier(.22,1,.36,1);--gutter:clamp(24px,4.5vw,80px);--display:'Space Grotesk',Arial,sans-serif;--body:'DM Sans',Arial,sans-serif;--hero-scroll:0;color-scheme:light}
+:root[data-theme=dark]{--bg:#131b20;--surface:#1e292f;--ink:#edece6;--muted:#aeb8ba;--line:#344047;--soft:#202d33;--copper:#d7a17c;--copper-bright:#ca9069;--stage:#19262c;--header:rgba(19,27,32,.96);--shadow:0 22px 70px rgba(0,0,0,.32);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+button,a{-webkit-tap-highlight-color:transparent}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+svg{display:block}
+button{color:inherit}
+button:focus-visible,a:focus-visible{outline:2px solid var(--copper);outline-offset:6px}
+::selection{background:var(--copper);color:var(--bg)}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3,h4{font-family:var(--display);font-weight:500;line-height:1.05;letter-spacing:-.055em}
+h2{font-size:clamp(42px,5.5vw,84px)}
+dialog{width:min(880px,calc(100% - 40px));max-height:calc(100svh - 48px);border:1px solid var(--line);border-radius:5px;padding:0;background:var(--bg);color:var(--ink);box-shadow:0 30px 100px #0005;overscroll-behavior:contain}
+dialog::backdrop{background:rgba(6,14,18,.76)}
+:root[data-motion=off]{scroll-behavior:auto}
+[data-motion=off] *,[data-motion=off] *:before,[data-motion=off] *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media (max-width:800px){html{scroll-padding-top:90px}}
+@media (max-width:560px){:root{--gutter:23px}}
+@media (prefers-reduced-motion:reduce){:root:not([data-motion=on]){scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){:root:not([data-motion=on]) *,:root:not([data-motion=on]) *:before,:root:not([data-motion=on]) *:after{animation:none!important;transition:none!important}}
 
-  body {
-    min-height: 100vh;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    background-color: var(--color-neutral-50);
-    overscroll-behavior-y: none;
-  }
-
-  .dark body {
-    background-color: var(--color-neutral-900);
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-  }
-
-  section[id],
-  footer[id] {
-    scroll-margin-top: 6rem;
-  }
 }
-
-
 
 @layer components {
-  .page-shell {
-    @apply bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
-  }
-
-  .section-shell {
-    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 2xl:px-12;
-  }
-
-  .section-block {
-    @apply py-16 md:py-20 lg:py-24 2xl:py-28;
-  }
-
-  .section-heading {
-    @apply font-harabara text-4xl text-neutral-900 dark:text-white sm:text-4xl lg:text-5xl 2xl:text-6xl;
-  }
-
-  .section-intro {
-    @apply max-w-2xl text-base leading-7 text-neutral-600 dark:text-neutral-300 lg:text-lg 2xl:text-xl lg:leading-8;
-  }
-
-  .surface-card {
-    @apply rounded-3xl border border-neutral-200/90 bg-white/95 shadow-sm shadow-neutral-200/70 backdrop-blur-sm p-6 md:p-8 lg:p-10 dark:border-neutral-700/90 dark:bg-neutral-800/95 dark:shadow-none;
-  }
-
-  .surface-card-soft {
-    @apply rounded-3xl border border-neutral-200/80 bg-linear-to-br from-indigo-50/95 to-white shadow-sm shadow-indigo-100/50 p-4 lg:p-6 dark:border-neutral-800/60 dark:from-indigo-950/25 dark:to-neutral-800/95 dark:shadow-none;
-  }
-
-  .surface-card-dark {
-    @apply rounded-3xl border border-neutral-700/90 bg-neutral-800/95 shadow-none;
-  }
-
-  .tag-pill {
-    @apply inline-flex items-center rounded-full border border-neutral-300/90 bg-white/90 px-3 py-1 text-[9px] font-semibold uppercase text-neutral-700 dark:border-neutral-600 dark:bg-neutral-800/90 dark:text-neutral-200;
-  }
-
-  .button-secondary {
-    @apply inline-flex min-h-[44px] items-center justify-center rounded-full border border-neutral-300 bg-white px-6 py-3 text-base font-semibold text-neutral-900 transition-colors duration-150 hover:border-indigo-600 hover:text-indigo-600 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:hover:border-indigo-400 dark:hover:text-indigo-400;
-  }
-
-  .focus-ring {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-50 dark:focus-visible:ring-indigo-400 dark:focus-visible:ring-offset-neutral-900;
-  }
-
-  .muted-copy {
-    @apply text-neutral-600 dark:text-neutral-300;
-  }
-
-  .muted-copy-soft {
-    @apply text-neutral-500 dark:text-neutral-400;
-  }
+  .layout-container { @apply w-full max-w-[1740px] mx-auto px-[var(--gutter)]; }
+  .type-mono { @apply [font-family:'Courier_New',monospace] text-[10px] leading-[1.6] tracking-[.07em] font-[400]; }
+  .type-eyebrow { @apply [font-family:'Courier_New',monospace] text-[10px] tracking-[.09em] leading-[1.6] flex items-center gap-[9px]; }
+  .section-label { @apply [font-family:'Courier_New',monospace] text-[10px] tracking-[.09em] leading-[1.6] text-muted mb-[30px]; }
+  .action-button { @apply inline-flex gap-[32px] items-center justify-between [border:1px_solid_transparent] rounded-[2px] p-[17px_22px] min-h-[54px] text-[12px] transition-colors duration-250; }
+  .accent-square { @apply w-[6px] h-[6px] inline-block [background:var(--copper)] shrink-0; }
 }

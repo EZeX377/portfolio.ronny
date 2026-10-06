@@ -1,0 +1,60 @@
+/* Existing case-study routes retain their scoped component styles and utilities. */
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@theme { --font-manrope: "DM Sans", sans-serif; --font-harabara: "Space Grotesk", sans-serif; }
+@scope (.legacy-case-study) {
+@layer components {
+  .page-shell {
+    @apply bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100;
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 2xl:px-12;
+  }
+
+  .section-block {
+    @apply py-16 md:py-20 lg:py-24 2xl:py-28;
+  }
+
+  .section-heading {
+    @apply font-harabara text-4xl text-neutral-900 dark:text-white sm:text-4xl lg:text-5xl 2xl:text-6xl;
+  }
+
+  .section-intro {
+    @apply max-w-2xl text-base leading-7 text-neutral-600 dark:text-neutral-300 lg:text-lg 2xl:text-xl lg:leading-8;
+  }
+
+  .surface-card {
+    @apply rounded-3xl border border-neutral-200/90 bg-white/95 shadow-sm shadow-neutral-200/70 backdrop-blur-sm p-6 md:p-8 lg:p-10 dark:border-neutral-700/90 dark:bg-neutral-800/95 dark:shadow-none;
+  }
+
+  .surface-card-soft {
+    @apply rounded-3xl border border-neutral-200/80 bg-linear-to-br from-indigo-50/95 to-white shadow-sm shadow-indigo-100/50 p-4 lg:p-6 dark:border-neutral-800/60 dark:from-indigo-950/25 dark:to-neutral-800/95 dark:shadow-none;
+  }
+
+  .surface-card-dark {
+    @apply rounded-3xl border border-neutral-700/90 bg-neutral-800/95 shadow-none;
+  }
+
+  .tag-pill {
+    @apply inline-flex items-center rounded-full border border-neutral-300/90 bg-white/90 px-3 py-1 text-[9px] font-semibold uppercase text-neutral-700 dark:border-neutral-600 dark:bg-neutral-800/90 dark:text-neutral-200;
+  }
+
+  .button-secondary {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-full border border-neutral-300 bg-white px-6 py-3 text-base font-semibold text-neutral-900 transition-colors duration-150 hover:border-indigo-600 hover:text-indigo-600 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:hover:border-indigo-400 dark:hover:text-indigo-400;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-50 dark:focus-visible:ring-indigo-400 dark:focus-visible:ring-offset-neutral-900;
+  }
+
+  .muted-copy {
+    @apply text-neutral-600 dark:text-neutral-300;
+  }
+
+  .muted-copy-soft {
+    @apply text-neutral-500 dark:text-neutral-400;
+  }
+}
+}

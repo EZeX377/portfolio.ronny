@@ -1,3 +1,4 @@
+import "./legacy.css";
 import { projects } from "@/components/portfolio/content";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -22,7 +23,7 @@ export default async function CaseStudyPage({ params }) {
   }
 
   return (
-    <main className="section-block min-h-screen">
+    <main className="legacy-case-study section-block min-h-screen">
       <div className="section-shell">
         <Link
           href="/#projects"

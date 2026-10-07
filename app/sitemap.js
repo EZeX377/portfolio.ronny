@@ -1,6 +1,8 @@
 import { siteUrl } from "@/lib/site";
 
 export default function sitemap() {
-  // Detailed case studies will be added when they replace the modal overviews.
-  return [{ url: siteUrl, changeFrequency: "monthly", priority: 1 }];
+  return [
+    { url: siteUrl, changeFrequency: "monthly", priority: 1 },
+    { url: `${siteUrl}/projects/nesfic-2026/case_study`, changeFrequency: "monthly", priority: .8 },
+  ];
 }

@@ -59,4 +59,22 @@ The codebase follows a **System First** approach—every motion, layout shift, a
 
 Canonical links, social images, robots.txt, and the sitemap use `SITE_URL` when set. On Vercel they otherwise use `VERCEL_PROJECT_PRODUCTION_URL`; local development defaults to `http://localhost:3000`.
 
-Before building on the VPS, set `SITE_URL` to the final public origin (including `https://`). Rebuild when this value changes, because homepage metadata and the sitemap are prerendered. The sitemap currently includes only the homepage; detailed case studies remain deferred and project cards open modal overviews.
+Before building on the VPS, set `SITE_URL` to the final public origin (including `https://`). Rebuild when this value changes, because homepage metadata and the sitemap are prerendered. The sitemap includes the homepage and the NESFIC 2026 and Mutual Transfer case studies. Those project cards link to full pages; other projects open modal overviews.
+
+## Mutual Transfer case study
+
+The current-design page is at `/projects/mutual-transfer-portal/case_study`. Its copy describes the role, workflow decisions, and delivery work recorded in the existing project content. It does not claim measured improvements in speed, adoption, accessibility, or security. Confirm the role, dates, and responsibilities before publication.
+
+Screenshots are optional. To add the supplied images, place them in `public/assets/case-studies/mutual-transfer-portal/` and add entries to the `screenshots` array in `app/projects/mutual-transfer-portal/case_study/page.jsx`:
+
+```js
+{
+  src: "/assets/case-studies/mutual-transfer-portal/employee-dashboard.jpg",
+  label: "Employee dashboard showing the current application stage",
+  caption: "Describe what this supplied screen demonstrates.",
+  width: 1440,
+  height: 900,
+}
+```
+
+Use each image’s actual dimensions and a caption matching its content. The screenshot section remains hidden until entries are added, so the page has no missing-image links or placeholder frames.

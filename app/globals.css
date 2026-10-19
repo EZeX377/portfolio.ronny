@@ -1,4 +1,7 @@
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V4
+ * macrostructure: Marquee Hero · genre: modern-minimal · tone: composed · anchor hue: copper */
 @layer theme, base, components, utilities;
+@import "../tokens.css";
 @import "tailwindcss/theme" layer(theme);
 @import "tailwindcss/utilities" layer(utilities);
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
@@ -44,4 +47,16 @@ dialog::backdrop{background:rgba(6,14,18,.76)}
   .section-label { @apply [font-family:'Courier_New',monospace] text-[12px] tracking-[.09em] leading-[1.6] text-muted mb-[30px]; }
   .action-button { @apply inline-flex gap-[32px] items-center justify-between [border:1px_solid_transparent] rounded-[2px] p-[17px_22px] min-h-[54px] text-[12px] transition-colors duration-250; }
   .accent-square { @apply w-[6px] h-[6px] inline-block [background:var(--copper)] shrink-0; }
+}
+
+/* Shared typography and compact desktop composition. */
+html { overflow-x: clip; }
+h1, h2, h3, h4 { min-width: 0; overflow-wrap: anywhere; font-style: normal; }
+.type-mono, .type-eyebrow, .section-label { font-family: var(--mono); }
+.action-button, [data-slot~="text-link"], [data-slot~="contact-button"] { white-space: nowrap; }
+[data-slot~="ide-layout"] { grid-template-columns: minmax(0, 1fr); }
+[data-slot~="ide-source"] { width: 100%; }
+@media (min-width: 801px) {
+  [data-slot~="hero-art"] [data-slot~="hero-live"] { top: 88px; }
+  [data-slot~="hero-art"] [data-slot~="actor-front"] { top: 360px; }
 }

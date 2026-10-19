@@ -1,0 +1,34 @@
+/* Hallmark · existing copper identity · shared illustration and contact tokens */
+:root {
+  --mono: "Courier New", monospace;
+  --art-paper: oklch(0.98269 0.00796 114.22);
+  --art-surface: oklch(0.96070 0.00950 119.58);
+  --art-soft: oklch(0.92744 0.01436 128.63);
+  --art-line: oklch(0.89040 0.01374 134.90);
+  --art-ink: oklch(0.33387 0.02668 173.07);
+  --art-muted: oklch(0.47564 0.01955 162.12);
+  --art-faint: oklch(0.59614 0.02401 143.13);
+  --art-accent: oklch(0.61256 0.09004 51.75);
+  --art-success: oklch(0.49417 0.05346 137.49);
+  --art-sage: oklch(0.80341 0.04868 132.61);
+  --art-dark: oklch(0.27046 0.02114 222.05);
+  --art-dark-line: oklch(0.38189 0.02151 214.67);
+  --art-dark-muted: oklch(0.81678 0.01982 152.74);
+  --art-dark-ink: oklch(0.93858 0.01110 123.46);
+  --art-dark-accent: oklch(0.71778 0.09280 50.79);
+  --contact-bg: oklch(0.71724 0.08727 54.09);
+  --contact-ink: oklch(0.25300 0.01700 229.87);
+  --contact-muted: oklch(0.34045 0.01436 217.81);
+  --contact-button-ink: oklch(0.95408 0.01078 76.60);
+  --mask-ink: oklch(0.00000 0.00000 0.00);
+  --shadow-soft: oklch(0.00000 0.00000 0.00 / 0.0392);
+  --shadow-medium: oklch(0.00000 0.00000 0.00 / 0.0941);
+  --shadow-strong: oklch(0.00000 0.00000 0.00 / 0.1255);
+  --art-rule-soft: oklch(1.00000 0.00000 0.00 / 0.0902);
+  --art-rule: oklch(1.00000 0.00000 0.00 / 0.1098);
+  --art-accent-wash: oklch(0.52088 0.09522 48.42 / 0.1490);
+  --art-accent-line: oklch(0.52088 0.09522 48.42 / 0.2078);
+  --art-bloom: oklch(0.64784 0.09245 57.87 / 0.1600);
+  --art-floor: oklch(0.00000 0.00000 0.00 / 0.0900);
+  --contact-line: oklch(0.25300 0.01700 229.87 / 0.2800);
+}

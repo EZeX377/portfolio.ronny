@@ -2,14 +2,14 @@
   {
     "id": "mutual",
     "title": "Mutual Transfer Portal",
-    "category": "Government services · Project overview",
+    "category": "Government services · Case study",
     "summary": "A statewide portal for Assam Grade III and IV government employees across departments, with a centralized, role-driven mutual transfer workflow.",
     "focus": [
       "Centralized mutual transfer workflow",
       "Role-driven journeys",
       "Cross-department service access"
     ],
-    "note": "Detailed case study and project-specific screens will be added. The visual shown is an illustrative system study.",
+    "note": "Case study covering role-based interfaces, application tracking, and UI/UX delivery. The card visual is an illustrative system study.",
     "image": "assets/mutualtransfer.webp"
   },
   {

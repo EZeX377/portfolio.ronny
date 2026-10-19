@@ -4,5 +4,6 @@ export default function sitemap() {
   return [
     { url: siteUrl, changeFrequency: "monthly", priority: 1 },
     { url: `${siteUrl}/projects/nesfic-2026/case_study`, changeFrequency: "monthly", priority: .8 },
+    { url: `${siteUrl}/projects/mutual-transfer-portal/case_study`, changeFrequency: "monthly", priority: .8 },
   ];
 }

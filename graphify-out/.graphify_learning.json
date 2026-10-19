@@ -1,21 +1,42 @@
 {
-  "generated_at": "2026-09-09T17:03:54.556503+00:00",
+  "generated_at": "2026-10-19T16:10:34.952127+00:00",
   "nodes": {
-    "app_projects_id_case_study_page": {
-      "code_fingerprint": "59553c6aa40ed551bd6d69ea3634ed1092ee404a778a89a631fb546dd3c1ba4f",
-      "label": "case_study/page.jsx",
-      "last": "2026-09-09T16:45:32.382019+00:00",
+    "app_layout": {
+      "code_fingerprint": "ee484796727c13da5a9a7e1d4ad5b95d628edf392800e66ac2f8b9627755bb10",
+      "label": "layout.jsx",
+      "last": "2026-09-09T17:18:09.405961+00:00",
       "provenance": [
+        {
+          "date": "2026-09-09T17:18:09.405961+00:00",
+          "outcome": "useful",
+          "q": "Use the ui-ux-pro-max skill to review the current frontend"
+        }
+      ],
+      "score": 0.397280775,
+      "source_file": "app/layout.jsx",
+      "status": "tentative",
+      "uses": 1
+    },
+    "app_projects_id_case_study_page": {
+      "code_fingerprint": "857f25e8e332e5d57ef956577a65cc1f27df7b8e72c446d580a6573e13f60edc",
+      "label": "case_study/page.jsx",
+      "last": "2026-09-09T17:18:09.405961+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-09T17:18:09.405961+00:00",
+          "outcome": "useful",
+          "q": "Use the ui-ux-pro-max skill to review the current frontend"
+        },
         {
           "date": "2026-09-09T16:45:32.382019+00:00",
           "outcome": "useful",
           "q": "ux/ui your review of my current portfolio"
         }
       ],
-      "score": 0.999705302,
+      "score": 0.79435369,
       "source_file": "app/projects/[id]/case_study/page.jsx",
-      "status": "tentative",
-      "uses": 1
+      "status": "preferred",
+      "uses": 2
     },
     "components_portfolio_content": {
       "code_fingerprint": "aa54461cefb006b6672cdcaecacfe0dda52e9043443cde7725338520e73eff69",
@@ -28,58 +49,89 @@
           "q": "ux/ui your review of my current portfolio"
         }
       ],
-      "score": 0.999705302,
+      "score": 0.397072915,
       "source_file": "components/portfolio/content.js",
       "status": "tentative",
       "uses": 1
     },
     "components_portfolio_herosection": {
-      "code_fingerprint": "a595bbc6b94aade0397fe33b12d2a0b1a670abc6250b0cb9f1df2aba00fdc165",
+      "code_fingerprint": "fabd76ca11b1e403b3e03c27557ec0da0c7171319e79bcac0d45a17c61d2525f",
       "label": "HeroSection.jsx",
-      "last": "2026-09-09T16:45:32.382019+00:00",
+      "last": "2026-09-09T17:18:09.405961+00:00",
       "provenance": [
+        {
+          "date": "2026-09-09T17:18:09.405961+00:00",
+          "outcome": "useful",
+          "q": "Use the ui-ux-pro-max skill to review the current frontend"
+        },
         {
           "date": "2026-09-09T16:45:32.382019+00:00",
           "outcome": "useful",
           "q": "ux/ui your review of my current portfolio"
         }
       ],
-      "score": 0.999705302,
+      "score": 0.79435369,
       "source_file": "components/portfolio/HeroSection.jsx",
-      "status": "tentative",
-      "uses": 1
+      "status": "preferred",
+      "uses": 2
     },
     "components_portfolio_navbar": {
-      "code_fingerprint": "ba919909f9b0ae2f0c046bcc2fb138c13eba8471a0966809e5299f2a6c64e8ff",
+      "code_fingerprint": "873997be116e0a2690b9bf3d912e459014ebd3d9d037dcf1644e9cd470da2fff",
       "label": "Navbar.jsx",
-      "last": "2026-09-09T16:45:32.382019+00:00",
+      "last": "2026-09-09T17:18:09.405961+00:00",
       "provenance": [
+        {
+          "date": "2026-09-09T17:18:09.405961+00:00",
+          "outcome": "useful",
+          "q": "Use the ui-ux-pro-max skill to review the current frontend"
+        },
         {
           "date": "2026-09-09T16:45:32.382019+00:00",
           "outcome": "useful",
           "q": "ux/ui your review of my current portfolio"
         }
       ],
-      "score": 0.999705302,
+      "score": 0.79435369,
       "source_file": "components/portfolio/Navbar.jsx",
+      "status": "preferred",
+      "uses": 2
+    },
+    "components_portfolio_projectpreview": {
+      "code_fingerprint": "f6f2991f842b3dfcf7fb6961a95a72514f5e7744922cb08d63465b02e1dcec20",
+      "label": "ProjectPreview.jsx",
+      "last": "2026-09-09T17:18:09.405961+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-09T17:18:09.405961+00:00",
+          "outcome": "useful",
+          "q": "Use the ui-ux-pro-max skill to review the current frontend"
+        }
+      ],
+      "score": 0.397280775,
+      "source_file": "components/portfolio/ProjectPreview.jsx",
       "status": "tentative",
       "uses": 1
     },
     "components_portfolio_projectssection": {
-      "code_fingerprint": "a94c3cf75717c962f75b3f018ac7c6320cdc1f5555906ebfe0ec7e78ba24a1a6",
+      "code_fingerprint": "bd792118c481ef0e69021995f1afe0049a917d77382728368b95d4571ce30c06",
       "label": "ProjectsSection.jsx",
-      "last": "2026-09-09T16:45:32.382019+00:00",
+      "last": "2026-09-09T17:18:09.405961+00:00",
       "provenance": [
+        {
+          "date": "2026-09-09T17:18:09.405961+00:00",
+          "outcome": "useful",
+          "q": "Use the ui-ux-pro-max skill to review the current frontend"
+        },
         {
           "date": "2026-09-09T16:45:32.382019+00:00",
           "outcome": "useful",
           "q": "ux/ui your review of my current portfolio"
         }
       ],
-      "score": 0.999705302,
+      "score": 0.79435369,
       "source_file": "components/portfolio/ProjectsSection.jsx",
-      "status": "tentative",
-      "uses": 1
+      "status": "preferred",
+      "uses": 2
     },
     "package": {
       "code_fingerprint": "7795149f7f11e27e1b549bf28842f525468a432411388a0fb598335100ff2a01",
@@ -92,7 +144,7 @@
           "q": "Check whether the screenshot dependency vulnerabilities exist and plan fixes"
         }
       ],
-      "score": 0.996305384,
+      "score": 0.395722502,
       "source_file": "package.json",
       "status": "tentative",
       "uses": 1

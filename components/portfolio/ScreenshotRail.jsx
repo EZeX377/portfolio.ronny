@@ -16,12 +16,17 @@ export default function ScreenshotRail({ label, children }) {
 
   useEffect(() => {
     const node = rail.current;
-    const measure = () => setDistance(Math.max(0, node.scrollWidth - viewport.current.clientWidth));
+    const frame = viewport.current;
+    if (!node || !frame) return;
+    let disposed = false;
+    const measure = () => {
+      if (!disposed) setDistance(Math.max(0, node.scrollWidth - frame.clientWidth));
+    };
     const observer = new ResizeObserver(measure);
     observer.observe(node);
-    observer.observe(viewport.current);
+    observer.observe(frame);
     measure();
-    return () => observer.disconnect();
+    return () => { disposed = true; observer.disconnect(); };
   }, []);
 
   return <section ref={section} aria-label={label} style={enabled ? { height: `calc(100svh + ${distance}px)` } : undefined}>

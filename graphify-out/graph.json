@@ -865,103 +865,114 @@
       "source_location": "L1"
     },
     {
-      "id": "package_devdependencies",
-      "label": "devDependencies",
+      "id": "package_dependencies",
+      "label": "dependencies",
       "_origin": "ast",
       "community": 0,
       "community_name": "package.json",
       "file_type": "code",
-      "norm_label": "devdependencies",
+      "norm_label": "dependencies",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L11"
     },
     {
-      "id": "package_devdependencies_chokidar",
-      "label": "chokidar",
+      "id": "package_dependencies_framer_motion",
+      "label": "framer-motion",
       "_origin": "ast",
       "community": 0,
       "community_name": "package.json",
       "file_type": "code",
-      "norm_label": "chokidar",
+      "norm_label": "framer-motion",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L13"
     },
     {
-      "id": "package_devdependencies_dotenv",
-      "label": "dotenv",
+      "id": "package_dependencies_lenis",
+      "label": "lenis",
       "_origin": "ast",
       "community": 0,
       "community_name": "package.json",
       "file_type": "code",
-      "norm_label": "dotenv",
+      "norm_label": "lenis",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L14"
     },
     {
-      "id": "package_devdependencies_eslint",
-      "label": "eslint",
+      "id": "package_dependencies_lucide_react",
+      "label": "lucide-react",
       "_origin": "ast",
       "community": 0,
       "community_name": "package.json",
       "file_type": "code",
-      "norm_label": "eslint",
+      "norm_label": "lucide-react",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L15"
     },
     {
-      "id": "package_devdependencies_eslint_plugin_react",
-      "label": "eslint-plugin-react",
+      "id": "package_dependencies_next",
+      "label": "next",
       "_origin": "ast",
       "community": 0,
       "community_name": "package.json",
       "file_type": "code",
-      "norm_label": "eslint-plugin-react",
+      "norm_label": "next",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L16"
     },
     {
-      "id": "package_devdependencies_globals",
-      "label": "globals",
+      "id": "package_dependencies_postcss",
+      "label": "postcss",
       "_origin": "ast",
       "community": 0,
       "community_name": "package.json",
       "file_type": "code",
-      "norm_label": "globals",
+      "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L17"
     },
     {
-      "id": "package_devdependencies_types_node",
-      "label": "@types/node",
+      "id": "package_dependencies_react",
+      "label": "react",
       "_origin": "ast",
       "community": 0,
       "community_name": "package.json",
       "file_type": "code",
-      "norm_label": "@types/node",
+      "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L18"
     },
     {
-      "id": "package_devdependencies_types_react",
-      "label": "@types/react",
+      "id": "package_dependencies_react_dom",
+      "label": "react-dom",
       "_origin": "ast",
       "community": 0,
       "community_name": "package.json",
       "file_type": "code",
-      "norm_label": "@types/react",
+      "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L19"
     },
     {
-      "id": "package_devdependencies_typescript",
-      "label": "typescript",
+      "id": "package_dependencies_tailwindcss",
+      "label": "tailwindcss",
       "_origin": "ast",
       "community": 0,
       "community_name": "package.json",
       "file_type": "code",
-      "norm_label": "typescript",
+      "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L20"
+    },
+    {
+      "id": "package_dependencies_tailwindcss_postcss",
+      "label": "@tailwindcss/postcss",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "@tailwindcss/postcss",
+      "source_file": "package.json",
+      "source_location": "L12"
     },
     {
       "id": "package_name",
@@ -1502,7 +1513,18 @@
       "file_type": "code",
       "norm_label": "nextconfig",
       "source_file": "next.config.mjs",
-      "source_location": "L2"
+      "source_location": "L17"
+    },
+    {
+      "id": "next_config_reportonlycsp",
+      "label": "reportOnlyCsp",
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "next.config.mjs",
+      "file_type": "code",
+      "norm_label": "reportonlycsp",
+      "source_file": "next.config.mjs",
+      "source_location": "L3"
     },
     {
       "id": "components_portfolio_processsection",
@@ -1549,114 +1571,103 @@
       "source_location": "L6"
     },
     {
-      "id": "package_dependencies",
-      "label": "dependencies",
+      "id": "package_devdependencies",
+      "label": "devDependencies",
       "_origin": "ast",
       "community": 4,
-      "community_name": "dependencies",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "dependencies",
+      "norm_label": "devdependencies",
       "source_file": "package.json",
-      "source_location": "L11"
+      "source_location": "L22"
     },
     {
-      "id": "package_dependencies_framer_motion",
-      "label": "framer-motion",
+      "id": "package_devdependencies_chokidar",
+      "label": "chokidar",
       "_origin": "ast",
       "community": 4,
-      "community_name": "dependencies",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "framer-motion",
+      "norm_label": "chokidar",
       "source_file": "package.json",
-      "source_location": "L13"
+      "source_location": "L25"
     },
     {
-      "id": "package_dependencies_lenis",
-      "label": "lenis",
+      "id": "package_devdependencies_dotenv",
+      "label": "dotenv",
       "_origin": "ast",
       "community": 4,
-      "community_name": "dependencies",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "lenis",
+      "norm_label": "dotenv",
       "source_file": "package.json",
-      "source_location": "L14"
+      "source_location": "L26"
     },
     {
-      "id": "package_dependencies_lucide_react",
-      "label": "lucide-react",
+      "id": "package_devdependencies_eslint",
+      "label": "eslint",
       "_origin": "ast",
       "community": 4,
-      "community_name": "dependencies",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "lucide-react",
+      "norm_label": "eslint",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L27"
     },
     {
-      "id": "package_dependencies_next",
-      "label": "next",
+      "id": "package_devdependencies_eslint_plugin_react",
+      "label": "eslint-plugin-react",
       "_origin": "ast",
       "community": 4,
-      "community_name": "dependencies",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "next",
+      "norm_label": "eslint-plugin-react",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L28"
     },
     {
-      "id": "package_dependencies_postcss",
-      "label": "postcss",
+      "id": "package_devdependencies_globals",
+      "label": "globals",
       "_origin": "ast",
       "community": 4,
-      "community_name": "dependencies",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "postcss",
+      "norm_label": "globals",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L29"
     },
     {
-      "id": "package_dependencies_react",
-      "label": "react",
+      "id": "package_devdependencies_types_node",
+      "label": "@types/node",
       "_origin": "ast",
       "community": 4,
-      "community_name": "dependencies",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "react",
+      "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L23"
     },
     {
-      "id": "package_dependencies_react_dom",
-      "label": "react-dom",
+      "id": "package_devdependencies_types_react",
+      "label": "@types/react",
       "_origin": "ast",
       "community": 4,
-      "community_name": "dependencies",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "react-dom",
+      "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L24"
     },
     {
-      "id": "package_dependencies_tailwindcss",
-      "label": "tailwindcss",
+      "id": "package_devdependencies_typescript",
+      "label": "typescript",
       "_origin": "ast",
       "community": 4,
-      "community_name": "dependencies",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "tailwindcss",
+      "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L20"
-    },
-    {
-      "id": "package_dependencies_tailwindcss_postcss",
-      "label": "@tailwindcss/postcss",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "@tailwindcss/postcss",
-      "source_file": "package.json",
-      "source_location": "L12"
+      "source_location": "L30"
     },
     {
       "id": "postcss_config",
@@ -8318,7 +8329,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "next.config.mjs",
-      "source_location": "L2",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "next_config",
+      "target": "next_config_reportonlycsp",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "next.config.mjs",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -8949,5 +8971,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "20af49907d7a8d7891885e75e31ffa9e9d12e572"
+  "built_at_commit": "fa55625c77db1c5fd35bd5ff69b35809709e8bf1"
 }

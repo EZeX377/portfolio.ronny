@@ -1,17 +1,17 @@
-# Graph Report - portfolio.ronny  (2026-10-19)
+# Graph Report - portfolio.ronny  (2026-11-02)
 
 ## Corpus Check
-- 61 files · ~331,365 words
+- 60 files · ~331,441 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: .css 2, .example 1, (none) 1)
 
 ## Summary
-- 271 nodes · 487 edges · 33 communities (17 shown, 16 thin omitted)
+- 272 nodes · 488 edges · 33 communities (17 shown, 16 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.91)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `20af4990`
+- Built from commit: `fa55625c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - [id]/case_study/page.jsx
 - ProcessSection.jsx
 - Ronny Das UI/UX Developer and Project Lead Portfolio
-- dependencies
+- devDependencies
 - MotionElement
 - app/page.jsx
 - Tailwind CSS Logo
@@ -78,7 +78,7 @@
 
 ### Community 0 - "package.json"
 Cohesion: 0.06
-Nodes (30): devDependencies, chokidar, dotenv, eslint, eslint-plugin-react, globals, @types/node, @types/react (+22 more)
+Nodes (31): dependencies, framer-motion, lenis, lucide-react, next, postcss, react, react-dom (+23 more)
 
 ### Community 1 - "[id]/case_study/page.jsx"
 Cohesion: 0.10
@@ -92,9 +92,9 @@ Nodes (8): ProcessSection(), useConnectorGeometry(), box(), update(), useProcess
 Cohesion: 0.13
 Nodes (15): CSS3 Logo, Next.js App Router, Depth-Aware Motion System, Framer Motion, GPU-Accelerated Animation, Lenis, Lucide React, Next.js (+7 more)
 
-### Community 4 - "dependencies"
-Cohesion: 0.20
-Nodes (10): dependencies, framer-motion, lenis, lucide-react, next, postcss, react, react-dom (+2 more)
+### Community 4 - "devDependencies"
+Cohesion: 0.22
+Nodes (9): devDependencies, chokidar, dotenv, eslint, eslint-plugin-react, globals, @types/node, @types/react (+1 more)
 
 ### Community 5 - "MotionElement"
 Cohesion: 0.15
@@ -145,8 +145,8 @@ Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Use the ui-ux-pro-max skill to review the current frontend, Source Nodes
 
 ## Knowledge Gaps
-- **107 isolated node(s):** `metadata`, `viewport`, `alt`, `size`, `contentType` (+102 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 133 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **108 isolated node(s):** `metadata`, `viewport`, `alt`, `size`, `contentType` (+103 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 134 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
@@ -161,15 +161,15 @@ Nodes (4): Answer, Outcome, Q: Use the ui-ux-pro-max skill to review the current
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `react` connect `usePortfolio` to `package.json`, `[id]/case_study/page.jsx`, `ProcessSection.jsx`, `app/page.jsx`, `CaseStudyDiagram.jsx`, `layout.jsx`?**
-  _High betweenness centrality (0.138) - this node is a cross-community bridge._
+  _High betweenness centrality (0.137) - this node is a cross-community bridge._
 - **Why does `next` connect `MotionElement` to `package.json`, `[id]/case_study/page.jsx`, `app/page.jsx`?**
-  _High betweenness centrality (0.095) - this node is a cross-community bridge._
+  _High betweenness centrality (0.094) - this node is a cross-community bridge._
 - **Why does `framer-motion` connect `usePortfolio` to `package.json`, `[id]/case_study/page.jsx`, `ProcessSection.jsx`, `CaseStudyDiagram.jsx`, `layout.jsx`?**
   _High betweenness centrality (0.070) - this node is a cross-community bridge._
 - **What connects `metadata`, `viewport`, `alt` to the rest of the system?**
-  _107 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _108 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.062388591800356503 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06050420168067227 - nodes in this community are weakly interconnected._
 - **Should `[id]/case_study/page.jsx` be split into smaller, more focused modules?**
   _Cohesion score 0.1038961038961039 - nodes in this community are weakly interconnected._
 - **Should `Ronny Das UI/UX Developer and Project Lead Portfolio` be split into smaller, more focused modules?**

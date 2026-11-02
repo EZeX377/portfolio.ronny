@@ -126,9 +126,9 @@
     "semantic_hash": "fdb12db49f8ea77f4f0cd7ce40775a80"
   },
   "package.json": {
-    "mtime": 1788960148.7113256,
-    "seen": 1788971191.3597817,
-    "ast_hash": "e9e0d401876a1e7ce7f07a9b4866a1c7",
+    "mtime": 1793113994.2384212,
+    "seen": 1793613046.31997,
+    "ast_hash": "7db6b8e3e6a774e276a755def0837d39",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
@@ -570,9 +570,9 @@
     "semantic_hash": ""
   },
   "next.config.mjs": {
-    "mtime": 1791388746.0652514,
-    "seen": 1792426595.6185348,
-    "ast_hash": "1c3aa4b3346bd1240c8ced95365da545",
+    "mtime": 1793613012.834726,
+    "seen": 1793613046.31997,
+    "ast_hash": "333931f025017b1100137c390fe2002b",
     "semantic_hash": ""
   },
   "graphify-out/memory/query_20261019_161115_bbf34008_next_to_implement.md": {
@@ -663,12 +663,6 @@
     "mtime": 1791372338.9724996,
     "seen": 1792426595.6185348,
     "ast_hash": "a6559fd2c41b24733b59ae277cbde244",
-    "semantic_hash": ""
-  },
-  ".hallmark/log.json": {
-    "mtime": 1792428270.3742297,
-    "seen": 1792428429.4003375,
-    "ast_hash": "d6b050e5b1eb7dcd253d94766b2dfd0a",
     "semantic_hash": ""
   }
 }

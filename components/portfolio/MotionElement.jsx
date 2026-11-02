@@ -12,7 +12,8 @@ export default function MotionElement({ as = "div", kind = "reveal", delay = 0, 
   const emptyRef = useRef(null);
   const Tag = motion[as];
   const reveal = kind === "reveal";
-  const enabled = initialized && motionEnabled && !reveal;
+  // Keep already-painted hero text stable when preferences finish hydrating.
+  const enabled = initialized && motionEnabled && !reveal && kind !== "entrance";
   useAnimatedStyles(reveal ? ref : emptyRef, true);
   const slots = props["data-slot"] || "";
   const assembly = kind === "assembly";

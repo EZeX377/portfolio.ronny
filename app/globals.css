@@ -12,7 +12,7 @@
 
 /* Theme tokens and element defaults. Layout and illustration styling live in Tailwind utilities. */
 @layer base {
-:root{--bg:#f3f2ed;--surface:#fffefa;--ink:#1a2227;--muted:#60655f;--line:#d4d6ce;--soft:#e8e9e2;--copper:#955735;--copper-bright:#c58b64;--stage:#e8e9e3;--header:rgba(243,242,237,.96);--shadow:0 22px 60px rgba(31,39,37,.15);--ease:cubic-bezier(.22,1,.36,1);--gutter:clamp(24px,4.5vw,80px);--display:'Space Grotesk',Arial,sans-serif;--body:'DM Sans',Arial,sans-serif;--hero-scroll:0;color-scheme:light}
+:root{--bg:#f3f2ed;--surface:#fffefa;--ink:#1a2227;--muted:#60655f;--line:#d4d6ce;--soft:#e8e9e2;--copper:#955735;--copper-bright:#c58b64;--stage:#e8e9e3;--header:rgba(243,242,237,.96);--shadow:0 22px 60px rgba(31,39,37,.15);--ease:cubic-bezier(.22,1,.36,1);--gutter:clamp(24px,4.5vw,80px);--display:var(--font-space-grotesk),Arial,sans-serif;--body:var(--font-dm-sans),Arial,sans-serif;--hero-scroll:0;color-scheme:light}
 :root[data-theme=dark]{--bg:#131b20;--surface:#1e292f;--ink:#edece6;--muted:#aeb8ba;--line:#344047;--soft:#202d33;--copper:#d7a17c;--copper-bright:#ca9069;--stage:#19262c;--header:rgba(19,27,32,.96);--shadow:0 22px 70px rgba(0,0,0,.32);color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:110px}

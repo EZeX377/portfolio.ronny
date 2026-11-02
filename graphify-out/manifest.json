@@ -6,9 +6,9 @@
     "semantic_hash": "27670bcfb809f68adbe1902e45d01489"
   },
   "app/layout.jsx": {
-    "mtime": 1791311462.5601575,
-    "seen": 1791311483.9268956,
-    "ast_hash": "3bee7ed0188db848beb867898416aa7d",
+    "mtime": 1793615660.4521062,
+    "seen": 1793615917.9352353,
+    "ast_hash": "afdb1bf643b4c5ac5f41f67619f6a113",
     "semantic_hash": ""
   },
   "app/page.jsx": {
@@ -72,9 +72,9 @@
     "semantic_hash": ""
   },
   "components/portfolio/ProjectsSection.jsx": {
-    "mtime": 1792428270.2644916,
-    "seen": 1792428429.4003375,
-    "ast_hash": "6d2567f803b48809988a0932d0fb49c8",
+    "mtime": 1793615679.1955519,
+    "seen": 1793615917.9352353,
+    "ast_hash": "cf6a558a87281f5b523a5c0aa011b644",
     "semantic_hash": ""
   },
   "components/portfolio/SkillBullet.jsx": {
@@ -276,9 +276,9 @@
     "semantic_hash": ""
   },
   "components/portfolio/HeroArtwork.jsx": {
-    "mtime": 1792428270.336648,
-    "seen": 1792428429.4003375,
-    "ast_hash": "3ff4c4ab7db58ff44b5181c1bddb90c3",
+    "mtime": 1793615829.6203506,
+    "seen": 1793615917.9352353,
+    "ast_hash": "6e14d06e5448c2aa4d4b7e1429fcfc25",
     "semantic_hash": ""
   },
   "components/portfolio/LayoutElement.jsx": {
@@ -294,9 +294,9 @@
     "semantic_hash": ""
   },
   "components/portfolio/MotionElement.jsx": {
-    "mtime": 1792428208.485797,
-    "seen": 1792428429.4003375,
-    "ast_hash": "7b7e3e45df1ef1fd36c5fa3b48033531",
+    "mtime": 1793615820.375623,
+    "seen": 1793615917.9352353,
+    "ast_hash": "661cd47d99fb9f444d0bb917ba62d2e0",
     "semantic_hash": ""
   },
   "components/portfolio/MotionSurface.jsx": {
@@ -324,9 +324,9 @@
     "semantic_hash": ""
   },
   "components/portfolio/Portrait.jsx": {
-    "mtime": 1791317139.5292487,
-    "seen": 1792426595.6185348,
-    "ast_hash": "a009148298436307c4dedc74b2e109db",
+    "mtime": 1793615678.5243025,
+    "seen": 1793615917.9352353,
+    "ast_hash": "a2c9995ce09e0eb39df6e0a6a09d55b8",
     "semantic_hash": ""
   },
   "components/portfolio/PreferenceControl.jsx": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "components/portfolio/ProjectBrowser.jsx": {
-    "mtime": 1791304317.3144693,
-    "seen": 1791311483.9268956,
-    "ast_hash": "56c1e9f3cd5b61dbb872777df990a52f",
+    "mtime": 1793615679.1935515,
+    "seen": 1793615917.9352353,
+    "ast_hash": "0c614f2eec2a729b0623931ef8c71aae",
     "semantic_hash": ""
   },
   "components/portfolio/heroStates.js": {
@@ -663,6 +663,12 @@
     "mtime": 1791372338.9724996,
     "seen": 1792426595.6185348,
     "ast_hash": "a6559fd2c41b24733b59ae277cbde244",
+    "semantic_hash": ""
+  },
+  "components/portfolio/DeferredPortfolioDialogs.jsx": {
+    "mtime": 1793615660.6052837,
+    "seen": 1793615917.9352353,
+    "ast_hash": "4bb2ecb67f12c7beb25145ef3e5096ee",
     "semantic_hash": ""
   }
 }
